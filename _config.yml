@@ -100,5 +100,5 @@ leancloud:
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/justzerock/justzerock.github.io.git
+  repo: https://gh_token@github.com/justzerock/justzerock.github.io.git
   branch: master
