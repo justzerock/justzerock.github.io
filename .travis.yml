@@ -20,8 +20,6 @@ after_script:
   - git commit -m "TravisCI 自动部署"
   # Github Pages
   - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:master
-  # Coding Pages
-  # - git push --force --quiet "https://coding用户名:${CO_TOKEN}@${CO_REF}" master:master
 
 branches:
   only:
@@ -31,5 +29,3 @@ env:
   global:
     # Github Pages
     - GH_REF: github.com/justzerock/justzerock.github.io
-    # Coding Pages
-    # - CO_REF: git.coding.net/bule/bule.coding.me.git  这里替换你的coding仓库地址
