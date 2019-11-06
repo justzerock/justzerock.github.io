@@ -3,19 +3,21 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: zero
-subtitle: ""
-description: ""
-keywords:
+title: 亦如年少
+subtitle: 谨慎地潇洒
+description: 熟练掌握hello world的码农
+keywords: hexo, 博客, 前端, 刘亦岳
 author: Liu
-language: en
-timezone: ""
+language:
+timezone:
+favicon: https://cdn.jsdelivr.net/gh/justzerock/assets@master/favicon.ico
+avatar: https://cdn.jsdelivr.net/gh/justzerock/assets@master/avatar.png
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: https://justzerock.github.io/
 root: /
-permalink: :year/:month/:day/:title/
+permalink: :category/:year-:month-:day-:title/
 permalink_defaults:
 pretty_urls:
   trailing_index: true # Set to false to remove trailing index.html from permalinks
@@ -31,7 +33,7 @@ i18n_dir: :lang
 skip_render:
 
 # Writing
-new_post_name: :title.md # File name of new posts
+new_post_name: :year-:month-:day-:title.md # File name of new posts
 default_layout: post
 titlecase: false # Transform title into titlecase
 external_link:
@@ -59,7 +61,7 @@ index_generator:
   order_by: -date
 
 # Category & Tag
-default_category: uncategorized
+default_category: blog
 category_map:
 tag_map:
 

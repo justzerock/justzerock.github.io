@@ -8,10 +8,10 @@ tags:
 
 ### 但不知道写写什么
 
-  就这样吧
+就这样吧
 
-````javascript
+```javascript
 if (love) {
-  console.log('Me too')
+  console.log("Me too");
 }
-````
+```
