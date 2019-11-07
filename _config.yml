@@ -8,7 +8,7 @@ subtitle: 谨慎地潇洒
 description: 熟练掌握hello world的码农
 keywords: hexo, 博客, 前端, 刘亦岳
 author: Liu
-language:
+language: zh-cn
 timezone:
 favicon: https://cdn.jsdelivr.net/gh/justzerock/assets@master/favicon.ico
 avatar: https://cdn.jsdelivr.net/gh/justzerock/assets@master/avatar.png
@@ -46,7 +46,7 @@ post_asset_folder: false
 relative_link: false
 future: true
 highlight:
-  enable: true
+  enable: false
   line_number: true
   auto_detect: false
   tab_replace: ""
@@ -92,7 +92,44 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: "landscape"
+theme: typography
+
+plugin:
+  - hexo-generator-category-enhance
+  - hexo-generator-feed
+  - hexo-asset-image
+  - hexo-prism-plugin
+  - hexo-toc
+
+# Generate archive page
+archive_generator:
+  per_page: 0
+
+# Generate categories index page and each category page
+category_generator:
+  per_page: 10
+  enable_index_page: true
+
+# Generate tags index page and each tag page
+tag_generator:
+  per_page: 10
+  enable_index_page: true
+
+# Generator atom feed for you website
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+  hub:
+  content:
+  content_limit: 140
+  content_limit_delim: ' '
+
+# For syntax highlighting
+prism_plugin:
+  mode: 'preprocess'
+  theme: 'default'
+  line_number: true 
 
 # Valine评论需要
 leancloud:

@@ -1,0 +1,12 @@
+[submodule "themes/typography"]
+	path = themes/typography
+	url = https://github.com/justzerock/hexo-theme-typography.git
+[submodule "themes/journal"]
+	path = themes/journal
+	url = https://github.com/justzerock/hexo-theme-Journal.git
+[submodule "themes/cactus"]
+	path = themes/cactus
+	url = https://github.com/justzerock/hexo-theme-cactus.git
+[submodule "themes/chic"]
+	path = themes/chic
+	url = https://github.com/justzerock/hexo-theme-Chic.git
