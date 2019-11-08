@@ -10,8 +10,7 @@ install:
   - npm install
   - cd themes/typography
   - npm install
-  - cd ..
-  - cd ..
+  - cd ../..
 script:
   - hexo clean
   - hexo generate
