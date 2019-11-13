@@ -4,7 +4,7 @@
 
 # Site
 title: 亦如年少
-subtitle: 谨慎地潇洒
+subtitle: 往者不可谏，来者犹可追
 description: 熟练掌握hello world的码农
 keywords: hexo, 博客, 前端, 刘亦岳
 author: Liu
@@ -95,7 +95,7 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: typography
+theme: zero
 
 plugin:
   - hexo-generator-category-enhance
@@ -126,13 +126,13 @@ feed:
   hub:
   content:
   content_limit: 140
-  content_limit_delim: ' '
+  content_limit_delim: " "
 
 # For syntax highlighting
 prism_plugin:
-  mode: 'preprocess'
-  theme: 'default'
-  line_number: true 
+  mode: "preprocess"
+  theme: "default"
+  line_number: true
 
 # Valine评论需要
 leancloud:
