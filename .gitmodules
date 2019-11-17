@@ -13,3 +13,6 @@
 [submodule "themes/zero"]
 	path = themes/zero
 	url = https://github.com/justzerock/hexo-theme-zero.git
+[submodule "themes/next"]
+	path = themes/next
+	url = https://github.com/theme-next/hexo-theme-next

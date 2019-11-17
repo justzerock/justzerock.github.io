@@ -8,9 +8,9 @@ before_install:
   - npm install hexo-cli -g
 install:
   - npm install
-  - cd themes/typography
-  - npm install
-  - cd ../..
+  #- cd themes/typography
+  #- npm install
+  #- cd ../..
 script:
   - hexo clean
   - hexo generate
