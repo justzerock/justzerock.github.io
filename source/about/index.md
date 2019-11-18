@@ -3,10 +3,12 @@ title: 关于
 comments: false
 ---
 
-<center>一名普通的程序员</center>
+<center>
 
-<center>一个简单的网站</center>
+一名普通的程序员
 
-<center>喜欢健身，听歌</center>
+一个简单的网站
 
-<center>永远热血，永远青春</center>
+喜欢健身，听歌
+
+永远热血，永远青春

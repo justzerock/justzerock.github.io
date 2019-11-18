@@ -5,7 +5,10 @@
 # Site
 title: 亦如年少
 subtitle: 往者不可諫，來者猶可追
-description: 一个普通的程序员
+subtitles:
+  first: 往者不可諫
+  second: 來者猶可追
+description: 笑一个吧 😜
 keywords: hexo, 博客, 前端, 刘亦岳
 author: 刘亦岳
 language: zh-CN
