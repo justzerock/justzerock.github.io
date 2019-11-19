@@ -1,6 +1,8 @@
 [submodule "themes/zero"]
 	path = themes/zero
 	url = https://github.com/justzerock/hexo-theme-zero.git
+	ignore = all
 [submodule "themes/next"]
 	path = themes/next
 	url = https://github.com/justzerock/hexo-theme-next.git
+	ignore = all
