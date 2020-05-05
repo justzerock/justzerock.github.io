@@ -1,14 +1,14 @@
 :root {
-  --button-width: 300px;
-  --button-height: 175px;
-  --toggle-diameter: 155px;
+  --button-width: 200px;
+  --button-height: 120px;
+  --toggle-diameter: 100px;
   --button-toggle-offset: calc((var(--button-height) - var(--toggle-diameter)) / 2);
   --button-toggle-translatex: calc(var(--button-width) - var(--toggle-diameter) - var(--button-toggle-offset)); 
   --button-toggle-translatex-wider: calc(var(--button-width) - var(--toggle-wider) - var(--button-toggle-offset)); 
   --shadow-offset-out: calc(var(--button-toggle-offset) / 4);
   --shadow-offset-inset: calc(var(--button-toggle-offset) / -4);
   --shadow-blur: calc(var(--button-toggle-offset) / 2);
-  --toggle-wider: 200px;
+  --toggle-wider: 125px;
   --color-light: #F3F3F3;
   --color-dark: #27292F;
   --color-primary: #74C2FC;
@@ -39,7 +39,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  height: 300px;
   background: var(--color-light);
 }
 
