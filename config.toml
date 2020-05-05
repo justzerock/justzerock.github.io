@@ -1,0 +1,34 @@
+baseURL = "https://blog.zerock.top/"
+languageCode = "en-us"
+title = "亦如年少"
+copyright = "刘亦岳"
+theme = "zdiary"
+
+[params]
+subtitle = "往者不可谏，来者犹可追"
+enableValine = true
+
+[params.valine]
+appId = "lUBXsWwG1SnROnGq9wwSqSin-9Nh9j0Va"
+appKey = "m74UnYUVQL6SbcpdG5mWlIbi"
+
+[taxonomies]
+   tag = "tags"
+   category = "categories"
+
+[[menu.main]]
+url = "/categories"
+name = "Categories"
+weight = 2
+[[menu.main]]
+url = "/tags"
+name = "Tags"
+weight = 3
+[[menu.main]]
+url = "/posts"
+name = "Archive"
+weight = 1
+[[menu.main]]
+url = "/index.xml"
+name = "RSS Feed"
+weight = 4
