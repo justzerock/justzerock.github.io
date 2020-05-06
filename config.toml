@@ -1,7 +1,7 @@
 baseURL = "https://blog.zerock.top/"
 languageCode = "en-us"
 title = "亦如年少"
-copyright = "刘亦岳"
+copyright = "LIUYIYUE"
 theme = "diary"
 
 [params]
@@ -25,7 +25,7 @@ url = "/tags"
 name = "Tags"
 weight = 3
 [[menu.main]]
-url = "/posts"
+url = "/post"
 name = "Archive"
 weight = 1
 [[menu.main]]
