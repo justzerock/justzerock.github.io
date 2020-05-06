@@ -6,11 +6,18 @@ theme = "diary"
 
 [params]
 subtitle = "往者不可谏，来者犹可追"
-enableValine = true
+# enableValine = true
+enableGitalk = true
 
-[params.valine]
-appId = "lUBXsWwG1SnROnGq9wwSqSin-9Nh9j0Va"
-appKey = "m74UnYUVQL6SbcpdG5mWlIbi"
+[params.gitalk]
+  owner = "justzerock"
+  repo = "justzerock.github.io"
+  client_id = "25e7db3a0f1b86299d43"
+  client_secret = "2d991aea52200b9c8adea0aed16193a8952a388c"
+
+# [params.valine]
+# appId = "lUBXsWwG1SnROnGq9wwSqSin-9Nh9j0Va"
+# appKey = "m74UnYUVQL6SbcpdG5mWlIbi"
 
 [taxonomies]
    tag = "tags"

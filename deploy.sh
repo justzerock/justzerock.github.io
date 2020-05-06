@@ -1,15 +1,22 @@
-#!/bin/sh
+#!/bin/bash
+# 判断public文件夹是否存在
+hugoPath=`pwd`
+publicPath=`pwd`"/public"
+if [ ! -d $publicPath ];then
+  echo public not exist
+  exit
+fi
 
-# If a command fails then the deploy stops
-set -e
+# 进入public文件夹，并清空之前生成文件
+cd $publicPath
+rm -r ./*
 
-printf "\033[0;32mDeploying updates to GitHub...\033[0m\n"
+# 回到根目录，并生成新的静态文件
+cd $hugoPath
+hugo
 
-# Build the project.
-hugo # if using a theme, replace with `hugo -t <YOURTHEME>`
-
-# Go To Public folder
-cd public
+# 回到public，并进行提交
+cd $publicPath
 
 # Add changes to git.
 git add .
