@@ -1,3 +1,3 @@
-[submodule "themes/zero-next"]
-	path = themes/zero-next
-	url = https://github.com/justzerock/hexo-theme-next.git
+[submodule "themes/journal"]
+	path = themes/journal
+	url = https://github.com/justzerock/hexo-theme-Journal.git
