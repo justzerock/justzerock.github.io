@@ -6,18 +6,19 @@ theme = "diary"
 
 [params]
 subtitle = "往者不可谏，来者犹可追"
-# enableValine = true
-enableGitalk = true
+favicon = "https://cdn.jsdelivr.net/gh/justzerock/assets@master/img/icon.png"
+enableValine = true
+# enableGitalk = true
 
-[params.gitalk]
-  owner = "justzerock"
-  repo = "justzerock.github.io"
-  client_id = "25e7db3a0f1b86299d43"
-  client_secret = "2d991aea52200b9c8adea0aed16193a8952a388c"
+# [params.gitalk]
+#   owner = "justzerock"
+#   repo = "justzerock.github.io"
+#   client_id = "25e7db3a0f1b86299d43"
+#   client_secret = "2d991aea52200b9c8adea0aed16193a8952a388c"
 
-# [params.valine]
-# appId = "lUBXsWwG1SnROnGq9wwSqSin-9Nh9j0Va"
-# appKey = "m74UnYUVQL6SbcpdG5mWlIbi"
+[params.valine]
+  appId = "lUBXsWwG1SnROnGq9wwSqSin-9Nh9j0Va"
+  appKey = "m74UnYUVQL6SbcpdG5mWlIbi"
 
 [taxonomies]
    tag = "tags"
@@ -25,17 +26,25 @@ enableGitalk = true
 
 [[menu.main]]
 url = "/categories"
-name = "Categories"
+name = "分类"
 weight = 2
 [[menu.main]]
 url = "/tags"
-name = "Tags"
+name = "标签"
 weight = 3
 [[menu.main]]
 url = "/post"
-name = "Archive"
+name = "归档"
 weight = 1
 [[menu.main]]
-url = "/index.xml"
-name = "RSS Feed"
+url = "/friends"
+name = "友链"
 weight = 4
+[[menu.main]]
+url = "/works"
+name = "作品"
+weight = 5
+[[menu.main]]
+url = "/index.xml"
+name = "RSS"
+weight = 9

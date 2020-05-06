@@ -1,5 +1,6 @@
 ---
 title: "Neumorphic 风格开关按钮"
+featured_image: https://cdn.jsdelivr.net/gh/justzerock/assets@master/img/image-20200506144155418.png
 date: 2020-05-06T00:57:23+08:00
 draft: false
 ---
