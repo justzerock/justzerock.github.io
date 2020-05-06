@@ -1,10 +1,7 @@
-[submodule "themes/diary"]
-	path = themes/diary
-	url = https://github.com/AmazingRise/hugo-theme-diary.git
 [submodule "public"]
 	path = public
 	url = https://github.com/justzerock/justzerock.github.io.git
 	branch = master
-[submodule "themes/zdiary"]
-	path = themes/zdiary
+[submodule "themes/diary"]
+	path = themes/diary
 	url = https://github.com/justzerock/hugo-theme-diary.git

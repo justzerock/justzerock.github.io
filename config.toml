@@ -2,7 +2,7 @@ baseURL = "https://blog.zerock.top/"
 languageCode = "en-us"
 title = "亦如年少"
 copyright = "刘亦岳"
-theme = "zdiary"
+theme = "diary"
 
 [params]
 subtitle = "往者不可谏，来者犹可追"
