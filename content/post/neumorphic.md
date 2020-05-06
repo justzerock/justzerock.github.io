@@ -35,8 +35,8 @@ draft: false
   /* 按钮偏移值 */
   --button-toggle-offset: calc((var(--button-height) - var(--toggle-diameter)) / 2);
   /* 横向变换值 */
-  --button-toggle-translatex: calc(var(--button-width) - var(--toggle-diameter) - var(--button-toggle-offset)); 
-  --button-toggle-translatex-wider: calc(var(--button-width) - var(--toggle-wider) - var(--button-toggle-offset)); 
+  --button-toggle-translatex: calc(var(--button-width) - var(--toggle-diameter) - var(--button-toggle-offset));
+  --button-toggle-translatex-wider: calc(var(--button-width) - var(--toggle-wider) - var(--button-toggle-offset));
   /* 阴影偏移量 */
   --shadow-offset-out: calc(var(--button-toggle-offset) / 4);
   --shadow-offset-inset: calc(var(--button-toggle-offset) / -4);
@@ -51,19 +51,19 @@ draft: false
   --shadow-dark-white: rgba(255, 255, 255, 0.15);
   --shadow-light-black: rgba(0, 0, 0, 0.08);
   --shadow-dark-black: rgba(0, 0, 0, 0.25);
-  --shadow-out-light: var(--shadow-offset-inset) var(--shadow-offset-inset) 
+  --shadow-out-light: var(--shadow-offset-inset) var(--shadow-offset-inset)
     var(--shadow-blur) var(--shadow-light-white),
     var(--shadow-offset-out) var(--shadow-offset-out)
     var(--shadow-blur) var(--shadow-light-black);
-  --shadow-out-dark: var(--shadow-offset-inset) var(--shadow-offset-inset) 
+  --shadow-out-dark: var(--shadow-offset-inset) var(--shadow-offset-inset)
     var(--shadow-blur) var(--shadow-dark-white),
     var(--shadow-offset-out) var(--shadow-offset-out)
     var(--shadow-blur) var(--shadow-dark-black);
-  --shadow-inset-light: inset var(--shadow-offset-inset) var(--shadow-offset-inset) 
+  --shadow-inset-light: inset var(--shadow-offset-inset) var(--shadow-offset-inset)
     var(--shadow-blur) var(--shadow-light-white),
     inset var(--shadow-offset-out) var(--shadow-offset-out)
     var(--shadow-blur) var(--shadow-light-black);
-  --shadow-inset-dark: inset var(--shadow-offset-inset) var(--shadow-offset-inset) 
+  --shadow-inset-dark: inset var(--shadow-offset-inset) var(--shadow-offset-inset)
     var(--shadow-blur) var(--shadow-dark-white),
     inset var(--shadow-offset-out) var(--shadow-offset-out)
     var(--shadow-blur) var(--shadow-dark-black);
