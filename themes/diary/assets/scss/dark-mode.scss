@@ -199,4 +199,17 @@ body.night {
   .vsys{
     background: none;
   }
+
+  .zero-works {
+    background: #495057;
+    img {
+      box-shadow: rgba(0,0,0,0.15);
+    }
+    .name {
+      color: #f8f9fa;
+    }
+    .desc {
+      color: rgb(171, 178, 191);
+    }
+  }
 }

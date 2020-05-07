@@ -16,4 +16,4 @@ tags:
 
 ### Web应用
 
-{{< works url="https://one.zerock.top" src="https://cdn.jsdelivr.net/gh/justzerock/assets@master/avatar.png" name="亦言" desc="使用 Vue.js 开发的 Web 应用" >}} 
+{{< works url="https://one.zerock.top" src="https://cdn.jsdelivr.net/gh/justzerock/assets@master/img/goku_logo.jpg" name="亦言" desc="使用 Vue.js 开发的 Web 应用" >}} 
