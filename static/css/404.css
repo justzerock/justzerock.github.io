@@ -1,0 +1,55 @@
+.block-404 {
+  width: 100%;
+  height: 200px;
+}
+.page-404 {
+  display: grid;
+  width: 300px;
+  height: 150px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas: "text text link link"
+    "text text link link";
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.08);
+  border-radius: 20px;
+  transition: all .25s ease-in-out;
+}
+
+.page-404:hover {
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
+}
+
+.page-404:active {
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.08);
+}
+
+.page-404 .text, .page-404 .link {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: xx-large;
+  font-weight: bolder;
+}
+
+.page-404 .text {
+  grid-area: text;
+  -webkit-user-select: none;
+}
+.page-404 .link {
+  grid-area: link;
+  text-decoration: none;
+  transition: all .25s ease-in-out;
+  border-radius: 20px;
+  background: rgb(69, 177, 255);
+  color: #fff;
+}
+.page-404 .link:hover {
+  background: rgb(40, 165, 255);
+}

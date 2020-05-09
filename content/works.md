@@ -14,6 +14,6 @@ tags:
 
 {{< works url="https://github.com/justzerock/mp-time-by-taro" src="https://cdn.jsdelivr.net/gh/justzerock/assets@master/img/20200506174620.jpg" name="亦时" desc="使用 Taro 框架遵循 React 语法规范开发的微信小程序" >}}
 
-### Web应用
+### PWA应用
 
-{{< works url="https://one.zerock.top" src="https://cdn.jsdelivr.net/gh/justzerock/assets@master/img/goku_logo.jpg" name="亦言" desc="使用 Vue.js 开发的 Web 应用" >}} 
+{{< works url="https://one.zerock.top" src="https://cdn.jsdelivr.net/gh/justzerock/assets@master/img/goku_logo.jpg" name="亦言" desc="使用 Vue.js 开发的 PWA 应用" >}} 

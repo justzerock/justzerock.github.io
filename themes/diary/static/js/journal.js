@@ -7,7 +7,8 @@ app = new Vue({
         navOpacity: 0,
         isDrawerOpen: false,
         mounted: false,
-        isDarkMode: false
+        isDarkMode: false,
+        isDarkAuto: true
     },
     methods: {
             sgn(t, x) {
@@ -50,13 +51,36 @@ app = new Vue({
                 document.getElementsByTagName('html')[0].style.overflow = this.isDrawerOpen ? 'hidden' : 'unset';
             },
             toggleDarkMode() {
-                this.isDarkMode = !this.isDarkMode;
-                if (this.isDarkMode==true){
-                    document.cookie = "night=1;path=/";
-                    document.body.classList.add("night");
+                this.isDarkMode = !this.isDarkMode
+                this.setDarkClass('manual', this.isDarkMode)
+            },
+            toggleDarkAuto() {
+                this.isDarkAuto = !this.isDarkAuto
+                this.setDarkClass('auto', this.isDarkAuto)
+            },
+            setDarkAuto(isDarkAuto) {
+                this.isDarkAuto = isDarkAuto
+                this.setDarkClass('auto', isDarkAuto)
+            },
+            setDarkMode(isDarkMode) {
+                this.isDarkMode = isDarkMode
+                this.setDarkClass('manual', isDarkMode)
+            },
+            setDarkClass(type, bool) {
+                let className1 = type == 'auto' ? 'auto' : 'night'
+                let className2 = type == 'auto' ? 'night' : 'auto'
+                let keyName = type == 'auto' ? 'isDarkAuto' : 'isDarkMode'
+                if (bool) {
+                    document.body.classList.add(className1)
+                    localStorage.setItem(keyName, true)
+                    if (type == 'auto') {
+                        document.body.classList.remove(className2)
+                        this.isDarkMode = false
+                        localStorage.setItem('isDarkMode', false)
+                    }
                 } else {
-                    document.cookie = "night=0;path=/";
-                    document.body.classList.remove("night");
+                    document.body.classList.remove(className1)
+                    localStorage.setItem(keyName, false)
                 }
             }
     },
@@ -70,9 +94,20 @@ app = new Vue({
             })(navigator.userAgent || navigator.vendor || window.opera);
             return check;
         };
+
+        if (localStorage.getItem('isDarkAuto')) {
+            let isDarkAuto = JSON.parse(localStorage.getItem('isDarkAuto'))
+            this.setDarkAuto(isDarkAuto)
+            if (!isDarkAuto) {
+                let isDarkMode = JSON.parse(localStorage.getItem('isDarkMode'))
+                this.setDarkMode(isDarkMode)
+            }
+        } else {
+            this.setDarkAuto(true)
+        }
         
         // From https://www.jdeal.cn/archives/Dark.html
-        var night = document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+        /* var night = document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1");
         if (night==""){
             if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
                 //this.toggleDarkMode();
@@ -82,7 +117,7 @@ app = new Vue({
             if (night=="1") {
                 this.toggleDarkMode();
             }
-        }
+        } */
         
     },
     mounted() {

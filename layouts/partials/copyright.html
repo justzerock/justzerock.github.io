@@ -1,0 +1,24 @@
+<!-- Please don't remove the information of theme makers. -->
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://amazingrise.net">Rise</a>
+<br>
+Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+<!-- Because this project is under MIT licence. -->
+&copy;
+	{{ if .Site.Copyright }}
+	{{ .Site.Copyright }}
+	{{ else }}
+	{{.Site.Home.Date.Year}} {{.Site.Title}}
+	{{ end }}
+<br>
+<span style="display: none; align-items: center;"><a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" ><img src="/img/upyun-logo.png" width="60" alt=""></a>提供CDN服务</span>
+<br>
+<a href="http://www.beian.miit.gov.cn">闽ICP备19023197号-1</a>
+<br>
+<label for="toggle" class="dark-switch">
+	<input type="checkbox" id="toggle" v-model="isDarkAuto" @click="toggleDarkAuto">
+	<div class="title">黑暗模式:</div>
+	<div class="name" v-if="isDarkAuto">自动</div>
+	<div class="name" v-else>手动</div>
+	<span class="switch"></span>
+</label>

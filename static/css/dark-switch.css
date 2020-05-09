@@ -1,0 +1,55 @@
+
+
+.dark-switch {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-top: 10px;
+  --transition: all .25s ease-in-out;
+}
+
+.dark-switch input[type="checkbox"] {
+  display: none;
+}
+
+.dark-switch .title, .dark-switch .name {
+  margin-right: 10px;
+}
+
+.dark-switch .switch {
+  display: inline-flex;
+  position: relative;
+  width: 40px;
+  height: 20px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.08);
+  transition: var(--transition);
+}
+
+.dark-switch .switch::before {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 8px;
+  top: 2px;
+  transform: translateX(2px);
+  background: rgba(0, 0, 0, 0.08);
+  transition: var(--transition);
+}
+
+.dark-switch input[type="checkbox"]:checked ~ span {
+  background: #6CC4FA;
+}
+.dark-switch input[type="checkbox"]:checked ~ span::before {
+  transform: translateX(22px);
+  background: #fff;
+}
+
+.dark-switch input[type="checkbox"]:active ~ span::before {
+  width: 20px;
+}
+.dark-switch input[type="checkbox"]:checked:active ~ span::before {
+  transform: translateX(18px);
+}

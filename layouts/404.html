@@ -1,8 +1,13 @@
 
-{{ define "main"}}
-<main id="main">
-  <div>
-   <h1 id="title"><a href="{{ "/" | relURL }}">Go Home</a></h1>
-  </div>
-</main>
+{{ define "main" }}
+
+<div ref="streamContainer" class="stream-container">
+    <div class="post-list-container post-list-container-no-background">
+      <div class="page-404">
+        <div class="text">404</div>
+        <a href="/" class="link">HOME</a>
+      </div>
+      <div class="block-404"></div>
+    </div>
+</div>
 {{ end }}

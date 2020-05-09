@@ -1,7 +1,7 @@
 baseURL = "https://blog.zerock.top/"
 languageCode = "en-us"
 title = "亦如年少"
-copyright = "LIUYIYUE"
+copyright = "2020 LIUYIYUE"
 theme = "diary"
 
 [params]

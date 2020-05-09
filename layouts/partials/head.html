@@ -23,6 +23,8 @@
 <script src="{{"/vendor/js/vue.min.js" | relURL}}" ></script>
 <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/iframe.css" />
 <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/works.css" />
+<link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/404.css" />
+<link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/dark-switch.css" />
 
 {{ if .Site.Params.favicon }}
 <link rel="icon" href="{{ .Site.Params.favicon }}">
@@ -37,9 +39,13 @@
 <link rel="stylesheet" href="{{ $darkmode.Permalink }}" integrity="{{ $darkmode.Data.Integrity }}" media="screen">
 {{ end }}
 
+{{ $darkauto := resources.Get "scss/dark-auto.scss" | toCSS | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $darkauto.Permalink }}" integrity="{{ $darkauto.Data.Integrity }}" media="screen">
+
+
 <script src="{{.Site.BaseURL}}/js/loadCSS.js"></script>
 <script>
-  loadCSS("https://fonts.googleapis.com/css?family=Lora|Montserrat|Fira+Mono|Noto+Serif+SC|Material+Icons");
+  loadCSS("https://fonts.loli.net/css?family=Lora|Montserrat|Fira+Mono|Noto+Serif+SC|Material+Icons");
 </script>
 
 <script src="{{.Site.BaseURL}}/js/table.js"></script>
