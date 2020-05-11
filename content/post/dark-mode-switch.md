@@ -10,3 +10,5 @@ tags:
 ---
 
 ### 测试部署
+
+push on hugo
