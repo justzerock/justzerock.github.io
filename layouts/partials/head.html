@@ -15,12 +15,12 @@
 {{ template "_internal/google_analytics.html" . }}
 {{ end }}
 
-<script src="{{"/vendor/js/jquery.min.js" | relURL}}" ></script>
-<script src="{{"/vendor/js/popper.min.js" | relURL}}" ></script>
-<script src="{{"/vendor/js/bootstrap.min.js" | relURL}}" ></script>
-<script src="{{"/vendor/js/smooth-scroll.polyfills.min.js" | relURL}}" ></script>
-<link type="text/css" rel="stylesheet" href="{{"/vendor/css/bootstrap.min.css" | relURL}}">
-<script src="{{"/vendor/js/vue.min.js" | relURL}}" ></script>
+<script src="{{ .Site.Params.jscdn }}vendor/js/jquery.min.js"></script>
+<script src="{{ .Site.Params.jscdn }}vendor/js/popper.min.js"></script>
+<script src="{{ .Site.Params.jscdn }}vendor/js/bootstrap.min.js"></script>
+<script src="{{ .Site.Params.jscdn }}vendor/js/smooth-scroll.polyfills.min.js"></script>
+<link type="text/css" rel="stylesheet" href="{{ .Site.Params.jscdn }}vendor/css/bootstrap.min.css" />
+<script src="{{ .Site.Params.jscdn }}vendor/js/vue.min.js" ></script>
 <link rel="stylesheet" type="text/css" href="{{ .Site.Params.jscdn }}css/iframe.css" />
 <link rel="stylesheet" type="text/css" href="{{ .Site.Params.jscdn }}css/works.css" />
 <link rel="stylesheet" type="text/css" href="{{ .Site.Params.jscdn }}css/404.css" />
