@@ -7,6 +7,7 @@ theme = "diary"
 [params]
 subtitle = "往者不可谏，来者犹可追"
 favicon = "https://cdn.jsdelivr.net/gh/justzerock/assets@master/img/icon.png"
+jscdn = "https://cdn.jsdelivr.net/gh/justzerock/justzerock.github.io@master/"
 enableValine = true
 # enableGitalk = true
 
