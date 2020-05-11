@@ -30,3 +30,11 @@ git commit -m "$msg"
 
 # Push source and build repos.
 git push origin master
+
+cd $hugoPath
+
+git add .
+
+git commit -m "update"
+
+git push origin hugo
