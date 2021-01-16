@@ -7,13 +7,13 @@ title: 亦如年少
 subtitle: '往者不可谏，来者犹可追'
 description: ''
 keywords:
-author: liu.zerock
+author: 礼右六
 language: zh-CN
 timezone: ''
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: https://blog.zerock.top
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -103,11 +103,29 @@ theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
-# deploy:
-#   type: git
-#   repo: git@aliyun:/home/git/repos/blog.git
-#   branch: master
 deploy:
   type: git
-  repo: https://github.com/justzerock/justzerock.github.io.git
+  repo: git@aliyun:/home/git/repos/blog.git
   branch: master
+# deploy:
+#   type: git
+#   repo: https://github.com/justzerock/justzerock.github.io.git
+#   branch: master
+
+# 初始化仓库
+
+## 使用
+## git clone --recursive https://github.com/justzerock/justzerock.github.io.git
+
+## 或者
+## git clone  https://github.com/justzerock/justzerock.github.io.git
+## git submodule init
+## git submodule update
+
+# 更新子模块
+
+## git submodule update --remote themes/next
+
+## 或者
+## git submodule update --remote themes/next
+
