@@ -1,0 +1,23 @@
+
+# html lang
+language: zh-CN
+
+url: https://github.com/justzerock/hexo-theme-zexo
+
+# main menu navigation
+menu:
+  Home: /
+  About: /about
+  Contact: /contact
+  Archives: /archives
+  Friends: /friends
+
+# stylesheets loaded in the <head>
+stylesheets:
+- /css/index.css
+- //at.alicdn.com/t/font_2332181_3dpntkdlh8c.css
+# icon love -> if i-love
+
+# scripts loaded in the end of the body
+scripts:
+- /js/hexo-theme-zexo.js
