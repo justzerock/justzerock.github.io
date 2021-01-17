@@ -1,6 +1,6 @@
 [submodule "themes/next"]
 	path = themes/next
 	url = https://github.com.cnpmjs.org/theme-next/hexo-theme-next.git
-[submodule "themes/zero"]
-	path = themes/zero
-	url = https://github.com.cnpmjs.org/justzerock/hexo-theme-zero.git
+[submodule "themes/zexo"]
+	path = themes/zexo
+	url = https://github.com.cnpmjs.org/justzerock/hexo-theme-zexo.git
