@@ -1,0 +1,27 @@
+.menu {
+  &__avatar {
+    display: flex
+    flex-direction: column
+    align-items: center
+    width: 100%
+    margin: 2em auto
+    &--img {
+      width: 6vw
+      height: 6vw
+      border-radius: 50%
+      border: 2px solid rgba(#fff, 0.6)
+      box-shadow: boxShadow(0.1vw, 'light-out')
+    }
+    &--title {
+      font-family: $title-font
+      color: rgba($color-blue-gray, 0.6)
+      font-size: 1.6vw
+      cursor: pointer
+      user-select: none
+      text-shadow: textShadow('light', 0.2vw, rgba(#E2EEF6, 0.8), rgba(#000, 0.5))
+    }
+    &--ru {
+      color: rgba($color-red, 0.5)
+    }
+  } 
+}

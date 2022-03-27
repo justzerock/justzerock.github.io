@@ -15,11 +15,26 @@ timezone: ''
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: https://blog.zerock.top
 root: /
-permalink: :year/:month/:day/:title/
+permalink: post-:abbrlink.html
 permalink_defaults:
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
   trailing_html: true # Set to false to remove trailing '.html' from permalinks
+
+# abbrlink config
+abbrlink:
+  alg: crc32      #support crc16(default) and crc32
+  rep: hex        #support dec(default) and hex
+  drafts: false   #(true)Process draft,(false)Do not process draft. false(default) 
+  # Generate categories from directory-tree
+  # depth: the max_depth of directory-tree you want to generate, should > 0
+  auto_category:
+     enable: true  #true(default)
+     depth:        #3(default)
+     over_write: false 
+  auto_title: false #enable auto title, it can auto fill the title by path
+  auto_date: false #enable auto date, it can auto fill the date by time today
+  force: false #enable force mode,in this mode, the plugin will ignore the cache, and calc the abbrlink for every post even it already had abbrlink.
 
 # Directory
 source_dir: source
@@ -45,12 +60,12 @@ post_asset_folder: false
 relative_link: false
 future: true
 highlight:
-  enable: true
+  enable: false
   line_number: true
   auto_detect: false
   tab_replace: ''
   wrap: true
-  hljs: false
+  hljs: true
 
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
@@ -77,7 +92,7 @@ meta_generator: true
 date_format: YYYY-MM-DD
 time_format: HH:mm:ss
 ## Use post's date for updated date unless set in front-matter
-use_date_for_updated: false
+updated_option: 'date'
 
 # Pagination
 ## Set per_page to 0 to disable pagination
@@ -100,6 +115,38 @@ search:
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 theme: zexo
+
+# config for aomori
+aomori_logo: https://cdn.jsdelivr.net/gh/justzerock/assets@master/img/icon.png
+aomori_logo_typed_animated: true
+aomori_menu:
+  Home: /
+  Archives: /archives
+aomori_widgets:
+  - toc # Article navigation
+  - category  # Article classification
+  - tag # Article tags
+  - recent_posts  # latest articles
+  - archive # Article Archive
+aomori_copyright: true # or false
+aomori_social:
+  -
+    icon: # Boxicons name
+    type: # Boxicons type
+    url: # Your social link
+aomori_baidu_sitepush: true  # or false
+aomori_google_site:
+  enable: true
+  id: XXX
+aomori_favicon: ☭
+algolia:
+    applicationID: '0XROMJY2CJ'
+    apiKey: '94d1f71bdaa07ae7daa0d44120463056'
+    indexName: 'zerock'
+aomori_search_algolia: false
+
+
+
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
