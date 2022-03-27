@@ -1,0 +1,399 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tag Plugins · 亦如年少</title>
+  <link rel="preconnect" href="https://gstatic.loli.net">
+  
+    
+    
+      <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.5.0/build/styles/nord.min.css">
+    
+      <link rel="stylesheet" href="//at.alicdn.com/t/font_2332181_28yeh7oxlz5.css">
+    
+      <link rel="stylesheet" href="//fonts.loli.net/css2?family=Fira+Code:wght@500&display=swap">
+    
+      <link rel="stylesheet" href="/css/index.css">
+    
+  
+  <script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+  
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+  
+</head>
+<body>
+
+<div class="menu">
+  <div class="menu__avatar">
+  <a class="menu__avatar--link" href="/">
+    <img class="menu__avatar--img"  src="https://cdn.jsdelivr.net/gh/justzerock/assets@master/img/icon.png"/>
+  </a>
+  <span class="menu__avatar--title">
+    亦<span class="menu__avatar--ru">如</span>年少
+  </span>
+</div>
+  
+  
+    <a href="/" key="Home" class="menu__item ">
+      <i class="menu__icon if i-Home"></i>
+      Home
+    </a>
+  
+    <a href="/archives" key="Archives" class="menu__item ">
+      <i class="menu__icon if i-Archives"></i>
+      Archives
+    </a>
+  
+    <a href="/about" key="About" class="menu__item ">
+      <i class="menu__icon if i-About"></i>
+      About
+    </a>
+  
+  <script>
+
+load_menu = function () {
+    document.querySelectorAll('.menu a.menu__item').forEach( el => {
+      el.addEventListener("click", it => {set_current(it)}, false)
+    })
+
+}
+
+set_current = function (it) {
+  document.querySelectorAll('.menu a.menu__item').forEach( item => {
+    item.className = 'menu__item'
+  })
+  //it.target.className = 'menu__item menu__item--current'
+  it.target.classList.add('menu__item--current')
+}
+
+document.addEventListener("DOMContentLoaded", (event) => {
+  load_menu()
+})
+
+//document.addEventListener('pjax:complete', function (){
+//  load_menu()
+//})
+
+</script>
+</div>
+
+<div class="content-main">
+  
+  
+  <div class="post">
+    <article id="post" class="post__article ">
+      
+      <h1 class="post__article--title">
+      
+        Tag Plugins
+      
+      </h1>
+      <div class='post__article--date'>
+        2013-12-25
+      </div>
+      <div class="post__article--content">
+      <p>This post is used for testing tag plugins. See <a target="_blank" rel="noopener" href="http://zespia.tw/hexo/docs/tag-plugins.html">docs</a> for more info.</p>
+<h2 id="Block-Quote"><a href="#Block-Quote" class="headerlink" title="Block Quote"></a>Block Quote</h2><h3 id="Normal-blockquote"><a href="#Normal-blockquote" class="headerlink" title="Normal blockquote"></a>Normal blockquote</h3><blockquote>
+<p>Praesent diam elit, interdum ut pulvinar placerat, imperdiet at magna.</p>
+</blockquote>
+<h3 id="Quote-from-a-book"><a href="#Quote-from-a-book" class="headerlink" title="Quote from a book"></a>Quote from a book</h3><blockquote><p>Do not just seek happiness for yourself. Seek happiness for all. Through kindness. Through mercy.</p>
+<footer><strong>David Levithan</strong><cite>Wide Awake</cite></footer></blockquote>
+
+<h3 id="Quote-from-Twitter"><a href="#Quote-from-Twitter" class="headerlink" title="Quote from Twitter"></a>Quote from Twitter</h3><blockquote><p>NEW: DevDocs now comes with syntax highlighting. <a target="_blank" rel="noopener" href="http://devdocs.io/">http://devdocs.io</a></p>
+<footer><strong>@DevDocs</strong><cite><a target="_blank" rel="noopener" href="https://twitter.com/devdocs/status/356095192085962752">twitter.com/devdocs/status/356095192085962752</a></cite></footer></blockquote>
+
+<h3 id="Quote-from-an-article-on-the-web"><a href="#Quote-from-an-article-on-the-web" class="headerlink" title="Quote from an article on the web"></a>Quote from an article on the web</h3><blockquote><p>Every interaction is both precious and an opportunity to delight.</p>
+<footer><strong>Seth Godin</strong><cite><a target="_blank" rel="noopener" href="http://sethgodin.typepad.com/seths_blog/2009/07/welcome-to-island-marketing.html">Welcome to Island Marketing</a></cite></footer></blockquote>
+
+<h2 id="Code-Block"><a href="#Code-Block" class="headerlink" title="Code Block"></a>Code Block</h2><h3 id="Normal-code-block"><a href="#Normal-code-block" class="headerlink" title="Normal code block"></a>Normal code block</h3><pre><code>alert(&#39;Hello World!&#39;);
+</code></pre>
+<h3 id="With-caption"><a href="#With-caption" class="headerlink" title="With caption"></a>With caption</h3><pre><code>array.map(callback[, thisArg])</code></pre>
+
+<h3 id="With-caption-and-URL"><a href="#With-caption-and-URL" class="headerlink" title="With caption and URL"></a>With caption and URL</h3><pre><code>.compact([0, 1, false, 2, ‘’, 3]);
+&#x3D;&gt; [1, 2, 3]</code></pre>
+
+<h3 id="With-marked-lines"><a href="#With-marked-lines" class="headerlink" title="With marked lines"></a>With marked lines</h3><p>Line 1,7-8,10 should be marked with different color.</p>
+<pre><code>const http &#x3D; require(&#39;http&#39;);
+
+const hostname &#x3D; &#39;127.0.0.1&#39;;
+const port &#x3D; 1337;
+
+http.createServer((req, res) &#x3D;&gt; {
+  res.writeHead(200, { &#39;Content-Type&#39;: &#39;text&#x2F;plain&#39; });
+  res.end(&#39;Hello World\n&#39;);
+}).listen(port, hostname, () &#x3D;&gt; {
+  console.log(&#96;Server running at http:&#x2F;&#x2F;${hostname}:${port}&#x2F;&#96;);
+});</code></pre>
+
+<p>Note: Theme’s style should support <code>.highlight.line.marked</code> (recommend to use the selection or current line color).</p>
+<h3 id="Gist"><a href="#Gist" class="headerlink" title="Gist"></a>Gist</h3><script src="//gist.github.com/996818.js"></script>
+
+<h3 id="jsFiddle"><a href="#jsFiddle" class="headerlink" title="jsFiddle"></a>jsFiddle</h3><iframe scrolling="no" width="100%" height="300" src="https://jsfiddle.net/ccWP7/embedded/js,resources,html,css,result/light" frameborder="0" loading="lazy" allowfullscreen></iframe>
+
+<h2 id="Pullquote"><a href="#Pullquote" class="headerlink" title="Pullquote"></a>Pullquote</h2><h3 id="Left"><a href="#Left" class="headerlink" title="Left"></a>Left</h3><blockquote class="pullquote left"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+</blockquote>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tempus molestie arcu, et fringilla mauris placerat ac. Nullam luctus bibendum risus. Ut cursus sed ipsum feugiat egestas. Suspendisse elementum, velit eu consequat consequat, augue lorem dapibus libero, eget pulvinar dolor est sit amet nulla. Suspendisse a porta tortor, et posuere mi. Pellentesque ultricies, mi quis volutpat malesuada, erat felis vulputate nisl, ac congue ante tortor ut ante. Proin aliquam sem vel mauris tincidunt, eget scelerisque tortor euismod. Nulla tincidunt enim nec commodo dictum. Mauris id sapien et orci gravida luctus id ut dui. In vel vulputate odio. Duis vel turpis molestie, scelerisque enim eu, lobortis eros. Cras at ipsum gravida, sagittis ante vel, viverra tellus. Nunc mauris turpis, elementum ullamcorper nisl pretium, ultrices cursus justo. Mauris porttitor commodo eros, ac ornare orci interdum in. Cras fermentum cursus leo sed mattis. In dignissim lorem sem, sit amet elementum mauris venenatis ac.</p>
+<h3 id="Right"><a href="#Right" class="headerlink" title="Right"></a>Right</h3><blockquote class="pullquote right"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+</blockquote>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ligula justo, lobortis sit amet semper vel, dignissim sit amet libero. Praesent ac tempus ligula. Maecenas at gravida odio. Etiam tristique volutpat lacus eu faucibus. Donec non tempus arcu. Phasellus adipiscing, mauris nec mollis egestas, ipsum nunc auctor velit, et rhoncus lorem ipsum at ante. Praesent et sem in velit volutpat auctor. Duis vel mauris nulla. Maecenas mattis interdum ante, quis sagittis nibh cursus et. Nulla facilisi. Morbi convallis gravida tortor, ut fermentum enim gravida et. Nunc vel dictum nisl, non ultrices libero. Proin vestibulum felis eget orci consectetur lobortis. Vestibulum augue nulla, iaculis vitae augue vehicula, dignissim ultrices libero. Sed imperdiet urna et quam ultrices tincidunt nec ac magna. Etiam vel pharetra elit.</p>
+
+      
+        <div  class='post__gallery--block'>
+        
+        </div>
+      
+      </div>
+      
+      
+    </article>
+    <div class="post__paginator">
+
+  <div class="post__prev">
+    <a class="post__prev--link" href="/post-2e066104.html">
+      <i class="post__prev--icon if i-arrow-left"></i>
+      <span class="post__prev--text">
+        
+          Videos
+        
+      </span>
+      <span class="post__prev--block"></span>
+    </a>
+  </div>
+
+
+  <div class="post__next">
+    <a class="post__next--link" href="/post-1f63b7d1.html">
+      <span class="post__next--block"></span>
+      <span class="post__next--text">
+        
+          www.google.com 
+        
+      </span>
+      <i class="post__next--icon if i-arrow-right"></i>
+    </a>
+  </div>
+
+</div>
+    
+<div class='vcomment-toggle' title='评论'><i class='if i-comment'></i></div>
+<div id="vcomment"></div>
+<script>
+
+  load_valine = function () {
+    let vcards = document.getElementsByClassName('vcards').length
+
+    if (!vcards) {
+      let emojiMaps = {
+        
+          'doge': 'bilibilitv/[tv_doge].png',
+        
+          '亲亲': 'bilibilitv/[tv_亲亲].png',
+        
+          '偷笑': 'bilibilitv/[tv_偷笑].png',
+        
+          '再见': 'bilibilitv/[tv_再见].png',
+        
+          '冷漠': 'bilibilitv/[tv_冷漠].png',
+        
+          '发怒': 'bilibilitv/[tv_发怒].png',
+        
+          '发财': 'bilibilitv/[tv_发财].png',
+        
+          '可爱': 'bilibilitv/[tv_可爱].png',
+        
+          '吐血': 'bilibilitv/[tv_吐血].png',
+        
+          '呆': 'bilibilitv/[tv_呆].png',
+        
+          '呕吐': 'bilibilitv/[tv_呕吐].png',
+        
+          '困': 'bilibilitv/[tv_困].png',
+        
+          '坏笑': 'bilibilitv/[tv_坏笑].png',
+        
+          '大佬': 'bilibilitv/[tv_大佬].png',
+        
+          '大哭': 'bilibilitv/[tv_大哭].png',
+        
+          '委屈': 'bilibilitv/[tv_委屈].png',
+        
+          '害羞': 'bilibilitv/[tv_害羞].png',
+        
+          '尴尬': 'bilibilitv/[tv_尴尬].png',
+        
+          '微笑': 'bilibilitv/[tv_微笑].png',
+        
+          '思考': 'bilibilitv/[tv_思考].png',
+        
+          '惊吓': 'bilibilitv/[tv_惊吓].png',
+        
+          '打脸': 'bilibilitv/[tv_打脸].png',
+        
+          '抓狂': 'bilibilitv/[tv_抓狂].png',
+        
+          '抠鼻': 'bilibilitv/[tv_抠鼻].png',
+        
+          '斜眼笑': 'bilibilitv/[tv_斜眼笑].png',
+        
+          '无奈': 'bilibilitv/[tv_无奈].png',
+        
+          '晕': 'bilibilitv/[tv_晕].png',
+        
+          '流汗': 'bilibilitv/[tv_流汗].png',
+        
+          '流泪': 'bilibilitv/[tv_流泪].png',
+        
+          '流鼻血': 'bilibilitv/[tv_流鼻血].png',
+        
+          '点赞': 'bilibilitv/[tv_点赞].png',
+        
+          '生气': 'bilibilitv/[tv_生气].png',
+        
+          '生病': 'bilibilitv/[tv_生病].png',
+        
+          '疑问': 'bilibilitv/[tv_疑问].png',
+        
+          '白眼': 'bilibilitv/[tv_白眼].png',
+        
+          '皱眉': 'bilibilitv/[tv_皱眉].png',
+        
+          '目瞪口呆': 'bilibilitv/[tv_目瞪口呆].png',
+        
+          '睡着': 'bilibilitv/[tv_睡着].png',
+        
+          '笑哭': 'bilibilitv/[tv_笑哭].png',
+        
+          '腼腆': 'bilibilitv/[tv_腼腆].png',
+        
+          '色': 'bilibilitv/[tv_色].png',
+        
+          '调侃': 'bilibilitv/[tv_调侃].png',
+        
+          '调皮': 'bilibilitv/[tv_调皮].png',
+        
+          '鄙视': 'bilibilitv/[tv_鄙视].png',
+        
+          '闭嘴': 'bilibilitv/[tv_闭嘴].png',
+        
+          '难过': 'bilibilitv/[tv_难过].png',
+        
+          '馋': 'bilibilitv/[tv_馋].png',
+        
+          '鬼脸': 'bilibilitv/[tv_鬼脸].png',
+        
+          '黑人问号': 'bilibilitv/[tv_黑人问号].png',
+        
+          '鼓掌': 'bilibilitv/[tv_鼓掌].png',
+        
+      }
+      new Valine({
+          el:'#vcomment',
+          appId: 'lUBXsWwG1SnROnGq9wwSqSin-9Nh9j0Va',
+          appKey: 'm74UnYUVQL6SbcpdG5mWlIbi',
+          avatar: 'robohash',
+          placeholder: '¯\_(ツ)_/¯ 我想说……',
+          // 这里设置CDN, 默认微博表情CDN
+          emojiCDN: 'https://cdn.jsdelivr.net/gh/GamerNoTitle/ValineCDN/', 
+          // 表情title和图片映射
+          emojiMaps: emojiMaps,
+          path: window.location.pathname
+      })
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", function(event) {
+    load_valine()
+  })
+
+  document.addEventListener('pjax:complete', function (){
+    load_valine()
+  })
+
+  document.getElementsByClassName('vcomment-toggle')[0].onclick = function () {
+    let vcomment = document.getElementById('vcomment')
+    if ( ('','0','0px').includes(vcomment.style.maxHeight) ) {
+      vcomment.style.maxHeight = '999px'
+      setTimeout(() => {  vcomment.style.maxHeight = 'max-content' }, 500);
+    } else {
+      vcomment.style.maxHeight = '0'
+    }
+  }
+</script>
+
+  </div>
+
+
+
+</div>
+
+<div class="sidebar">
+  
+  <div class="sidebar__toc" id="sidebar__toc"></div>
+  
+  
+</div>
+
+<div class="bottom">
+  
+    <a class="bottom--link" target="_blank" rel="noopener" href="https://beian.miit.gov.cn"> 闽ICP备19023197号-1</a>
+  
+  <span>
+    <a class="bottom--link" target="_blank" rel="noopener" href="https://github.com/justzerock/hexo-theme-zexo">Zexo</a>
+     Powered by 
+    <a class="bottom--link" target="_blank" rel="noopener" href="http://hexo.io">Hexo</a>
+  </span>
+</div>
+
+
+  
+  
+    <script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+  
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.5.0/build/highlight.min.js"></script>
+  
+    <script src="//cdn.jsdelivr.net/gh/RickStrahl/highlightjs-badge@master/highlightjs-badge.min.js"></script>
+  
+    <script src="//cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script>
+  
+    <script src="//cdn.jsdelivr.net/npm/tocbot@4.18.2/dist/tocbot.min.js"></script>
+  
+    <script src="//cdn.jsdelivr.net/npm/anchor-js@4.3.1/anchor.min.js"></script>
+  
+    <script src="/js/hexo-theme-zexo.js"></script>
+  
+    <script src="/js/heart-click.js"></script>
+  
+    <script src="/js/pjax.js"></script>
+  
+    <script src="/js/highlight.js"></script>
+  
+    <script src="/js/dynamicColor.js"></script>
+  
+    <script src="/js/tocbot.js"></script>
+  
+    <script src="/js/anchor.js"></script>
+  
+    <script src="/js/img-style.js"></script>
+  
+
+</body>
+</html>

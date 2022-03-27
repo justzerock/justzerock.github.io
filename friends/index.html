@@ -1,0 +1,162 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>friends · 亦如年少</title>
+  <link rel="preconnect" href="https://gstatic.loli.net">
+  
+    
+    
+      <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.5.0/build/styles/nord.min.css">
+    
+      <link rel="stylesheet" href="//at.alicdn.com/t/font_2332181_28yeh7oxlz5.css">
+    
+      <link rel="stylesheet" href="//fonts.loli.net/css2?family=Fira+Code:wght@500&display=swap">
+    
+      <link rel="stylesheet" href="/css/index.css">
+    
+  
+  <script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+  
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+  
+</head>
+<body>
+
+<div class="menu">
+  <div class="menu__avatar">
+  <a class="menu__avatar--link" href="/">
+    <img class="menu__avatar--img"  src="https://cdn.jsdelivr.net/gh/justzerock/assets@master/img/icon.png"/>
+  </a>
+  <span class="menu__avatar--title">
+    亦<span class="menu__avatar--ru">如</span>年少
+  </span>
+</div>
+  
+  
+    <a href="/" key="Home" class="menu__item ">
+      <i class="menu__icon if i-Home"></i>
+      Home
+    </a>
+  
+    <a href="/archives" key="Archives" class="menu__item ">
+      <i class="menu__icon if i-Archives"></i>
+      Archives
+    </a>
+  
+    <a href="/about" key="About" class="menu__item ">
+      <i class="menu__icon if i-About"></i>
+      About
+    </a>
+  
+  <script>
+
+load_menu = function () {
+    document.querySelectorAll('.menu a.menu__item').forEach( el => {
+      el.addEventListener("click", it => {set_current(it)}, false)
+    })
+
+}
+
+set_current = function (it) {
+  document.querySelectorAll('.menu a.menu__item').forEach( item => {
+    item.className = 'menu__item'
+  })
+  //it.target.className = 'menu__item menu__item--current'
+  it.target.classList.add('menu__item--current')
+}
+
+document.addEventListener("DOMContentLoaded", (event) => {
+  load_menu()
+})
+
+//document.addEventListener('pjax:complete', function (){
+//  load_menu()
+//})
+
+</script>
+</div>
+
+<div class="content-main">
+  
+  
+  <article id="page">
+    <h1>friends</h1>
+    
+  </article>
+
+    <div id="paginator" class="paginator">
+    
+  </div>
+
+</div>
+
+<div class="sidebar">
+  
+  <div class="sidebar__toc" id="sidebar__toc"></div>
+  
+  
+</div>
+
+<div class="bottom">
+  
+    <a class="bottom--link" target="_blank" rel="noopener" href="https://beian.miit.gov.cn"> 闽ICP备19023197号-1</a>
+  
+  <span>
+    <a class="bottom--link" target="_blank" rel="noopener" href="https://github.com/justzerock/hexo-theme-zexo">Zexo</a>
+     Powered by 
+    <a class="bottom--link" target="_blank" rel="noopener" href="http://hexo.io">Hexo</a>
+  </span>
+</div>
+
+
+  
+  
+    <script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+  
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.5.0/build/highlight.min.js"></script>
+  
+    <script src="//cdn.jsdelivr.net/gh/RickStrahl/highlightjs-badge@master/highlightjs-badge.min.js"></script>
+  
+    <script src="//cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script>
+  
+    <script src="//cdn.jsdelivr.net/npm/tocbot@4.18.2/dist/tocbot.min.js"></script>
+  
+    <script src="//cdn.jsdelivr.net/npm/anchor-js@4.3.1/anchor.min.js"></script>
+  
+    <script src="/js/hexo-theme-zexo.js"></script>
+  
+    <script src="/js/heart-click.js"></script>
+  
+    <script src="/js/pjax.js"></script>
+  
+    <script src="/js/highlight.js"></script>
+  
+    <script src="/js/dynamicColor.js"></script>
+  
+    <script src="/js/tocbot.js"></script>
+  
+    <script src="/js/anchor.js"></script>
+  
+    <script src="/js/img-style.js"></script>
+  
+
+</body>
+</html>
