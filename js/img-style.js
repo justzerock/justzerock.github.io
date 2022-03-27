@@ -15,11 +15,9 @@ load_style = function () {
         imgWrapBlock.setAttribute('class', 'post__img--block')
   
         el.setAttribute('class', 'post__img--img')
-        el.warp(imgWrapLink)
-        imgWrapLink.warp(imgWrapBlock)
-        //el.parentNode.replaceChild(imgWrapBlock, el)
-        //imgWrapBlock.appendChild(imgWrapLink)
-        //imgWrapLink.appendChild(el)
+        el.parentNode.replaceChild(imgWrapBlock, el)
+        imgWrapBlock.appendChild(imgWrapLink)
+        imgWrapLink.appendChild(el)
   
         let imgTitle = el.getAttribute('title') || el.getAttribute('alt')
         if (imgTitle) {

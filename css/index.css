@@ -449,7 +449,8 @@ body::-webkit-scrollbar-thumb {
   display: flex;
   flex-direction: column;
   width: calc(100% - 8vw);
-  padding: 4vw;
+  padding: 2vw 4vw;
+  margin: 2vw auto;
   background: #fcfbfb;
   box-shadow: 0 0 10px rgba(0,0,0,0.08);
   border-radius: 1vw;
@@ -598,10 +599,15 @@ body::-webkit-scrollbar-thumb {
   border-radius: 1vw 1vw 0.5vw 0.5vw;
   width: calc(100% - 6vw);
   line-height: 1.65em;
-  margin: 3vw auto 0;
-  padding: 3vw;
+  margin: 2vw auto 0;
+  padding: 2vw 3vw;
   background: #fcfbfb;
   box-shadow: 0 0 10px rgba(0,0,0,0.08);
+/* 代码高亮 */
+/*  按键 */
+/*  外链视频 */
+/* 表格 */
+/* 引用 */
 }
 .post__top-img {
   width: 100%;
@@ -621,6 +627,7 @@ body::-webkit-scrollbar-thumb {
 }
 .post__article--title {
   color: #304a62;
+  line-height: 1.5em;
 }
 .post__article--gallery {
   display: flex;
@@ -632,21 +639,6 @@ body::-webkit-scrollbar-thumb {
   object-fit: cover;
   height: 20vw;
   width: 28vw;
-}
-.post__article .video-container {
-  display: flex;
-  justify-content: center;
-}
-.post__article .video-container iframe {
-  width: 48vw;
-  height: 27vw;
-}
-.post__article kbd {
-  display: inline-flex;
-  padding: 0 0.5em;
-  border-radius: 0.25em;
-  margin: 0 0.25em;
-  box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
 }
 .post__gallery--block {
   display: flex;
@@ -675,64 +667,99 @@ body::-webkit-scrollbar-thumb {
   justify-content: center;
   margin-top: 0;
 }
-.post .line-numbers .line-numbers-rows {
-  border-right: none;
-}
-.post pre[class*=language-] {
-  border-radius: 0.5vw;
-  background: #edf3f9;
-  margin: 2vw auto;
-}
-.post pre[class*=language-]::-webkit-scrollbar {
-  background-color: #edf3f9;
--webkit-
-  border-radius: 0 0 0.5vw 0.5vw;
-  padding: 0 1vw;
-}
-.post pre[class*=language-]::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #e8f0f7, #b2cfe0);
-  border-radius: 0.5vw;
-}
-.post pre[class*=language-] code[class*="language-"] {
-  font-family: 'Fira Code';
-  background: none;
-}
-.post .highlight {
+.post .code-badge-pre {
   overflow: auto;
   margin: 3vw 0;
-  padding: 0 1em;
+  padding: 0;
   border-radius: 0.5vw;
-  background: #2d343f;
   position: relative;
 }
-.post .highlight::-webkit-scrollbar {
-  background-color: #2d343f;
-  border-radius: 0 0 0.5vw 0.5vw;
-}
-.post .highlight::-webkit-scrollbar-thumb {
-  background: rgba(255,255,255,0.2);
-  border-radius: 0.5vw;
-}
-.post .highlight table .gutter {
-  text-align: right;
-  font-family: 'fira code';
-  color: rgba(255,255,255,0.6);
-}
-.post .highlight table .code pre.code-badge-pre {
-  position: inherit;
-  margin: 1.5em 0 1em;
-}
-.post .highlight table .code pre.code-badge-pre .code-badge {
+.post .code-badge-pre .code-badge {
   background: rgba(255,255,255,0.1);
-  color: #31a7f2;
 }
-.post .highlight table .code pre.code-badge-pre .code-badge .code-badge-language {
-  color: #b48ead;
+.post .code-badge-pre .code-badge .code-badge-language {
   user-select: none;
 }
-.post .highlight table .code pre code.hljs {
-  font-family: 'fira code';
-  background: none;
+.post .code-badge-pre .hljs {
+  padding: 1em;
+  font-family: 'Menlo';
+}
+.post .code-badge-pre .hljs::-webkit-scrollbar {
+  width: 0.6vw;
+  height: 0.6vw;
+}
+.post .code-badge-pre .hljs::-webkit-scrollbar-thumb {
+  background: #cfd7e3;
+  border-radius: 0.25vw;
+}
+.post kbd {
+  display: inline-flex;
+  padding: 0 0.5em;
+  border-radius: 0.25em;
+  margin: 0 0.25em;
+  background: rgba(48,74,98,0.8);
+  color: #efefef;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}
+.post .video-container {
+  display: flex;
+  justify-content: center;
+}
+.post .video-container iframe {
+  width: 54vw;
+  height: 30.375vw;
+  border-radius: 0.5vw;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+.post table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+.post table * {
+  box-sizing: border-box;
+}
+.post table th,
+.post table td {
+  border: 1px solid rgba(44,52,65,0.322);
+  padding: 0.5em;
+}
+.post blockquote {
+  background: #efefef;
+  border-radius: 1vw;
+  margin: 0;
+  padding: 1em 2em 1em 3em;
+  position: relative;
+}
+.post blockquote::before {
+  content: '“';
+  position: absolute;
+  left: 0;
+  top: 1vw;
+  font-size: 5em;
+  color: rgba(66,165,245,0.5);
+}
+.post blockquote.pullquote.right {
+  text-align: right;
+  padding: 1em 3em 1em 2em;
+}
+.post blockquote.pullquote.right::before {
+  content: '”';
+  right: 0;
+}
+.post blockquote cite {
+  margin-left: 1em;
+  font-style: normal;
+  position: relative;
+}
+.post blockquote cite::before {
+  content: '';
+  position: absolute;
+  width: 95%;
+  height: 0.5em;
+  border-radius: 0.25em;
+  left: -0.25em;
+  bottom: -0.25em;
+  background: rgba(255,206,67,0.5);
 }
 .paginator {
   line-height: 2em;
