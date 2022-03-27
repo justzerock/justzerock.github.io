@@ -12,348 +12,76 @@
       </categories>
   </entry>
   <entry>
+    <title>Excerpts</title>
+    <url>/post-13f29456.html</url>
+    <content><![CDATA[<p>The following contents should be invisible in home/archive page.</p>
+<span id="more"></span>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eget urna vitae velit eleifend interdum at ac nisi. In nec ligula lacus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed eu cursus erat, ut dapibus quam. Aliquam eleifend dolor vitae libero pharetra adipiscing. Etiam adipiscing dolor a quam tempor, eu convallis nulla varius. Aliquam sollicitudin risus a porta aliquam. Ut nec velit dolor. Proin eget leo lobortis, aliquam est sed, mollis mauris. Fusce vitae leo pretium massa accumsan condimentum. Fusce malesuada gravida lectus vel vulputate. Donec bibendum porta nibh ut aliquam.</p>
+<p>Sed lorem felis, congue non fringilla eu, aliquam eu eros. Curabitur orci libero, mollis sed semper vitae, adipiscing in lectus. Aenean non egestas odio. Donec sollicitudin nisi quis lorem gravida, in pharetra mauris fringilla. Duis sit amet faucibus dolor, id aliquam neque. In egestas, odio gravida tempor dictum, mauris felis faucibus purus, sit amet commodo lacus diam vitae est. Ut ut quam eget massa semper sodales. Aenean non ipsum cursus, blandit lectus in, ornare odio. Curabitur ultrices porttitor vulputate.</p>
+]]></content>
+  </entry>
+  <entry>
     <title>Code Highlight Style test</title>
     <url>/post-9db656e5.html</url>
     <content><![CDATA[<p>Make sure all the code blocks highlighted correctly. All the code samples are come from the demo of <a href="https://highlightjs.org/">https://highlightjs.org</a></p>
 <span id="more"></span>
 
-<pre><code class="plain">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-</code></pre>
-<pre><code class="rust">#[derive(Debug)]
-pub enum State &#123;
-    Start,
-    Transient,
-    Closed,
-&#125;
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plain">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#x27;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.<br></code></pre></td></tr></table></figure>
 
-impl From&lt;&amp;&#39;a str&gt; for State &#123;
-    fn from(s: &amp;&#39;a str) -&gt; Self &#123;
-        match s &#123;
-            &quot;start&quot; =&gt; State::Start,
-            &quot;closed&quot; =&gt; State::Closed,
-            _ =&gt; unreachable!(),
-        &#125;
-    &#125;
-&#125;
-</code></pre>
-<pre><code class="json">[
-  &#123;
-    &quot;title&quot;: &quot;apples&quot;,
-    &quot;count&quot;: [12000, 20000],
-    &quot;description&quot;: &#123;&quot;text&quot;: &quot;...&quot;, &quot;sensitive&quot;: false&#125;
-  &#125;,
-  &#123;
-    &quot;title&quot;: &quot;oranges&quot;,
-    &quot;count&quot;: [17500, null],
-    &quot;description&quot;: &#123;&quot;text&quot;: &quot;...&quot;, &quot;sensitive&quot;: false&#125;
-  &#125;
-]
-</code></pre>
-<pre><code class="python">@requires_authorization
-def somefunc(param1=&#39;&#39;, param2=0):
-    r&#39;&#39;&#39;A docstring&#39;&#39;&#39;
-    if param1 &gt; param2: # interesting
-        print &#39;Gre\&#39;ater&#39;
-    return (param2 - param1 + 1 + 0b10l) or None
+<figure class="highlight rust"><table><tr><td class="code"><pre><code class="hljs rust"><span class="hljs-meta">#[derive(Debug)]</span><br><span class="hljs-keyword">pub</span> <span class="hljs-keyword">enum</span> <span class="hljs-title class_">State</span> &#123;<br>    Start,<br>    Transient,<br>    Closed,<br>&#125;<br><br><span class="hljs-keyword">impl</span> <span class="hljs-title class_">From</span>&lt;&amp;<span class="hljs-symbol">&#x27;a</span> <span class="hljs-type">str</span>&gt; <span class="hljs-keyword">for</span> <span class="hljs-title class_">State</span> &#123;<br>    <span class="hljs-keyword">fn</span> <span class="hljs-title function_">from</span>(s: &amp;<span class="hljs-symbol">&#x27;a</span> <span class="hljs-type">str</span>) <span class="hljs-punctuation">-&gt;</span> <span class="hljs-keyword">Self</span> &#123;<br>        <span class="hljs-keyword">match</span> s &#123;<br>            <span class="hljs-string">&quot;start&quot;</span> =&gt; State::Start,<br>            <span class="hljs-string">&quot;closed&quot;</span> =&gt; State::Closed,<br>            _ =&gt; <span class="hljs-built_in">unreachable!</span>(),<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 
-class SomeClass:
-    pass
+<figure class="highlight json"><table><tr><td class="code"><pre><code class="hljs json"><span class="hljs-punctuation">[</span><br>  <span class="hljs-punctuation">&#123;</span><br>    <span class="hljs-attr">&quot;title&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;apples&quot;</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-attr">&quot;count&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span><span class="hljs-number">12000</span><span class="hljs-punctuation">,</span> <span class="hljs-number">20000</span><span class="hljs-punctuation">]</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-attr">&quot;description&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span><span class="hljs-attr">&quot;text&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;...&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-attr">&quot;sensitive&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-keyword">false</span><span class="hljs-punctuation">&#125;</span><br>  <span class="hljs-punctuation">&#125;</span><span class="hljs-punctuation">,</span><br>  <span class="hljs-punctuation">&#123;</span><br>    <span class="hljs-attr">&quot;title&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;oranges&quot;</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-attr">&quot;count&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span><span class="hljs-number">17500</span><span class="hljs-punctuation">,</span> <span class="hljs-keyword">null</span><span class="hljs-punctuation">]</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-attr">&quot;description&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span><span class="hljs-attr">&quot;text&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;...&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-attr">&quot;sensitive&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-keyword">false</span><span class="hljs-punctuation">&#125;</span><br>  <span class="hljs-punctuation">&#125;</span><br><span class="hljs-punctuation">]</span><br></code></pre></td></tr></table></figure>
 
-&gt;&gt;&gt; message = &#39;&#39;&#39;interpreter
-... prompt&#39;&#39;&#39;
-</code></pre>
-<pre><code class="html">&lt;!DOCTYPE html&gt;
-&lt;title&gt;Title&lt;/title&gt;
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-meta">@requires_authorization</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">somefunc</span>(<span class="hljs-params">param1=<span class="hljs-string">&#x27;&#x27;</span>, param2=<span class="hljs-number">0</span></span>):<br>    <span class="hljs-string">r&#x27;&#x27;&#x27;A docstring&#x27;&#x27;&#x27;</span><br>    <span class="hljs-keyword">if</span> param1 &gt; param2: <span class="hljs-comment"># interesting</span><br>        <span class="hljs-built_in">print</span> <span class="hljs-string">&#x27;Gre\&#x27;ater&#x27;</span><br>    <span class="hljs-keyword">return</span> (param2 - param1 + <span class="hljs-number">1</span> + <span class="hljs-number">0b10l</span>) <span class="hljs-keyword">or</span> <span class="hljs-literal">None</span><br><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">SomeClass</span>:<br>    <span class="hljs-keyword">pass</span><br><br><span class="hljs-meta">&gt;&gt;&gt; </span>message = <span class="hljs-string">&#x27;&#x27;&#x27;interpreter</span><br><span class="hljs-string"><span class="hljs-meta">... </span>prompt&#x27;&#x27;&#x27;</span><br></code></pre></td></tr></table></figure>
 
-&lt;style&gt;body &#123;width: 500px;&#125;&lt;/style&gt;
+<figure class="highlight html"><table><tr><td class="code"><pre><code class="hljs html"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-keyword">html</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Title<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span><br><br><span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="language-css"><span class="hljs-selector-tag">body</span> &#123;<span class="hljs-attribute">width</span>: <span class="hljs-number">500px</span>;&#125;</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span><br><br><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;application/javascript&quot;</span>&gt;</span><span class="language-javascript"></span><br><span class="language-javascript">  <span class="hljs-keyword">function</span> <span class="hljs-title function_">$init</span>(<span class="hljs-params"></span>) &#123;<span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;&#125;</span><br><span class="language-javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br><br><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">checked</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;title&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&#x27;title&#x27;</span>&gt;</span>Title<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><br>  <span class="hljs-comment">&lt;!-- here goes the rest of the page --&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span><br></code></pre></td></tr></table></figure>
 
-&lt;script type=&quot;application/javascript&quot;&gt;
-  function $init() &#123;return true;&#125;
-&lt;/script&gt;
+<figure class="highlight javascript"><table><tr><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">$initHighlight</span>(<span class="hljs-params">block, cls</span>) &#123;<br>  <span class="hljs-keyword">try</span> &#123;<br>    <span class="hljs-keyword">if</span> (cls.<span class="hljs-title function_">search</span>(<span class="hljs-regexp">/\bno\-highlight\b/</span>) != -<span class="hljs-number">1</span>)<br>      <span class="hljs-keyword">return</span> <span class="hljs-title function_">process</span>(block, <span class="hljs-literal">true</span>, <span class="hljs-number">0x0F</span>) +<br>             <span class="hljs-string">` class=&quot;<span class="hljs-subst">$&#123;cls&#125;</span>&quot;`</span>;<br>  &#125; <span class="hljs-keyword">catch</span> (e) &#123;<br>    <span class="hljs-comment">/* handle exception */</span><br>  &#125;<br>  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span> / <span class="hljs-number">2</span>; i &lt; classes.<span class="hljs-property">length</span>; i++) &#123;<br>    <span class="hljs-keyword">if</span> (<span class="hljs-title function_">checkCondition</span>(classes[i]) === <span class="hljs-literal">undefined</span>)<br>      <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&#x27;undefined&#x27;</span>);<br>  &#125;<br><br>  <span class="hljs-keyword">return</span> (<br>    <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span></span><br><span class="language-xml">      <span class="hljs-tag">&lt;<span class="hljs-name">web-component</span>&gt;</span>&#123;block&#125;<span class="hljs-tag">&lt;/<span class="hljs-name">web-component</span>&gt;</span></span><br><span class="language-xml">    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br>  )<br>&#125;<br><br><span class="hljs-keyword">export</span> $initHighlight;<br></code></pre></td></tr></table></figure>
 
-&lt;body&gt;
-  &lt;p checked class=&quot;title&quot; id=&#39;title&#39;&gt;Title&lt;/p&gt;
-  &lt;!-- here goes the rest of the page --&gt;
-&lt;/body&gt;
-</code></pre>
-<pre><code class="javascript">function $initHighlight(block, cls) &#123;
-  try &#123;
-    if (cls.search(/\bno\-highlight\b/) != -1)
-      return process(block, true, 0x0F) +
-             ` class=&quot;$&#123;cls&#125;&quot;`;
-  &#125; catch (e) &#123;
-    /* handle exception */
-  &#125;
-  for (var i = 0 / 2; i &lt; classes.length; i++) &#123;
-    if (checkCondition(classes[i]) === undefined)
-      console.log(&#39;undefined&#39;);
-  &#125;
+<figure class="highlight cpp"><table><tr><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;iostream&gt;</span></span><br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-type">int</span> argc, <span class="hljs-type">char</span> *argv[])</span> </span>&#123;<br><br>  <span class="hljs-comment">/* An annoying &quot;Hello World&quot; example */</span><br>  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">auto</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">0xFFFF</span>; i++)<br>    cout &lt;&lt; <span class="hljs-string">&quot;Hello, World!&quot;</span> &lt;&lt; endl;<br><br>  <span class="hljs-type">char</span> c = <span class="hljs-string">&#x27;\n&#x27;</span>;<br>  unordered_map &lt;string, vector&lt;string&gt; &gt; m;<br>  m[<span class="hljs-string">&quot;key&quot;</span>] = <span class="hljs-string">&quot;\\\\&quot;</span>; <span class="hljs-comment">// this is an error</span><br><br>  <span class="hljs-keyword">return</span> <span class="hljs-number">-2e3</span> + <span class="hljs-number">12l</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
 
-  return (
-    &lt;div&gt;
-      &lt;web-component&gt;&#123;block&#125;&lt;/web-component&gt;
-    &lt;/div&gt;
-  )
-&#125;
+<figure class="highlight sql"><table><tr><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> &quot;topic&quot; (<br>    &quot;id&quot; serial <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">NULL</span> <span class="hljs-keyword">PRIMARY</span> KEY,<br>    &quot;forum_id&quot; <span class="hljs-type">integer</span> <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">NULL</span>,<br>    &quot;subject&quot; <span class="hljs-type">varchar</span>(<span class="hljs-number">255</span>) <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">NULL</span><br>);<br><span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">TABLE</span> &quot;topic&quot;<br><span class="hljs-keyword">ADD</span> <span class="hljs-keyword">CONSTRAINT</span> forum_id <span class="hljs-keyword">FOREIGN</span> KEY (&quot;forum_id&quot;)<br><span class="hljs-keyword">REFERENCES</span> &quot;forum&quot; (&quot;id&quot;);<br><br><span class="hljs-comment">-- Initials</span><br><span class="hljs-keyword">insert</span> <span class="hljs-keyword">into</span> &quot;topic&quot; (&quot;forum_id&quot;, &quot;subject&quot;)<br><span class="hljs-keyword">values</span> (<span class="hljs-number">2</span>, <span class="hljs-string">&#x27;D&#x27;&#x27;artagnian&#x27;</span>);<br></code></pre></td></tr></table></figure>
 
-export $initHighlight;
-</code></pre>
-<pre><code class="cpp">#include &lt;iostream&gt;
+<figure class="highlight objectivec"><table><tr><td class="code"><pre><code class="hljs objectivec"><span class="hljs-meta">#import <span class="hljs-string">&lt;UIKit/UIKit.h&gt;</span></span><br><span class="hljs-meta">#import <span class="hljs-string">&quot;Dependency.h&quot;</span></span><br><br><span class="hljs-class"><span class="hljs-keyword">@protocol</span> <span class="hljs-title">WorldDataSource</span></span><br><span class="hljs-keyword">@optional</span><br>- (<span class="hljs-built_in">NSString</span>*)worldName;<br><span class="hljs-keyword">@required</span><br>- (<span class="hljs-built_in">BOOL</span>)allowsToLive;<br><span class="hljs-keyword">@end</span><br><br><span class="hljs-keyword">@property</span> (<span class="hljs-keyword">nonatomic</span>, <span class="hljs-keyword">readonly</span>) <span class="hljs-built_in">NSString</span> *title;<br>- (<span class="hljs-keyword">IBAction</span>) show;<br><span class="hljs-keyword">@end</span><br></code></pre></td></tr></table></figure>
 
-int main(int argc, char *argv[]) &#123;
+<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@author</span> John Smith &lt;john.smith@example.com&gt;</span><br><span class="hljs-comment">*/</span><br><span class="hljs-keyword">package</span> l2f.gameserver.model;<br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">L2Char</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_">L2Object</span> &#123;<br>  <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-type">Short</span> <span class="hljs-variable">ERROR</span> <span class="hljs-operator">=</span> <span class="hljs-number">0x0001</span>;<br><br>  <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">moveTo</span><span class="hljs-params">(<span class="hljs-type">int</span> x, <span class="hljs-type">int</span> y, <span class="hljs-type">int</span> z)</span> &#123;<br>    _ai = <span class="hljs-literal">null</span>;<br>    log(<span class="hljs-string">&quot;Should not be called&quot;</span>);<br>    <span class="hljs-keyword">if</span> (<span class="hljs-number">1</span> &gt; <span class="hljs-number">5</span>) &#123; <span class="hljs-comment">// wtf!?</span><br>      <span class="hljs-keyword">return</span>;<br>    &#125;<br>  &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 
-  /* An annoying &quot;Hello World&quot; example */
-  for (auto i = 0; i &lt; 0xFFFF; i++)
-    cout &lt;&lt; &quot;Hello, World!&quot; &lt;&lt; endl;
+<figure class="highlight swift"><table><tr><td class="code"><pre><code class="hljs swift"><span class="hljs-keyword">import</span> Foundation<br><br><span class="hljs-keyword">@objc</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Person</span>: <span class="hljs-title class_">Entity</span> &#123;<br>  <span class="hljs-keyword">var</span> name: <span class="hljs-type">String</span>!<br>  <span class="hljs-keyword">var</span> age:  <span class="hljs-type">Int</span>!<br><br>  <span class="hljs-keyword">init</span>(<span class="hljs-params">name</span>: <span class="hljs-type">String</span>, <span class="hljs-params">age</span>: <span class="hljs-type">Int</span>) &#123;<br>    <span class="hljs-comment">/* <span class="hljs-comment">/* ... */</span> */</span><br>  &#125;<br><br>  <span class="hljs-comment">// Return a descriptive string for this person</span><br>  <span class="hljs-keyword">func</span> <span class="hljs-title function_">description</span>(<span class="hljs-params">offset</span>: <span class="hljs-type">Int</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>) -&gt; <span class="hljs-type">String</span> &#123;<br>    <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;<span class="hljs-subst">\(name)</span> is <span class="hljs-subst">\(age <span class="hljs-operator">+</span> offset)</span> years old&quot;</span><br>  &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 
-  char c = &#39;\n&#39;;
-  unordered_map &lt;string, vector&lt;string&gt; &gt; m;
-  m[&quot;key&quot;] = &quot;\\\\&quot;; // this is an error
+<figure class="highlight css"><table><tr><td class="code"><pre><code class="hljs css"><span class="hljs-selector-class">.example-gradient</span> &#123;<br>	<span class="hljs-attribute">background</span>: <span class="hljs-built_in">-webkit-linear-gradient</span>(left,     <span class="hljs-number">#cb60b3</span> <span class="hljs-number">0%</span>, <span class="hljs-number">#c146a1</span> <span class="hljs-number">50%</span>, <span class="hljs-number">#a80077</span> <span class="hljs-number">51%</span>, <span class="hljs-number">#db36a4</span> <span class="hljs-number">100%</span>); <span class="hljs-comment">/* Chrome10+, Safari5.1+ */</span><br>	<span class="hljs-attribute">background</span>:    <span class="hljs-built_in">-moz-linear-gradient</span>(left,     <span class="hljs-number">#cb60b3</span> <span class="hljs-number">0%</span>, <span class="hljs-number">#c146a1</span> <span class="hljs-number">50%</span>, <span class="hljs-number">#a80077</span> <span class="hljs-number">51%</span>, <span class="hljs-number">#db36a4</span> <span class="hljs-number">100%</span>); <span class="hljs-comment">/* FF3.6+ */</span><br>	<span class="hljs-attribute">background</span>:     <span class="hljs-built_in">-ms-linear-gradient</span>(left,     <span class="hljs-number">#cb60b3</span> <span class="hljs-number">0%</span>, <span class="hljs-number">#c146a1</span> <span class="hljs-number">50%</span>, <span class="hljs-number">#a80077</span> <span class="hljs-number">51%</span>, <span class="hljs-number">#db36a4</span> <span class="hljs-number">100%</span>); <span class="hljs-comment">/* IE10+ */</span><br>	<span class="hljs-attribute">background</span>:      <span class="hljs-built_in">-o-linear-gradient</span>(left,     <span class="hljs-number">#cb60b3</span> <span class="hljs-number">0%</span>, <span class="hljs-number">#c146a1</span> <span class="hljs-number">50%</span>, <span class="hljs-number">#a80077</span> <span class="hljs-number">51%</span>, <span class="hljs-number">#db36a4</span> <span class="hljs-number">100%</span>); <span class="hljs-comment">/* Opera 11.10+ */</span><br>	<span class="hljs-attribute">background</span>:         <span class="hljs-built_in">linear-gradient</span>(to right, <span class="hljs-number">#cb60b3</span> <span class="hljs-number">0%</span>, <span class="hljs-number">#c146a1</span> <span class="hljs-number">50%</span>, <span class="hljs-number">#a80077</span> <span class="hljs-number">51%</span>, <span class="hljs-number">#db36a4</span> <span class="hljs-number">100%</span>); <span class="hljs-comment">/* W3C */</span><br>&#125;<br><span class="hljs-selector-class">.example-angle</span> &#123;<br>	<span class="hljs-attribute">transform</span>: <span class="hljs-built_in">rotate</span>(<span class="hljs-number">10deg</span>);<br>&#125;<br><span class="hljs-selector-class">.example-color</span> &#123;<br>	<span class="hljs-attribute">color</span>: <span class="hljs-built_in">rgba</span>(<span class="hljs-number">255</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0.2</span>);<br>	<span class="hljs-attribute">background</span>: purple;<br>	<span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-built_in">hsl</span>(<span class="hljs-number">100</span>, <span class="hljs-number">70%</span>, <span class="hljs-number">40%</span>);<br>&#125;<br><span class="hljs-selector-class">.example-easing</span> &#123;<br>	<span class="hljs-attribute">transition-timing-function</span>: linear;<br>&#125;<br><span class="hljs-selector-class">.example-time</span> &#123;<br>	<span class="hljs-attribute">transition-duration</span>: <span class="hljs-number">3s</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
 
-  return -2e3 + 12l;
-&#125;
-</code></pre>
-<pre><code class="sql">CREATE TABLE &quot;topic&quot; (
-    &quot;id&quot; serial NOT NULL PRIMARY KEY,
-    &quot;forum_id&quot; integer NOT NULL,
-    &quot;subject&quot; varchar(255) NOT NULL
-);
-ALTER TABLE &quot;topic&quot;
-ADD CONSTRAINT forum_id FOREIGN KEY (&quot;forum_id&quot;)
-REFERENCES &quot;forum&quot; (&quot;id&quot;);
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs markup">&lt;table bgcolor=&quot;#6E5494&quot;&gt;<br>&lt;tr style=&quot;background: lightblue;&quot;&gt;<br></code></pre></td></tr></table></figure>
 
--- Initials
-insert into &quot;topic&quot; (&quot;forum_id&quot;, &quot;subject&quot;)
-values (2, &#39;D&#39;&#39;artagnian&#39;);
-</code></pre>
-<pre><code class="objectivec">#import &lt;UIKit/UIKit.h&gt;
-#import &quot;Dependency.h&quot;
+<figure class="highlight less"><table><tr><td class="code"><pre><code class="hljs less"><span class="hljs-variable">@gradient:</span> linear-gradient(<span class="hljs-number">135deg</span>, <span class="hljs-number">#9dd53a</span> <span class="hljs-number">0%</span>, <span class="hljs-number">#a1d54f</span> <span class="hljs-number">50%</span>, <span class="hljs-number">#80c217</span> <span class="hljs-number">51%</span>, <span class="hljs-number">#7cbc0a</span> <span class="hljs-number">100%</span>);<br><span class="hljs-selector-class">.example-gradient</span> &#123;<br>	<span class="hljs-attribute">background</span>: -webkit-linear-gradient(-<span class="hljs-number">45deg</span>, <span class="hljs-number">#9dd53a</span> <span class="hljs-number">0%</span>, <span class="hljs-number">#a1d54f</span> <span class="hljs-number">50%</span>, <span class="hljs-number">#80c217</span> <span class="hljs-number">51%</span>, <span class="hljs-number">#7cbc0a</span> <span class="hljs-number">100%</span>); <span class="hljs-comment">/* Chrome10+, Safari5.1+ */</span><br>	<span class="hljs-attribute">background</span>:    -moz-linear-gradient(-<span class="hljs-number">45deg</span>, <span class="hljs-number">#9dd53a</span> <span class="hljs-number">0%</span>, <span class="hljs-number">#a1d54f</span> <span class="hljs-number">50%</span>, <span class="hljs-number">#80c217</span> <span class="hljs-number">51%</span>, <span class="hljs-number">#7cbc0a</span> <span class="hljs-number">100%</span>); <span class="hljs-comment">/* FF3.6+ */</span><br>	<span class="hljs-attribute">background</span>:     -ms-linear-gradient(-<span class="hljs-number">45deg</span>, <span class="hljs-number">#9dd53a</span> <span class="hljs-number">0%</span>, <span class="hljs-number">#a1d54f</span> <span class="hljs-number">50%</span>, <span class="hljs-number">#80c217</span> <span class="hljs-number">51%</span>, <span class="hljs-number">#7cbc0a</span> <span class="hljs-number">100%</span>); <span class="hljs-comment">/* IE10+ */</span><br>	<span class="hljs-attribute">background</span>:      -o-linear-gradient(-<span class="hljs-number">45deg</span>, <span class="hljs-number">#9dd53a</span> <span class="hljs-number">0%</span>, <span class="hljs-number">#a1d54f</span> <span class="hljs-number">50%</span>, <span class="hljs-number">#80c217</span> <span class="hljs-number">51%</span>, <span class="hljs-number">#7cbc0a</span> <span class="hljs-number">100%</span>); <span class="hljs-comment">/* Opera 11.10+ */</span><br>	<span class="hljs-attribute">background</span>:         linear-gradient(<span class="hljs-number">135deg</span>, <span class="hljs-number">#9dd53a</span> <span class="hljs-number">0%</span>, <span class="hljs-number">#a1d54f</span> <span class="hljs-number">50%</span>, <span class="hljs-number">#80c217</span> <span class="hljs-number">51%</span>, <span class="hljs-number">#7cbc0a</span> <span class="hljs-number">100%</span>); <span class="hljs-comment">/* W3C */</span><br>&#125;<br><span class="hljs-variable">@angle:</span> <span class="hljs-number">3rad</span>;<br><span class="hljs-selector-class">.example-angle</span> &#123;<br>	<span class="hljs-attribute">transform</span>: rotate(.<span class="hljs-number">4turn</span>)<br>&#125;<br><span class="hljs-variable">@nice-blue:</span> <span class="hljs-number">#5B83AD</span>;<br><span class="hljs-selector-class">.example-color</span> &#123;<br>	<span class="hljs-attribute">color</span>: hsla(<span class="hljs-number">102</span>, <span class="hljs-number">53%</span>, <span class="hljs-number">42%</span>, <span class="hljs-number">0.4</span>);<br>&#125;<br><span class="hljs-variable">@easing:</span> cubic-bezier(<span class="hljs-number">0.1</span>, <span class="hljs-number">0.3</span>, <span class="hljs-number">1</span>, .<span class="hljs-number">4</span>);<br><span class="hljs-selector-class">.example-easing</span> &#123;<br>	<span class="hljs-attribute">transition-timing-function</span>: ease;<br>&#125;<br><span class="hljs-variable">@time:</span> <span class="hljs-number">1s</span>;<br><span class="hljs-selector-class">.example-time</span> &#123;<br>	<span class="hljs-attribute">transition-duration</span>: <span class="hljs-number">2s</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
 
-@protocol WorldDataSource
-@optional
-- (NSString*)worldName;
-@required
-- (BOOL)allowsToLive;
-@end
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs sass">$gradient: linear-gradient(135deg, #9dd53a 0%, #a1d54f 50%, #80c217 51%, #7cbc0a 100%)<br>@mixin example-gradient<br>	background: -moz-radial-gradient(center, ellipse cover, #f2f6f8 0%, #d8e1e7 50%, #b5c6d0 51%, #e0eff9 100%)<br>	background: radial-gradient(ellipse at center, #f2f6f8 0%, #d8e1e7 50%, #b5c6d0 51%, #e0eff9 100%)<br>$angle: 380grad<br>@mixin example-angle<br>	transform: rotate(-120deg)<br>.example-angle<br>	transform: rotate(18rad)<br>$color: blue<br>@mixin example-color<br>	color: rgba(147, 32, 34, 0.8)<br>.example-color<br>	color: pink<br>$easing: ease-out<br>.example-easing<br>	transition-timing-function: ease-in-out<br>$time: 3s<br>@mixin example-time<br>	transition-duration: 800ms<br>.example-time<br>	transition-duration: 0.8s<br></code></pre></td></tr></table></figure>
 
-@property (nonatomic, readonly) NSString *title;
-- (IBAction) show;
-@end
-</code></pre>
-<pre><code class="java">/**
- * @author John Smith &lt;john.smith@example.com&gt;
-*/
-package l2f.gameserver.model;
+<figure class="highlight scss"><table><tr><td class="code"><pre><code class="hljs scss"><span class="hljs-variable">$gradient</span>: linear-gradient(<span class="hljs-number">135deg</span>, <span class="hljs-number">#9dd53a</span> <span class="hljs-number">0%</span>, <span class="hljs-number">#a1d54f</span> <span class="hljs-number">50%</span>, <span class="hljs-number">#80c217</span> <span class="hljs-number">51%</span>, <span class="hljs-number">#7cbc0a</span> <span class="hljs-number">100%</span>);<br><span class="hljs-variable">$attr</span>: background;<br><span class="hljs-selector-class">.example-gradient</span> &#123;<br>	#&#123;<span class="hljs-variable">$attr</span>&#125;-image: repeating-linear-gradient(<span class="hljs-number">10deg</span>, rgba(<span class="hljs-number">255</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>), rgba(<span class="hljs-number">255</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>) <span class="hljs-number">10px</span>, rgba(<span class="hljs-number">255</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>) <span class="hljs-number">20px</span>);<br>&#125;<br><span class="hljs-variable">$angle</span>: <span class="hljs-number">1.8turn</span>;<br><span class="hljs-selector-class">.example-angle</span> &#123;<br>	<span class="hljs-attribute">transform</span>: rotate(-<span class="hljs-number">3rad</span>)<br>&#125;<br><span class="hljs-variable">$color</span>: blue;<br><span class="hljs-selector-class">.example-color</span> &#123;<br>	#&#123;<span class="hljs-variable">$attr</span>&#125;-<span class="hljs-attribute">color</span>: rgba(<span class="hljs-number">255</span>, <span class="hljs-number">255</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0.75</span>);<br>&#125;<br><span class="hljs-variable">$easing</span>: linear;<br><span class="hljs-selector-class">.example-easing</span> &#123;<br>	<span class="hljs-attribute">transition-timing-function</span>: cubic-bezier(<span class="hljs-number">0.9</span>, <span class="hljs-number">0.1</span>, .<span class="hljs-number">2</span>, .<span class="hljs-number">4</span>);<br>&#125;<br><span class="hljs-variable">$time</span>: <span class="hljs-number">1s</span>;<br><span class="hljs-selector-class">.example-time</span> &#123;<br>	<span class="hljs-attribute">transition-duration</span>: <span class="hljs-number">10s</span><br>&#125;<br></code></pre></td></tr></table></figure>
 
-public abstract class L2Char extends L2Object &#123;
-  public static final Short ERROR = 0x0001;
+<figure class="highlight stylus"><table><tr><td class="code"><pre><code class="hljs stylus">gradient = <span class="hljs-built_in">linear-gradient</span>(<span class="hljs-number">135deg</span>, <span class="hljs-number">#9dd53a</span> <span class="hljs-number">0%</span>, <span class="hljs-number">#a1d54f</span> <span class="hljs-number">50%</span>, <span class="hljs-number">#80c217</span> <span class="hljs-number">51%</span>, <span class="hljs-number">#7cbc0a</span> <span class="hljs-number">100%</span>)<br><span class="hljs-selector-class">.example-gradient</span><br>	<span class="hljs-attribute">background-image</span>: repeating-radial-gradient(circle, rgba(<span class="hljs-number">255</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>), rgba(<span class="hljs-number">255</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>) <span class="hljs-number">10px</span>, rgba(<span class="hljs-number">255</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>) <span class="hljs-number">20px</span>)<br>angle = <span class="hljs-number">357deg</span><br><span class="hljs-selector-class">.example-angle</span><br>	<span class="hljs-attribute">transform</span>: rotate(<span class="hljs-number">100grad</span>)<br><span class="hljs-attribute">color</span> = olive<br><span class="hljs-selector-class">.example-color</span><br>	<span class="hljs-attribute">color</span>: <span class="hljs-number">#000</span><br>easing = ease-<span class="hljs-keyword">in</span><br><span class="hljs-selector-class">.example-easing</span><br>	<span class="hljs-attribute">transition-timing-function</span>: ease-out<br><span class="hljs-selector-tag">time</span> = <span class="hljs-number">3s</span><br><span class="hljs-selector-class">.example-time</span><br>	<span class="hljs-attribute">transition-duration</span>: <span class="hljs-number">0.5s</span><br></code></pre></td></tr></table></figure>
 
-  public void moveTo(int x, int y, int z) &#123;
-    _ai = null;
-    log(&quot;Should not be called&quot;);
-    if (1 &gt; 5) &#123; // wtf!?
-      return;
-    &#125;
-  &#125;
-&#125;
-</code></pre>
-<pre><code class="swift">import Foundation
+<figure class="highlight ruby"><table><tr><td class="code"><pre><code class="hljs ruby"><span class="hljs-comment"># The Greeter class</span><br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Greeter</span></span><br>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">initialize</span><span class="hljs-params">(name)</span></span><br>    <span class="hljs-variable">@name</span> = name.capitalize<br>  <span class="hljs-keyword">end</span><br><br>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">salute</span></span><br>    puts <span class="hljs-string">&quot;Hello <span class="hljs-subst">#&#123;<span class="hljs-variable">@name</span>&#125;</span>!&quot;</span><br>  <span class="hljs-keyword">end</span><br><span class="hljs-keyword">end</span><br><br>g = Greeter.new(<span class="hljs-string">&quot;world&quot;</span>)<br>g.salute<br></code></pre></td></tr></table></figure>
 
-@objc class Person: Entity &#123;
-  var name: String!
-  var age:  Int!
+<figure class="highlight makefile"><table><tr><td class="code"><pre><code class="hljs makefile"><span class="hljs-comment"># Makefile</span><br><br>BUILDDIR      = _build<br>EXTRAS       ?= <span class="hljs-variable">$(BUILDDIR)</span>/extras<br><br><span class="hljs-meta"><span class="hljs-keyword">.PHONY</span>: main clean</span><br><br><span class="hljs-section">main:</span><br>	@echo <span class="hljs-string">&quot;Building main facility...&quot;</span><br>	build_main <span class="hljs-variable">$(BUILDDIR)</span><br><br><span class="hljs-section">clean:</span><br>	rm -rf <span class="hljs-variable">$(BUILDDIR)</span>/*<br></code></pre></td></tr></table></figure>
 
-  init(name: String, age: Int) &#123;
-    /* /* ... */ */
-  &#125;
+<figure class="highlight go"><table><tr><td class="code"><pre><code class="hljs go"><span class="hljs-keyword">package</span> main<br><br><span class="hljs-keyword">import</span> <span class="hljs-string">&quot;fmt&quot;</span><br><br><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span> &#123;<br>    ch := <span class="hljs-built_in">make</span>(<span class="hljs-keyword">chan</span> <span class="hljs-type">float64</span>)<br>    ch &lt;- <span class="hljs-number">1.0e10</span>    <span class="hljs-comment">// magic number</span><br>    x, ok := &lt;- ch<br>    <span class="hljs-keyword">defer</span> fmt.Println(<span class="hljs-string">`exitting now\`</span>)<br>    <span class="hljs-keyword">go</span> <span class="hljs-built_in">println</span>(<span class="hljs-built_in">len</span>(<span class="hljs-string">&quot;hello world!&quot;</span>))<br>    <span class="hljs-keyword">return</span><br>&#125;<br></code></pre></td></tr></table></figure>
 
-  // Return a descriptive string for this person
-  func description(offset: Int = 0) -&gt; String &#123;
-    return &quot;\(name) is \(age + offset) years old&quot;
-  &#125;
-&#125;
-</code></pre>
-<pre><code class="css">.example-gradient &#123;
-    background: -webkit-linear-gradient(left,     #cb60b3 0%, #c146a1 50%, #a80077 51%, #db36a4 100%); /* Chrome10+, Safari5.1+ */
-    background:    -moz-linear-gradient(left,     #cb60b3 0%, #c146a1 50%, #a80077 51%, #db36a4 100%); /* FF3.6+ */
-    background:     -ms-linear-gradient(left,     #cb60b3 0%, #c146a1 50%, #a80077 51%, #db36a4 100%); /* IE10+ */
-    background:      -o-linear-gradient(left,     #cb60b3 0%, #c146a1 50%, #a80077 51%, #db36a4 100%); /* Opera 11.10+ */
-    background:         linear-gradient(to right, #cb60b3 0%, #c146a1 50%, #a80077 51%, #db36a4 100%); /* W3C */
-&#125;
-.example-angle &#123;
-    transform: rotate(10deg);
-&#125;
-.example-color &#123;
-    color: rgba(255, 0, 0, 0.2);
-    background: purple;
-    border: 1px solid hsl(100, 70%, 40%);
-&#125;
-.example-easing &#123;
-    transition-timing-function: linear;
-&#125;
-.example-time &#123;
-    transition-duration: 3s;
-&#125;
-</code></pre>
-<pre><code class="markup">&lt;table bgcolor=&quot;#6E5494&quot;&gt;
-&lt;tr style=&quot;background: lightblue;&quot;&gt;
-</code></pre>
-<pre><code class="less">@gradient: linear-gradient(135deg, #9dd53a 0%, #a1d54f 50%, #80c217 51%, #7cbc0a 100%);
-.example-gradient &#123;
-    background: -webkit-linear-gradient(-45deg, #9dd53a 0%, #a1d54f 50%, #80c217 51%, #7cbc0a 100%); /* Chrome10+, Safari5.1+ */
-    background:    -moz-linear-gradient(-45deg, #9dd53a 0%, #a1d54f 50%, #80c217 51%, #7cbc0a 100%); /* FF3.6+ */
-    background:     -ms-linear-gradient(-45deg, #9dd53a 0%, #a1d54f 50%, #80c217 51%, #7cbc0a 100%); /* IE10+ */
-    background:      -o-linear-gradient(-45deg, #9dd53a 0%, #a1d54f 50%, #80c217 51%, #7cbc0a 100%); /* Opera 11.10+ */
-    background:         linear-gradient(135deg, #9dd53a 0%, #a1d54f 50%, #80c217 51%, #7cbc0a 100%); /* W3C */
-&#125;
-@angle: 3rad;
-.example-angle &#123;
-    transform: rotate(.4turn)
-&#125;
-@nice-blue: #5B83AD;
-.example-color &#123;
-    color: hsla(102, 53%, 42%, 0.4);
-&#125;
-@easing: cubic-bezier(0.1, 0.3, 1, .4);
-.example-easing &#123;
-    transition-timing-function: ease;
-&#125;
-@time: 1s;
-.example-time &#123;
-    transition-duration: 2s;
-&#125;
-</code></pre>
-<pre><code class="sass">$gradient: linear-gradient(135deg, #9dd53a 0%, #a1d54f 50%, #80c217 51%, #7cbc0a 100%)
-@mixin example-gradient
-    background: -moz-radial-gradient(center, ellipse cover, #f2f6f8 0%, #d8e1e7 50%, #b5c6d0 51%, #e0eff9 100%)
-    background: radial-gradient(ellipse at center, #f2f6f8 0%, #d8e1e7 50%, #b5c6d0 51%, #e0eff9 100%)
-$angle: 380grad
-@mixin example-angle
-    transform: rotate(-120deg)
-.example-angle
-    transform: rotate(18rad)
-$color: blue
-@mixin example-color
-    color: rgba(147, 32, 34, 0.8)
-.example-color
-    color: pink
-$easing: ease-out
-.example-easing
-    transition-timing-function: ease-in-out
-$time: 3s
-@mixin example-time
-    transition-duration: 800ms
-.example-time
-    transition-duration: 0.8s
-</code></pre>
-<pre><code class="scss">$gradient: linear-gradient(135deg, #9dd53a 0%, #a1d54f 50%, #80c217 51%, #7cbc0a 100%);
-$attr: background;
-.example-gradient &#123;
-    #&#123;$attr&#125;-image: repeating-linear-gradient(10deg, rgba(255, 0, 0, 0), rgba(255, 0, 0, 1) 10px, rgba(255, 0, 0, 0) 20px);
-&#125;
-$angle: 1.8turn;
-.example-angle &#123;
-    transform: rotate(-3rad)
-&#125;
-$color: blue;
-.example-color &#123;
-    #&#123;$attr&#125;-color: rgba(255, 255, 0, 0.75);
-&#125;
-$easing: linear;
-.example-easing &#123;
-    transition-timing-function: cubic-bezier(0.9, 0.1, .2, .4);
-&#125;
-$time: 1s;
-.example-time &#123;
-    transition-duration: 10s
-&#125;
-</code></pre>
-<pre><code class="stylus">gradient = linear-gradient(135deg, #9dd53a 0%, #a1d54f 50%, #80c217 51%, #7cbc0a 100%)
-.example-gradient
-    background-image: repeating-radial-gradient(circle, rgba(255, 0, 0, 0), rgba(255, 0, 0, 1) 10px, rgba(255, 0, 0, 0) 20px)
-angle = 357deg
-.example-angle
-    transform: rotate(100grad)
-color = olive
-.example-color
-    color: #000
-easing = ease-in
-.example-easing
-    transition-timing-function: ease-out
-time = 3s
-.example-time
-    transition-duration: 0.5s
-</code></pre>
-<pre><code class="ruby"># The Greeter class
-class Greeter
-  def initialize(name)
-    @name = name.capitalize
-  end
+<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash"><span class="hljs-meta">#!/bin/bash</span><br><br><span class="hljs-comment">###### CONFIG</span><br>ACCEPTED_HOSTS=<span class="hljs-string">&quot;/root/.hag_accepted.conf&quot;</span><br>BE_VERBOSE=<span class="hljs-literal">false</span><br><br><span class="hljs-keyword">if</span> [ <span class="hljs-string">&quot;<span class="hljs-variable">$UID</span>&quot;</span> -ne 0 ]<br><span class="hljs-keyword">then</span><br>  <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;Superuser rights required&quot;</span><br>  <span class="hljs-built_in">exit</span> 2<br><span class="hljs-keyword">fi</span><br><br><span class="hljs-function"><span class="hljs-title">genApacheConf</span></span>()&#123;<br>  <span class="hljs-built_in">echo</span> -e <span class="hljs-string">&quot;# Host <span class="hljs-variable">$&#123;HOME_DIR&#125;</span><span class="hljs-variable">$1</span>/<span class="hljs-variable">$2</span> :&quot;</span><br>&#125;<br></code></pre></td></tr></table></figure>
 
-  def salute
-    puts &quot;Hello #&#123;@name&#125;!&quot;
-  end
-end
-
-g = Greeter.new(&quot;world&quot;)
-g.salute
-</code></pre>
-<pre><code class="makefile"># Makefile
-
-BUILDDIR      = _build
-EXTRAS       ?= $(BUILDDIR)/extras
-
-.PHONY: main clean
-
-main:
-    @echo &quot;Building main facility...&quot;
-    build_main $(BUILDDIR)
-
-clean:
-    rm -rf $(BUILDDIR)/*
-</code></pre>
-<pre><code class="go">package main
-
-import &quot;fmt&quot;
-
-func main() &#123;
-    ch := make(chan float64)
-    ch &lt;- 1.0e10    // magic number
-    x, ok := &lt;- ch
-    defer fmt.Println(`exitting now\`)
-    go println(len(&quot;hello world!&quot;))
-    return
-&#125;
-</code></pre>
-<pre><code class="bash">#!/bin/bash
-
-###### CONFIG
-ACCEPTED_HOSTS=&quot;/root/.hag_accepted.conf&quot;
-BE_VERBOSE=false
-
-if [ &quot;$UID&quot; -ne 0 ]
-then
-  echo &quot;Superuser rights required&quot;
-  exit 2
-fi
-
-genApacheConf()&#123;
-  echo -e &quot;# Host $&#123;HOME_DIR&#125;$1/$2 :&quot;
-&#125;
-</code></pre>
-<pre><code class="ini">; boilerplate
-[package]
-name = &quot;some_name&quot;
-authors = [&quot;Author&quot;]
-description = &quot;This is \
-a description&quot;
-
-[[lib]]
-name = $&#123;NAME&#125;
-default = True
-auto = no
-counter = 1_000
-</code></pre>
+<figure class="highlight ini"><table><tr><td class="code"><pre><code class="hljs ini"><span class="hljs-comment">; boilerplate</span><br><span class="hljs-section">[package]</span><br><span class="hljs-attr">name</span> = <span class="hljs-string">&quot;some_name&quot;</span><br><span class="hljs-attr">authors</span> = [<span class="hljs-string">&quot;Author&quot;</span>]<br><span class="hljs-attr">description</span> = <span class="hljs-string">&quot;This is \</span><br><span class="hljs-string">a description&quot;</span><br><br><span class="hljs-section">[[lib]]</span><br><span class="hljs-attr">name</span> = <span class="hljs-variable">$&#123;NAME&#125;</span><br><span class="hljs-attr">default</span> = <span class="hljs-literal">True</span><br><span class="hljs-attr">auto</span> = <span class="hljs-literal">no</span><br><span class="hljs-attr">counter</span> = <span class="hljs-number">1_000</span><br></code></pre></td></tr></table></figure>
+]]></content>
+  </entry>
+  <entry>
+    <title>Link Post</title>
+    <url>/post-b28ca4a7.html</url>
+    <content><![CDATA[<p>This is a link post. Clicking on the link should open <a href="http://www.google.com/">Google</a> in a new tab or window.</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>www.google.com</title>
+    <url>/post-1f63b7d1.html</url>
+    <content><![CDATA[<p>This is a link post without a title. The title should be the link with or without protocol. Clicking on the link should open <a href="http://www.google.com/">Google</a> in a new tab or window.</p>
 ]]></content>
   </entry>
   <entry>
@@ -413,16 +141,6 @@ counter = 1_000
 ]]></content>
   </entry>
   <entry>
-    <title>Excerpts</title>
-    <url>/post-13f29456.html</url>
-    <content><![CDATA[<p>The following contents should be invisible in home/archive page.</p>
-<span id="more"></span>
-
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eget urna vitae velit eleifend interdum at ac nisi. In nec ligula lacus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed eu cursus erat, ut dapibus quam. Aliquam eleifend dolor vitae libero pharetra adipiscing. Etiam adipiscing dolor a quam tempor, eu convallis nulla varius. Aliquam sollicitudin risus a porta aliquam. Ut nec velit dolor. Proin eget leo lobortis, aliquam est sed, mollis mauris. Fusce vitae leo pretium massa accumsan condimentum. Fusce malesuada gravida lectus vel vulputate. Donec bibendum porta nibh ut aliquam.</p>
-<p>Sed lorem felis, congue non fringilla eu, aliquam eu eros. Curabitur orci libero, mollis sed semper vitae, adipiscing in lectus. Aenean non egestas odio. Donec sollicitudin nisi quis lorem gravida, in pharetra mauris fringilla. Duis sit amet faucibus dolor, id aliquam neque. In egestas, odio gravida tempor dictum, mauris felis faucibus purus, sit amet commodo lacus diam vitae est. Ut ut quam eget massa semper sodales. Aenean non ipsum cursus, blandit lectus in, ornare odio. Curabitur ultrices porttitor vulputate.</p>
-]]></content>
-  </entry>
-  <entry>
     <title>Images</title>
     <url>/post-e7b3bb5c.html</url>
     <content><![CDATA[<p>This is a image test post.</p>
@@ -434,15 +152,55 @@ counter = 1_000
 ]]></content>
   </entry>
   <entry>
-    <title>www.google.com</title>
-    <url>/post-1f63b7d1.html</url>
-    <content><![CDATA[<p>This is a link post without a title. The title should be the link with or without protocol. Clicking on the link should open <a href="http://www.google.com/">Google</a> in a new tab or window.</p>
+    <title>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam justo turpis, tincidunt ac convallis id.</title>
+    <url>/post-40245f02.html</url>
+    <content><![CDATA[<p>This post has a long title. Make sure the title displayed right.</p>
 ]]></content>
   </entry>
   <entry>
-    <title>Link Post</title>
-    <url>/post-b28ca4a7.html</url>
-    <content><![CDATA[<p>This is a link post. Clicking on the link should open <a href="http://www.google.com/">Google</a> in a new tab or window.</p>
+    <title></title>
+    <url>/post-0.html</url>
+    <content><![CDATA[<p>This post doesn’t have a title. Make sure it’s accessible.</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>Tag Plugins</title>
+    <url>/post-e2e5eeac.html</url>
+    <content><![CDATA[<p>This post is used for testing tag plugins. See <a href="http://zespia.tw/hexo/docs/tag-plugins.html">docs</a> for more info.</p>
+<h2 id="Block-Quote"><a href="#Block-Quote" class="headerlink" title="Block Quote"></a>Block Quote</h2><h3 id="Normal-blockquote"><a href="#Normal-blockquote" class="headerlink" title="Normal blockquote"></a>Normal blockquote</h3><blockquote>
+<p>Praesent diam elit, interdum ut pulvinar placerat, imperdiet at magna.</p>
+</blockquote>
+<h3 id="Quote-from-a-book"><a href="#Quote-from-a-book" class="headerlink" title="Quote from a book"></a>Quote from a book</h3><blockquote><p>Do not just seek happiness for yourself. Seek happiness for all. Through kindness. Through mercy.</p>
+<footer><strong>David Levithan</strong><cite>Wide Awake</cite></footer></blockquote>
+
+<h3 id="Quote-from-Twitter"><a href="#Quote-from-Twitter" class="headerlink" title="Quote from Twitter"></a>Quote from Twitter</h3><blockquote><p>NEW: DevDocs now comes with syntax highlighting. <a href="http://devdocs.io/">http://devdocs.io</a></p>
+<footer><strong>@DevDocs</strong><cite><a href="https://twitter.com/devdocs/status/356095192085962752">twitter.com/devdocs/status/356095192085962752</a></cite></footer></blockquote>
+
+<h3 id="Quote-from-an-article-on-the-web"><a href="#Quote-from-an-article-on-the-web" class="headerlink" title="Quote from an article on the web"></a>Quote from an article on the web</h3><blockquote><p>Every interaction is both precious and an opportunity to delight.</p>
+<footer><strong>Seth Godin</strong><cite><a href="http://sethgodin.typepad.com/seths_blog/2009/07/welcome-to-island-marketing.html">Welcome to Island Marketing</a></cite></footer></blockquote>
+
+<h2 id="Code-Block"><a href="#Code-Block" class="headerlink" title="Code Block"></a>Code Block</h2><h3 id="Normal-code-block"><a href="#Normal-code-block" class="headerlink" title="Normal code block"></a>Normal code block</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">alert(&#x27;Hello World!&#x27;);<br></code></pre></td></tr></table></figure>
+
+<h3 id="With-caption"><a href="#With-caption" class="headerlink" title="With caption"></a>With caption</h3><figure class="highlight plaintext"><figcaption><span>Array.map</span></figcaption><table><tr><td class="code"><pre><code class="hljs plaintext">array.map(callback[, thisArg])<br></code></pre></td></tr></table></figure>
+
+<h3 id="With-caption-and-URL"><a href="#With-caption-and-URL" class="headerlink" title="With caption and URL"></a>With caption and URL</h3><figure class="highlight plaintext"><figcaption><span>.compact</span><a href="http://underscorejs.org/#compact">Underscore.js</a></figcaption><table><tr><td class="code"><pre><code class="hljs plaintext">.compact([0, 1, false, 2, ‘’, 3]);<br>=&gt; [1, 2, 3]<br></code></pre></td></tr></table></figure>
+
+<h3 id="With-marked-lines"><a href="#With-marked-lines" class="headerlink" title="With marked lines"></a>With marked lines</h3><p>Line 1,7-8,10 should be marked with different color.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><code class="hljs js"><mark><span class="hljs-keyword">const</span> http = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;http&#x27;</span>);</mark><br><br><span class="hljs-keyword">const</span> hostname = <span class="hljs-string">&#x27;127.0.0.1&#x27;</span>;<br><span class="hljs-keyword">const</span> port = <span class="hljs-number">1337</span>;<br><br>http.<span class="hljs-title function_">createServer</span>(<span class="hljs-function">(<span class="hljs-params">req, res</span>) =&gt;</span> &#123;<br><mark>  res.<span class="hljs-title function_">writeHead</span>(<span class="hljs-number">200</span>, &#123; <span class="hljs-string">&#x27;Content-Type&#x27;</span>: <span class="hljs-string">&#x27;text/plain&#x27;</span> &#125;);</mark><br><mark>  res.<span class="hljs-title function_">end</span>(<span class="hljs-string">&#x27;Hello World\n&#x27;</span>);</mark><br>&#125;).<span class="hljs-title function_">listen</span>(port, hostname, <span class="hljs-function">() =&gt;</span> &#123;<br><mark>  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">`Server running at http://<span class="hljs-subst">$&#123;hostname&#125;</span>:<span class="hljs-subst">$&#123;port&#125;</span>/`</span>);</mark><br>&#125;);<br></code></pre></td></tr></table></figure>
+
+<p>Note: Theme’s style should support <code>.highlight.line.marked</code> (recommend to use the selection or current line color).</p>
+<h3 id="Gist"><a href="#Gist" class="headerlink" title="Gist"></a>Gist</h3><script src="//gist.github.com/996818.js"></script>
+
+<h3 id="jsFiddle"><a href="#jsFiddle" class="headerlink" title="jsFiddle"></a>jsFiddle</h3><iframe scrolling="no" width="100%" height="300" src="https://jsfiddle.net/ccWP7/embedded/js,resources,html,css,result/light" frameborder="0" loading="lazy" allowfullscreen></iframe>
+
+<h2 id="Pullquote"><a href="#Pullquote" class="headerlink" title="Pullquote"></a>Pullquote</h2><h3 id="Left"><a href="#Left" class="headerlink" title="Left"></a>Left</h3><blockquote class="pullquote left"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+</blockquote>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tempus molestie arcu, et fringilla mauris placerat ac. Nullam luctus bibendum risus. Ut cursus sed ipsum feugiat egestas. Suspendisse elementum, velit eu consequat consequat, augue lorem dapibus libero, eget pulvinar dolor est sit amet nulla. Suspendisse a porta tortor, et posuere mi. Pellentesque ultricies, mi quis volutpat malesuada, erat felis vulputate nisl, ac congue ante tortor ut ante. Proin aliquam sem vel mauris tincidunt, eget scelerisque tortor euismod. Nulla tincidunt enim nec commodo dictum. Mauris id sapien et orci gravida luctus id ut dui. In vel vulputate odio. Duis vel turpis molestie, scelerisque enim eu, lobortis eros. Cras at ipsum gravida, sagittis ante vel, viverra tellus. Nunc mauris turpis, elementum ullamcorper nisl pretium, ultrices cursus justo. Mauris porttitor commodo eros, ac ornare orci interdum in. Cras fermentum cursus leo sed mattis. In dignissim lorem sem, sit amet elementum mauris venenatis ac.</p>
+<h3 id="Right"><a href="#Right" class="headerlink" title="Right"></a>Right</h3><blockquote class="pullquote right"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+</blockquote>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ligula justo, lobortis sit amet semper vel, dignissim sit amet libero. Praesent ac tempus ligula. Maecenas at gravida odio. Etiam tristique volutpat lacus eu faucibus. Donec non tempus arcu. Phasellus adipiscing, mauris nec mollis egestas, ipsum nunc auctor velit, et rhoncus lorem ipsum at ante. Praesent et sem in velit volutpat auctor. Duis vel mauris nulla. Maecenas mattis interdum ante, quis sagittis nibh cursus et. Nulla facilisi. Morbi convallis gravida tortor, ut fermentum enim gravida et. Nunc vel dictum nisl, non ultrices libero. Proin vestibulum felis eget orci consectetur lobortis. Vestibulum augue nulla, iaculis vitae augue vehicula, dignissim ultrices libero. Sed imperdiet urna et quam ultrices tincidunt nec ac magna. Etiam vel pharetra elit.</p>
 ]]></content>
   </entry>
   <entry>
@@ -452,57 +210,17 @@ counter = 1_000
 <span id="more"></span>
 
 <hr>
-<h2 id="Headers"><a href="#Headers" class="headerlink" title="Headers"></a>Headers</h2><pre><code class="markdown"># H1
-## H2
-### H3
-#### H4
-##### H5
-###### H6
+<h2 id="Headers"><a href="#Headers" class="headerlink" title="Headers"></a>Headers</h2><figure class="highlight markdown"><table><tr><td class="code"><pre><code class="hljs markdown"><span class="hljs-section"># H1</span><br><span class="hljs-section">## H2</span><br><span class="hljs-section">### H3</span><br><span class="hljs-section">#### H4</span><br><span class="hljs-section">##### H5</span><br><span class="hljs-section">###### H6</span><br><br>Alternatively, for H1 and H2, an underline-ish style:<br><br><span class="hljs-section">Alt-H1</span><br><span class="hljs-section">======</span><br><br><span class="hljs-section">Alt-H2</span><br><span class="hljs-section">------</span><br></code></pre></td></tr></table></figure>
 
-Alternatively, for H1 and H2, an underline-ish style:
-
-Alt-H1
-======
-
-Alt-H2
-------
-</code></pre>
 <h1 id="H1"><a href="#H1" class="headerlink" title="H1"></a>H1</h1><h2 id="H2"><a href="#H2" class="headerlink" title="H2"></a>H2</h2><h3 id="H3"><a href="#H3" class="headerlink" title="H3"></a>H3</h3><h4 id="H4"><a href="#H4" class="headerlink" title="H4"></a>H4</h4><h5 id="H5"><a href="#H5" class="headerlink" title="H5"></a>H5</h5><h6 id="H6"><a href="#H6" class="headerlink" title="H6"></a>H6</h6><p>Alternatively, for H1 and H2, an underline-ish style:</p>
-<h1 id="Alt-H1"><a href="#Alt-H1" class="headerlink" title="Alt-H1"></a>Alt-H1</h1><h2 id="Alt-H2"><a href="#Alt-H2" class="headerlink" title="Alt-H2"></a>Alt-H2</h2><h2 id="Emphasis"><a href="#Emphasis" class="headerlink" title="Emphasis"></a>Emphasis</h2><pre><code class="markdown">Emphasis, aka italics, with *asterisks* or _underscores_.
+<h1 id="Alt-H1"><a href="#Alt-H1" class="headerlink" title="Alt-H1"></a>Alt-H1</h1><h2 id="Alt-H2"><a href="#Alt-H2" class="headerlink" title="Alt-H2"></a>Alt-H2</h2><h2 id="Emphasis"><a href="#Emphasis" class="headerlink" title="Emphasis"></a>Emphasis</h2><figure class="highlight markdown"><table><tr><td class="code"><pre><code class="hljs markdown">Emphasis, aka italics, with <span class="hljs-emphasis">*asterisks*</span> or <span class="hljs-emphasis">_underscores_</span>.<br><br>Strong emphasis, aka bold, with <span class="hljs-strong">**asterisks**</span> or <span class="hljs-strong">__underscores__</span>.<br><br>Combined emphasis with <span class="hljs-strong">**asterisks and <span class="hljs-emphasis">_underscores_</span>**</span>.<br><br>Strikethrough uses two tildes. ~~Scratch this.~~<br></code></pre></td></tr></table></figure>
 
-Strong emphasis, aka bold, with **asterisks** or __underscores__.
-
-Combined emphasis with **asterisks and _underscores_**.
-
-Strikethrough uses two tildes. ~~Scratch this.~~
-</code></pre>
 <p>Emphasis, aka italics, with <em>asterisks</em> or <em>underscores</em>.</p>
 <p>Strong emphasis, aka bold, with <strong>asterisks</strong> or <strong>underscores</strong>.</p>
 <p>Combined emphasis with <strong>asterisks and <em>underscores</em></strong>.</p>
 <p>Strikethrough uses two tildes. <del>Scratch this.</del></p>
-<h2 id="Lists"><a href="#Lists" class="headerlink" title="Lists"></a>Lists</h2><pre><code class="markdown">1. First ordered list item
-2. Another item
-  * Unordered sub-list.
-1. Actual numbers don&#39;t matter, just that it&#39;s a number
-  1. Ordered sub-list
-4. And another item.
+<h2 id="Lists"><a href="#Lists" class="headerlink" title="Lists"></a>Lists</h2><figure class="highlight markdown"><table><tr><td class="code"><pre><code class="hljs markdown"><span class="hljs-bullet">1.</span> First ordered list item<br><span class="hljs-bullet">2.</span> Another item<br><span class="hljs-bullet">  *</span> Unordered sub-list.<br><span class="hljs-bullet">1.</span> Actual numbers don&#x27;t matter, just that it&#x27;s a number<br><span class="hljs-bullet">  1.</span> Ordered sub-list<br><span class="hljs-bullet">4.</span> And another item.<br><br>   You can have properly indented paragraphs within list items. Notice the blank line above, and the leading spaces (at least one, but we&#x27;ll use three here to also align the raw Markdown).<br><br>   To have a line break without a paragraph, you will need to use two trailing spaces.  <br>   Note that this line is separate, but within the same paragraph.  <br>   (This is contrary to the typical GFM line break behaviour, where trailing spaces are not required.)<br><br><span class="hljs-bullet">*</span> Unordered list can use asterisks<br><span class="hljs-bullet">-</span> Or minuses<br><span class="hljs-bullet">+</span> Or pluses<br><span class="hljs-bullet">-</span> Paragraph In unordered list<br><br>  For example like this.<br><br>Common Paragraph with some text.<br>And more text.<br></code></pre></td></tr></table></figure>
 
-   You can have properly indented paragraphs within list items. Notice the blank line above, and the leading spaces (at least one, but we&#39;ll use three here to also align the raw Markdown).
-
-   To have a line break without a paragraph, you will need to use two trailing spaces.  
-   Note that this line is separate, but within the same paragraph.  
-   (This is contrary to the typical GFM line break behaviour, where trailing spaces are not required.)
-
-* Unordered list can use asterisks
-- Or minuses
-+ Or pluses
-- Paragraph In unordered list
-
-  For example like this.
-
-Common Paragraph with some text.
-And more text.
-</code></pre>
 <ol>
 <li>First ordered list item</li>
 <li>Another item</li>
@@ -535,19 +253,14 @@ And more text.
 </li>
 </ul>
 <p>Common Paragraph with some text.<br>And more text.</p>
-<h2 id="Inline-HTML"><a href="#Inline-HTML" class="headerlink" title="Inline HTML"></a>Inline HTML</h2><pre><code class="markdown">&lt;p&gt;To reboot your computer, press &lt;kbd&gt;ctrl&lt;/kbd&gt;+&lt;kbd&gt;alt&lt;/kbd&gt;+&lt;kbd&gt;del&lt;/kbd&gt;.&lt;/p&gt;
-</code></pre>
+<h2 id="Inline-HTML"><a href="#Inline-HTML" class="headerlink" title="Inline HTML"></a>Inline HTML</h2><figure class="highlight markdown"><table><tr><td class="code"><pre><code class="hljs markdown"><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span></span>To reboot your computer, press <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">kbd</span>&gt;</span></span>ctrl<span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">kbd</span>&gt;</span></span>+<span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">kbd</span>&gt;</span></span>alt<span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">kbd</span>&gt;</span></span>+<span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">kbd</span>&gt;</span></span>del<span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">kbd</span>&gt;</span></span>.<span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></span><br></code></pre></td></tr></table></figure>
+
 <p>To reboot your computer, press <kbd>ctrl</kbd>+<kbd>alt</kbd>+<kbd>del</kbd>.</p>
 
 
-<pre><code class="markdown">&lt;dl&gt;
-    &lt;dt&gt;Definition list&lt;/dt&gt;
-    &lt;dd&gt;Is something people use sometimes.&lt;/dd&gt;
+<figure class="highlight markdown"><table><tr><td class="code"><pre><code class="hljs markdown"><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">dl</span>&gt;</span></span><br><span class="hljs-code">    &lt;dt&gt;Definition list&lt;/dt&gt;</span><br><span class="hljs-code">    &lt;dd&gt;Is something people use sometimes.&lt;/dd&gt;</span><br><span class="hljs-code"></span><br><span class="hljs-code">    &lt;dt&gt;Markdown in HTML&lt;/dt&gt;</span><br><span class="hljs-code">    &lt;dd&gt;Does *not* work **very** well. Use HTML &lt;em&gt;tags&lt;/em&gt;.&lt;/dd&gt;</span><br><span class="hljs-code">&lt;/dl&gt;</span><br></code></pre></td></tr></table></figure>
 
-    &lt;dt&gt;Markdown in HTML&lt;/dt&gt;
-    &lt;dd&gt;Does *not* work **very** well. Use HTML &lt;em&gt;tags&lt;/em&gt;.&lt;/dd&gt;
-&lt;/dl&gt;
-</code></pre>
+
 <dl>
     <dt>Definition list</dt>
     <dd>Is something people use sometimes.</dd>
@@ -558,24 +271,8 @@ And more text.
 </dl>
 
 
-<h2 id="Links"><a href="#Links" class="headerlink" title="Links"></a>Links</h2><pre><code class="markdown">[I&#39;m an inline-style link](https://www.google.com)
+<h2 id="Links"><a href="#Links" class="headerlink" title="Links"></a>Links</h2><figure class="highlight markdown"><table><tr><td class="code"><pre><code class="hljs markdown">[<span class="hljs-string">I&#x27;m an inline-style link</span>](<span class="hljs-link">https://www.google.com</span>)<br><br>[<span class="hljs-string">I&#x27;m an inline-style link with title</span>](<span class="hljs-link">https://www.google.com &quot;Google&#x27;s Homepage&quot;</span>)<br><br>[<span class="hljs-string">I&#x27;m a reference-style link</span>][<span class="hljs-symbol">Arbitrary case-insensitive reference text</span>]<br><br>[<span class="hljs-string">I&#x27;m a relative reference to a repository file</span>](<span class="hljs-link">../blob/master/LICENSE</span>)<br><br>[<span class="hljs-string">You can use numbers for reference-style link definitions</span>][<span class="hljs-symbol">1</span>]<br><br>Or leave it empty and use the [link text itself]<br><br>Some text to show that the reference links can follow later.<br><br>[<span class="hljs-symbol">arbitrary case-insensitive reference text</span>]: <span class="hljs-link">https://hexo.io</span><br>[<span class="hljs-symbol">1</span>]: <span class="hljs-link">https://hexo.io/docs/</span><br>[<span class="hljs-symbol">link text itself</span>]: <span class="hljs-link">https://hexo.io/api/</span><br></code></pre></td></tr></table></figure>
 
-[I&#39;m an inline-style link with title](https://www.google.com &quot;Google&#39;s Homepage&quot;)
-
-[I&#39;m a reference-style link][Arbitrary case-insensitive reference text]
-
-[I&#39;m a relative reference to a repository file](../blob/master/LICENSE)
-
-[You can use numbers for reference-style link definitions][1]
-
-Or leave it empty and use the [link text itself]
-
-Some text to show that the reference links can follow later.
-
-[arbitrary case-insensitive reference text]: https://hexo.io
-[1]: https://hexo.io/docs/
-[link text itself]: https://hexo.io/api/
-</code></pre>
 <p><a href="https://www.google.com/">I’m an inline-style link</a></p>
 <p><a href="https://www.google.com/" title="Google&#39;s Homepage">I’m an inline-style link with title</a></p>
 <p><a href="https://hexo.io/">I’m a reference-style link</a></p>
@@ -583,37 +280,21 @@ Some text to show that the reference links can follow later.
 <p><a href="https://hexo.io/docs/">You can use numbers for reference-style link definitions</a></p>
 <p>Or leave it empty and use the <a href="https://hexo.io/api/">link text itself</a></p>
 <p>Some text to show that the reference links can follow later.</p>
-<h2 id="Images"><a href="#Images" class="headerlink" title="Images"></a>Images</h2><pre><code class="markdown">hover to see the title text:
+<h2 id="Images"><a href="#Images" class="headerlink" title="Images"></a>Images</h2><figure class="highlight markdown"><table><tr><td class="code"><pre><code class="hljs markdown">hover to see the title text:<br><br>Inline-style:<br><br>![<span class="hljs-string">alt text</span>](<span class="hljs-link">https://hexo.io/icon/favicon-196x196.png &quot;Logo Title Text 1&quot;</span>)<br><br>Reference-style:<br>![<span class="hljs-string">alt text</span>][<span class="hljs-symbol">logo</span>]<br><br>[<span class="hljs-symbol">logo</span>]: <span class="hljs-link">https://hexo.io/icon/favicon-196x196.png &quot;Logo Title Text 2&quot;</span><br></code></pre></td></tr></table></figure>
 
-Inline-style:
-
-![alt text](https://hexo.io/icon/favicon-196x196.png &quot;Logo Title Text 1&quot;)
-
-Reference-style:
-![alt text][logo]
-
-[logo]: https://hexo.io/icon/favicon-196x196.png &quot;Logo Title Text 2&quot;
-</code></pre>
 <p>hover to see the title text:</p>
 <p>Inline-style:</p>
 <p><img src="https://hexo.io/icon/favicon-196x196.png" alt="alt text" title="Logo Title Text 1"></p>
 <p>Reference-style:<br><img src="https://hexo.io/icon/favicon-196x196.png" alt="alt text" title="Logo Title Text 2"></p>
 <h2 id="Code-and-Syntax-Highlighting"><a href="#Code-and-Syntax-Highlighting" class="headerlink" title="Code and Syntax Highlighting"></a>Code and Syntax Highlighting</h2><p>Inline <code>code</code> has <code>back-ticks around</code> it.</p>
-<pre><code class="javascript">var s = &quot;JavaScript syntax highlighting&quot;;
-alert(s);
-</code></pre>
-<pre><code class="python">s = &quot;Python syntax highlighting&quot;
-print s
-</code></pre>
-<pre><code>No language indicated, so no syntax highlighting.
-But let&#39;s throw in a &lt;b&gt;tag&lt;/b&gt;.
-</code></pre>
-<h2 id="Tables"><a href="#Tables" class="headerlink" title="Tables"></a>Tables</h2><pre><code class="markdown">|                |ASCII                          |HTML                         |
-|----------------|-------------------------------|-----------------------------|
-|Single backticks|`&#39;Isn&#39;t this fun?&#39;`            |&#39;Isn&#39;t this fun?&#39;            |
-|Quotes          |`&quot;Isn&#39;t this fun?&quot;`            |&quot;Isn&#39;t this fun?&quot;            |
-|Dashes          |`-- is en-dash, --- is em-dash`|-- is en-dash, --- is em-dash|
-</code></pre>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> s = <span class="hljs-string">&quot;JavaScript syntax highlighting&quot;</span>;<br><span class="hljs-title function_">alert</span>(s);<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python">s = <span class="hljs-string">&quot;Python syntax highlighting&quot;</span><br><span class="hljs-built_in">print</span> s<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">No language indicated, so no syntax highlighting.<br>But let&#x27;s throw in a &lt;b&gt;tag&lt;/b&gt;.<br></code></pre></td></tr></table></figure>
+
+<h2 id="Tables"><a href="#Tables" class="headerlink" title="Tables"></a>Tables</h2><figure class="highlight markdown"><table><tr><td class="code"><pre><code class="hljs markdown">|                |ASCII                          |HTML                         |<br>|----------------|-------------------------------|-----------------------------|<br>|Single backticks|<span class="hljs-code">`&#x27;Isn&#x27;t this fun?&#x27;`</span>            |&#x27;Isn&#x27;t this fun?&#x27;            |<br>|Quotes          |<span class="hljs-code">`&quot;Isn&#x27;t this fun?&quot;`</span>            |&quot;Isn&#x27;t this fun?&quot;            |<br>|Dashes          |<span class="hljs-code">`-- is en-dash, --- is em-dash`</span>|-- is en-dash, --- is em-dash|<br></code></pre></td></tr></table></figure>
+
 <table>
 <thead>
 <tr>
@@ -639,12 +320,8 @@ But let&#39;s throw in a &lt;b&gt;tag&lt;/b&gt;.
 </tr>
 </tbody></table>
 <p>Colons can be used to align columns.</p>
-<pre><code class="markdown">| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned |  |
-| col 2 is      | centered      |    |
-| zebra stripes | are neat      |   
-</code></pre>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><code class="hljs markdown">| Tables        | Are           | Cool  |<br>| ------------- |:-------------:| -----:|<br>| col 3 is      | right-aligned |  |<br>| col 2 is      | centered      |    |<br>| zebra stripes | are neat      |   <br></code></pre></td></tr></table></figure>
+
 <table>
 <thead>
 <tr>
@@ -670,11 +347,8 @@ But let&#39;s throw in a &lt;b&gt;tag&lt;/b&gt;.
 </tr>
 </tbody></table>
 <p>The outer pipes (|) are optional, and you don’t need to make the raw Markdown line up prettily. You can also use inline Markdown.</p>
-<pre><code class="markdown">Markdown | Less | Pretty
---- | --- | ---
-*Still* | `renders` | **nicely**
-1 | 2 | 3
-</code></pre>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><code class="hljs markdown">Markdown | Less | Pretty<br>--- | --- | ---<br><span class="hljs-emphasis">*Still*</span> | <span class="hljs-code">`renders`</span> | <span class="hljs-strong">**nicely**</span><br>1 | 2 | 3<br></code></pre></td></tr></table></figure>
+
 <table>
 <thead>
 <tr>
@@ -705,45 +379,23 @@ But let&#39;s throw in a &lt;b&gt;tag&lt;/b&gt;.
 <p>This is a very long line that will still be quoted properly when it wraps. Oh boy let’s keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can <em>put</em> <strong>Markdown</strong> into a blockquote.</p>
 </blockquote>
 <h2 id="Horizontal-Rule"><a href="#Horizontal-Rule" class="headerlink" title="Horizontal Rule"></a>Horizontal Rule</h2><p>Three or more…</p>
-<pre><code class="markdown">---
+<figure class="highlight markdown"><table><tr><td class="code"><pre><code class="hljs markdown">---<br><br>Hyphens<br><br><span class="hljs-strong">**<span class="hljs-emphasis">*</span></span><br><span class="hljs-emphasis"><span class="hljs-strong"></span></span><br><span class="hljs-emphasis"><span class="hljs-strong">Asterisks</span></span><br><span class="hljs-emphasis"><span class="hljs-strong"></span></span><br><span class="hljs-emphasis"><span class="hljs-strong"><span class="hljs-strong">__<span class="hljs-emphasis">_</span></span></span></span><br><span class="hljs-emphasis"><span class="hljs-strong"><span class="hljs-emphasis"><span class="hljs-strong"></span></span></span></span><br><span class="hljs-emphasis"><span class="hljs-strong"><span class="hljs-emphasis"><span class="hljs-strong">Underscores</span></span></span></span><br></code></pre></td></tr></table></figure>
 
-Hyphens
-
-***
-
-Asterisks
-
-___
-
-Underscores
-</code></pre>
 <hr>
 <p>Hyphens</p>
 <hr>
 <p>Asterisks</p>
 <hr>
 <p>Underscores</p>
-<h2 id="Line-Breaks"><a href="#Line-Breaks" class="headerlink" title="Line Breaks"></a>Line Breaks</h2><pre><code class="markdown">Here&#39;s a line for us to start with.
+<h2 id="Line-Breaks"><a href="#Line-Breaks" class="headerlink" title="Line Breaks"></a>Line Breaks</h2><figure class="highlight markdown"><table><tr><td class="code"><pre><code class="hljs markdown">Here&#x27;s a line for us to start with.<br><br>This line is separated from the one above by two newlines, so it will be a <span class="hljs-emphasis">*separate paragraph*</span>.<br><br>This line is also a separate paragraph, but...<br>This line is only separated by a single newline, so it&#x27;s a separate line in the <span class="hljs-emphasis">*same paragraph*</span>.<br></code></pre></td></tr></table></figure>
 
-This line is separated from the one above by two newlines, so it will be a *separate paragraph*.
 
-This line is also a separate paragraph, but...
-This line is only separated by a single newline, so it&#39;s a separate line in the *same paragraph*.
-</code></pre>
 <p>Here’s a line for us to start with.</p>
 <p>This line is separated from the one above by two newlines, so it will be a <em>separate paragraph</em>.</p>
 <p>This line is also a separate paragraph, but…<br>This line is only separated by a single newline, so it’s a separate line in the <em>same paragraph</em>.</p>
 <hr>
-<pre><code class="markdown">This is a regular paragraph.
+<figure class="highlight markdown"><table><tr><td class="code"><pre><code class="hljs markdown">This is a regular paragraph.<br><br><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">table</span>&gt;</span></span><br><span class="hljs-code">    &lt;tr&gt;</span><br><span class="hljs-code">        &lt;td&gt;Foo&lt;/td&gt;</span><br><span class="hljs-code">    &lt;/tr&gt;</span><br><span class="hljs-code">&lt;/table&gt;</span><br><span class="hljs-code"></span><br>This is another regular paragraph.<br></code></pre></td></tr></table></figure>
 
-&lt;table&gt;
-    &lt;tr&gt;
-        &lt;td&gt;Foo&lt;/td&gt;
-    &lt;/tr&gt;
-&lt;/table&gt;
-
-This is another regular paragraph.
-</code></pre>
 <p>This is a regular paragraph.</p>
 <table>
     <tr>
@@ -752,14 +404,8 @@ This is another regular paragraph.
 </table>
 
 <p>This is another regular paragraph.</p>
-<h2 id="Youtube-videos"><a href="#Youtube-videos" class="headerlink" title="Youtube videos"></a>Youtube videos</h2><pre><code class="markdown">&lt;a href=&quot;https://www.youtube.com/watch?feature=player_embedded&amp;v=ARted4RniaU
-&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;https://img.youtube.com/vi/ARted4RniaU/0.jpg&quot;
-alt=&quot;IMAGE ALT TEXT HERE&quot; width=&quot;240&quot; height=&quot;180&quot; border=&quot;10&quot; /&gt;&lt;/a&gt;
+<h2 id="Youtube-videos"><a href="#Youtube-videos" class="headerlink" title="Youtube videos"></a>Youtube videos</h2><figure class="highlight markdown"><table><tr><td class="code"><pre><code class="hljs markdown"><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://www.youtube.com/watch?feature=player_embedded&amp;v=ARted4RniaU</span></span></span><br><span class="hljs-string"><span class="hljs-tag"><span class="language-xml">&quot;</span> <span class="hljs-attr">target</span>=<span class="hljs-string">&quot;_blank&quot;</span>&gt;</span></span><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://img.youtube.com/vi/ARted4RniaU/0.jpg&quot;</span></span></span><br><span class="hljs-tag"><span class="language-xml"><span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;IMAGE ALT TEXT HERE&quot;</span> <span class="hljs-attr">width</span>=<span class="hljs-string">&quot;240&quot;</span> <span class="hljs-attr">height</span>=<span class="hljs-string">&quot;180&quot;</span> <span class="hljs-attr">border</span>=<span class="hljs-string">&quot;10&quot;</span> /&gt;</span></span><span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></span><br><br>Pure markdown version:<br><br>[<span class="hljs-string">![IMAGE ALT TEXT HERE</span>](<span class="hljs-link">https://img.youtube.com/vi/ARted4RniaU/0.jpg</span>)](<span class="hljs-link">https://www.youtube.com/watch?v=ARted4RniaU</span>)<br></code></pre></td></tr></table></figure>
 
-Pure markdown version:
-
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/ARted4RniaU/0.jpg)](https://www.youtube.com/watch?v=ARted4RniaU)
-</code></pre>
 <p><a href="https://www.youtube.com/watch?feature=player_embedded&v=ARted4RniaU
 " target="_blank"><img src="https://img.youtube.com/vi/ARted4RniaU/0.jpg"
 alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a></p>
@@ -770,69 +416,6 @@ alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a></p>
         <tag>Foo</tag>
         <tag>Bar</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam justo turpis, tincidunt ac convallis id.</title>
-    <url>/post-40245f02.html</url>
-    <content><![CDATA[<p>This post has a long title. Make sure the title displayed right.</p>
-]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/post-0.html</url>
-    <content><![CDATA[<p>This post doesn’t have a title. Make sure it’s accessible.</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>Tag Plugins</title>
-    <url>/post-e2e5eeac.html</url>
-    <content><![CDATA[<p>This post is used for testing tag plugins. See <a href="http://zespia.tw/hexo/docs/tag-plugins.html">docs</a> for more info.</p>
-<h2 id="Block-Quote"><a href="#Block-Quote" class="headerlink" title="Block Quote"></a>Block Quote</h2><h3 id="Normal-blockquote"><a href="#Normal-blockquote" class="headerlink" title="Normal blockquote"></a>Normal blockquote</h3><blockquote>
-<p>Praesent diam elit, interdum ut pulvinar placerat, imperdiet at magna.</p>
-</blockquote>
-<h3 id="Quote-from-a-book"><a href="#Quote-from-a-book" class="headerlink" title="Quote from a book"></a>Quote from a book</h3><blockquote><p>Do not just seek happiness for yourself. Seek happiness for all. Through kindness. Through mercy.</p>
-<footer><strong>David Levithan</strong><cite>Wide Awake</cite></footer></blockquote>
-
-<h3 id="Quote-from-Twitter"><a href="#Quote-from-Twitter" class="headerlink" title="Quote from Twitter"></a>Quote from Twitter</h3><blockquote><p>NEW: DevDocs now comes with syntax highlighting. <a href="http://devdocs.io/">http://devdocs.io</a></p>
-<footer><strong>@DevDocs</strong><cite><a href="https://twitter.com/devdocs/status/356095192085962752">twitter.com/devdocs/status/356095192085962752</a></cite></footer></blockquote>
-
-<h3 id="Quote-from-an-article-on-the-web"><a href="#Quote-from-an-article-on-the-web" class="headerlink" title="Quote from an article on the web"></a>Quote from an article on the web</h3><blockquote><p>Every interaction is both precious and an opportunity to delight.</p>
-<footer><strong>Seth Godin</strong><cite><a href="http://sethgodin.typepad.com/seths_blog/2009/07/welcome-to-island-marketing.html">Welcome to Island Marketing</a></cite></footer></blockquote>
-
-<h2 id="Code-Block"><a href="#Code-Block" class="headerlink" title="Code Block"></a>Code Block</h2><h3 id="Normal-code-block"><a href="#Normal-code-block" class="headerlink" title="Normal code block"></a>Normal code block</h3><pre><code>alert(&#39;Hello World!&#39;);
-</code></pre>
-<h3 id="With-caption"><a href="#With-caption" class="headerlink" title="With caption"></a>With caption</h3><pre><code>array.map(callback[, thisArg])</code></pre>
-
-<h3 id="With-caption-and-URL"><a href="#With-caption-and-URL" class="headerlink" title="With caption and URL"></a>With caption and URL</h3><pre><code>.compact([0, 1, false, 2, ‘’, 3]);
-&#x3D;&gt; [1, 2, 3]</code></pre>
-
-<h3 id="With-marked-lines"><a href="#With-marked-lines" class="headerlink" title="With marked lines"></a>With marked lines</h3><p>Line 1,7-8,10 should be marked with different color.</p>
-<pre><code>const http &#x3D; require(&#39;http&#39;);
-
-const hostname &#x3D; &#39;127.0.0.1&#39;;
-const port &#x3D; 1337;
-
-http.createServer((req, res) &#x3D;&gt; {
-  res.writeHead(200, { &#39;Content-Type&#39;: &#39;text&#x2F;plain&#39; });
-  res.end(&#39;Hello World\n&#39;);
-}).listen(port, hostname, () &#x3D;&gt; {
-  console.log(&#96;Server running at http:&#x2F;&#x2F;${hostname}:${port}&#x2F;&#96;);
-});</code></pre>
-
-<p>Note: Theme’s style should support <code>.highlight.line.marked</code> (recommend to use the selection or current line color).</p>
-<h3 id="Gist"><a href="#Gist" class="headerlink" title="Gist"></a>Gist</h3><script src="//gist.github.com/996818.js"></script>
-
-<h3 id="jsFiddle"><a href="#jsFiddle" class="headerlink" title="jsFiddle"></a>jsFiddle</h3><iframe scrolling="no" width="100%" height="300" src="https://jsfiddle.net/ccWP7/embedded/js,resources,html,css,result/light" frameborder="0" loading="lazy" allowfullscreen></iframe>
-
-<h2 id="Pullquote"><a href="#Pullquote" class="headerlink" title="Pullquote"></a>Pullquote</h2><h3 id="Left"><a href="#Left" class="headerlink" title="Left"></a>Left</h3><blockquote class="pullquote left"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-</blockquote>
-
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tempus molestie arcu, et fringilla mauris placerat ac. Nullam luctus bibendum risus. Ut cursus sed ipsum feugiat egestas. Suspendisse elementum, velit eu consequat consequat, augue lorem dapibus libero, eget pulvinar dolor est sit amet nulla. Suspendisse a porta tortor, et posuere mi. Pellentesque ultricies, mi quis volutpat malesuada, erat felis vulputate nisl, ac congue ante tortor ut ante. Proin aliquam sem vel mauris tincidunt, eget scelerisque tortor euismod. Nulla tincidunt enim nec commodo dictum. Mauris id sapien et orci gravida luctus id ut dui. In vel vulputate odio. Duis vel turpis molestie, scelerisque enim eu, lobortis eros. Cras at ipsum gravida, sagittis ante vel, viverra tellus. Nunc mauris turpis, elementum ullamcorper nisl pretium, ultrices cursus justo. Mauris porttitor commodo eros, ac ornare orci interdum in. Cras fermentum cursus leo sed mattis. In dignissim lorem sem, sit amet elementum mauris venenatis ac.</p>
-<h3 id="Right"><a href="#Right" class="headerlink" title="Right"></a>Right</h3><blockquote class="pullquote right"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-</blockquote>
-
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ligula justo, lobortis sit amet semper vel, dignissim sit amet libero. Praesent ac tempus ligula. Maecenas at gravida odio. Etiam tristique volutpat lacus eu faucibus. Donec non tempus arcu. Phasellus adipiscing, mauris nec mollis egestas, ipsum nunc auctor velit, et rhoncus lorem ipsum at ante. Praesent et sem in velit volutpat auctor. Duis vel mauris nulla. Maecenas mattis interdum ante, quis sagittis nibh cursus et. Nulla facilisi. Morbi convallis gravida tortor, ut fermentum enim gravida et. Nunc vel dictum nisl, non ultrices libero. Proin vestibulum felis eget orci consectetur lobortis. Vestibulum augue nulla, iaculis vitae augue vehicula, dignissim ultrices libero. Sed imperdiet urna et quam ultrices tincidunt nec ac magna. Etiam vel pharetra elit.</p>
-]]></content>
   </entry>
   <entry>
     <title>Tags</title>
