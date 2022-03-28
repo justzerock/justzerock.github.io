@@ -13,7 +13,7 @@ timezone: ''
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://blog.zerock.top
+url: https://zerock.top
 root: /
 permalink: post-:abbrlink.html
 permalink_defaults:
@@ -151,13 +151,11 @@ aomori_search_algolia: false
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type: git
-  repo: git@aliyun:/home/git/repos/blog.git
+- type: git
+  repo: al:/var/www/blog/git.git
+- type: git
+  repo: https://github.com/justzerock/justzerock.github.io.git
   branch: master
-# deploy:
-#   type: git
-#   repo: https://github.com/justzerock/justzerock.github.io.git
-#   branch: master
 
 # 初始化仓库
 

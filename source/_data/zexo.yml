@@ -15,11 +15,11 @@ menu:
   About: /about
 
 valine:
-  enable: true
+  enable: false
   appId: lUBXsWwG1SnROnGq9wwSqSin-9Nh9j0Va
   appKey: m74UnYUVQL6SbcpdG5mWlIbi
   avatar: robohash
-  placeholder: ¯\_(ツ)_/¯ 我想说……
+  placeholder: ¯\_(ツ)_/¯ Hello World
   emojiCDN: https://cdn.jsdelivr.net/gh/GamerNoTitle/ValineCDN/
   emojiMaps:
     doge: bilibilitv/[tv_doge].png
@@ -101,8 +101,8 @@ flat-style: true
 
 # stylesheets loaded in the <head>
 stylesheets:
+- //at.alicdn.com/t/font_2332181_fvvpcv17kg.css
 - //cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.5.0/build/styles/nord.min.css
-- //at.alicdn.com/t/font_2332181_28yeh7oxlz5.css
 - //fonts.loli.net/css2?family=Fira+Code:wght@500&display=swap
 - /css/index.css
 # icon love -> if i-love
@@ -119,8 +119,10 @@ scripts:
 - /js/hexo-theme-zexo.js
 - /js/heart-click.js
 - /js/pjax.js
-- /js/highlight.js
+#- /js/highlight.js
+#- /js/highlight-copy.js
 - /js/dynamicColor.js
 - /js/tocbot.js
 - /js/anchor.js
 - /js/img-style.js
+- /js/video.js
