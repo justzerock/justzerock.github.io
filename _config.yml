@@ -10,12 +10,12 @@ keywords:
 author: 礼右六
 language: zh-CN
 timezone: ''
-
+favicon: favicon.ico
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: https://zerock.top
 root: /
-permalink: post-:abbrlink.html
+permalink: z-:abbrlink.html
 permalink_defaults:
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
@@ -23,7 +23,7 @@ pretty_urls:
 
 # abbrlink config
 abbrlink:
-  alg: crc32      #support crc16(default) and crc32
+  alg: crc16      #support crc16(default) and crc32
   rep: hex        #support dec(default) and hex
   drafts: false   #(true)Process draft,(false)Do not process draft. false(default) 
   # Generate categories from directory-tree
@@ -32,7 +32,7 @@ abbrlink:
      enable: true  #true(default)
      depth:        #3(default)
      over_write: false 
-  auto_title: false #enable auto title, it can auto fill the title by path
+  auto_title: true #enable auto title, it can auto fill the title by path
   auto_date: false #enable auto date, it can auto fill the date by time today
   force: false #enable force mode,in this mode, the plugin will ignore the cache, and calc the abbrlink for every post even it already had abbrlink.
 
@@ -116,37 +116,10 @@ search:
 ## Themes: https://hexo.io/themes/
 theme: zexo
 
-# config for aomori
-aomori_logo: https://cdn.jsdelivr.net/gh/justzerock/assets@master/img/icon.png
-aomori_logo_typed_animated: true
-aomori_menu:
-  Home: /
-  Archives: /archives
-aomori_widgets:
-  - toc # Article navigation
-  - category  # Article classification
-  - tag # Article tags
-  - recent_posts  # latest articles
-  - archive # Article Archive
-aomori_copyright: true # or false
-aomori_social:
-  -
-    icon: # Boxicons name
-    type: # Boxicons type
-    url: # Your social link
-aomori_baidu_sitepush: true  # or false
-aomori_google_site:
-  enable: true
-  id: XXX
-aomori_favicon: ☭
 algolia:
     applicationID: '0XROMJY2CJ'
     apiKey: '94d1f71bdaa07ae7daa0d44120463056'
     indexName: 'zerock'
-aomori_search_algolia: false
-
-
-
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
