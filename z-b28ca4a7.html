@@ -25,7 +25,7 @@
     
       <link rel="stylesheet" href="//at.alicdn.com/t/font_2332181_fvvpcv17kg.css">
     
-      <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.5.0/build/styles/nord.min.css">
+      <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/highlight.js@11.5.0/styles/base16/material-lighter.min.css">
     
       <link rel="stylesheet" href="//fonts.loli.net/css2?family=Fira+Code:wght@500&display=swap">
     
@@ -34,8 +34,6 @@
   
   <script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
   
-<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
-
   
 </head>
 <body>
@@ -51,19 +49,24 @@
 </div>
   
   
-    <a href="/" key="Home" class="menu__item ">
-      <i class="menu__icon if i-Home"></i>
-      Home
+    <a href="/" key="首页" class="menu__item ">
+      
+      首页
     </a>
   
-    <a href="/archives" key="Archives" class="menu__item ">
-      <i class="menu__icon if i-Archives"></i>
-      Archives
+    <a href="/archives" key="归档" class="menu__item ">
+      
+      归档
     </a>
   
-    <a href="/about" key="About" class="menu__item ">
-      <i class="menu__icon if i-About"></i>
-      About
+    <a href="/friends" key="友链" class="menu__item ">
+      
+      友链
+    </a>
+  
+    <a href="/about" key="关于" class="menu__item ">
+      
+      关于
     </a>
   
   <script>
@@ -123,7 +126,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     <div class="post__paginator">
 
   <div class="post__prev">
-    <a class="post__prev--link" href="/post-75ae45b8.html">
+    <a class="post__prev--link" href="/z-75ae45b8.html">
       <i class="post__prev--icon if i-arrow-left"></i>
       <span class="post__prev--text">
         
@@ -136,7 +139,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
 
   <div class="post__next">
-    <a class="post__next--link" href="/post-cf8e3b18.html">
+    <a class="post__next--link" href="/z-cf8e3b18.html">
       <span class="post__next--block"></span>
       <span class="post__next--text">
         
@@ -149,151 +152,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
 </div>
     
-<div class='vcomment-toggle' title='评论'><i class='if i-comment'></i></div>
-<div id="vcomment"></div>
-<script>
-
-  load_valine = function () {
-    let vcards = document.getElementsByClassName('vcards').length
-
-    if (!vcards) {
-      let emojiMaps = {
-        
-          'doge': 'bilibilitv/[tv_doge].png',
-        
-          '亲亲': 'bilibilitv/[tv_亲亲].png',
-        
-          '偷笑': 'bilibilitv/[tv_偷笑].png',
-        
-          '再见': 'bilibilitv/[tv_再见].png',
-        
-          '冷漠': 'bilibilitv/[tv_冷漠].png',
-        
-          '发怒': 'bilibilitv/[tv_发怒].png',
-        
-          '发财': 'bilibilitv/[tv_发财].png',
-        
-          '可爱': 'bilibilitv/[tv_可爱].png',
-        
-          '吐血': 'bilibilitv/[tv_吐血].png',
-        
-          '呆': 'bilibilitv/[tv_呆].png',
-        
-          '呕吐': 'bilibilitv/[tv_呕吐].png',
-        
-          '困': 'bilibilitv/[tv_困].png',
-        
-          '坏笑': 'bilibilitv/[tv_坏笑].png',
-        
-          '大佬': 'bilibilitv/[tv_大佬].png',
-        
-          '大哭': 'bilibilitv/[tv_大哭].png',
-        
-          '委屈': 'bilibilitv/[tv_委屈].png',
-        
-          '害羞': 'bilibilitv/[tv_害羞].png',
-        
-          '尴尬': 'bilibilitv/[tv_尴尬].png',
-        
-          '微笑': 'bilibilitv/[tv_微笑].png',
-        
-          '思考': 'bilibilitv/[tv_思考].png',
-        
-          '惊吓': 'bilibilitv/[tv_惊吓].png',
-        
-          '打脸': 'bilibilitv/[tv_打脸].png',
-        
-          '抓狂': 'bilibilitv/[tv_抓狂].png',
-        
-          '抠鼻': 'bilibilitv/[tv_抠鼻].png',
-        
-          '斜眼笑': 'bilibilitv/[tv_斜眼笑].png',
-        
-          '无奈': 'bilibilitv/[tv_无奈].png',
-        
-          '晕': 'bilibilitv/[tv_晕].png',
-        
-          '流汗': 'bilibilitv/[tv_流汗].png',
-        
-          '流泪': 'bilibilitv/[tv_流泪].png',
-        
-          '流鼻血': 'bilibilitv/[tv_流鼻血].png',
-        
-          '点赞': 'bilibilitv/[tv_点赞].png',
-        
-          '生气': 'bilibilitv/[tv_生气].png',
-        
-          '生病': 'bilibilitv/[tv_生病].png',
-        
-          '疑问': 'bilibilitv/[tv_疑问].png',
-        
-          '白眼': 'bilibilitv/[tv_白眼].png',
-        
-          '皱眉': 'bilibilitv/[tv_皱眉].png',
-        
-          '目瞪口呆': 'bilibilitv/[tv_目瞪口呆].png',
-        
-          '睡着': 'bilibilitv/[tv_睡着].png',
-        
-          '笑哭': 'bilibilitv/[tv_笑哭].png',
-        
-          '腼腆': 'bilibilitv/[tv_腼腆].png',
-        
-          '色': 'bilibilitv/[tv_色].png',
-        
-          '调侃': 'bilibilitv/[tv_调侃].png',
-        
-          '调皮': 'bilibilitv/[tv_调皮].png',
-        
-          '鄙视': 'bilibilitv/[tv_鄙视].png',
-        
-          '闭嘴': 'bilibilitv/[tv_闭嘴].png',
-        
-          '难过': 'bilibilitv/[tv_难过].png',
-        
-          '馋': 'bilibilitv/[tv_馋].png',
-        
-          '鬼脸': 'bilibilitv/[tv_鬼脸].png',
-        
-          '黑人问号': 'bilibilitv/[tv_黑人问号].png',
-        
-          '鼓掌': 'bilibilitv/[tv_鼓掌].png',
-        
-      }
-      new Valine({
-          el:'#vcomment',
-          appId: 'Vjtfg96HPiby3d9RVjGGxWHy-MdYXbMMI',
-          appKey: 'PVnLrHLh4FJNCDV31rwXNXHR',
-          avatar: 'robohash',
-          placeholder: '¯\_(ツ)_/¯ Hello World',
-          // 这里设置CDN, 默认微博表情CDN
-          emojiCDN: 'https://cdn.jsdelivr.net/gh/GamerNoTitle/ValineCDN/', 
-          // 表情title和图片映射
-          emojiMaps: emojiMaps,
-          path: window.location.pathname
-      })
-    }
-  }
-
-  document.addEventListener("DOMContentLoaded", function(event) {
-    load_valine()
-  })
-
-  document.addEventListener('pjax:complete', function (){
-    load_valine()
-  })
-
-  document.getElementsByClassName('vcomment-toggle')[0].onclick = function () {
-    let vcomment = document.getElementById('vcomment')
-    if ( ('','0','0px').includes(vcomment.style.maxHeight) ) {
-      vcomment.style.maxHeight = '999px'
-      setTimeout(() => {  vcomment.style.maxHeight = 'max-content' }, 500);
-    } else {
-      vcomment.style.maxHeight = '0'
-    }
-  }
-</script>
-
     <script>
 
 load_copy_button = function () {
@@ -303,7 +161,7 @@ load_copy_button = function () {
   if (!badge) {
     var pres = document.querySelectorAll("pre>code");
     for (var i = 0; i < pres.length; i++) {
-    	hljs.highlightBlock(pres[i]);
+    	hljs.highlightElement(pres[i]);
     }
 
     /* double click */
@@ -336,6 +194,56 @@ document.addEventListener('pjax:complete', function (){
 })
 
 </script>
+    
+<div id='comment-beaudar'>
+  <div class='vcomment-toggle' title='评论'><i class='if i-comment'></i></div>
+</div>
+<style>
+  .beaudar {
+    transition: all .5s ease-in-out;
+    max-height: 0;
+    overflow: hidden;
+  }
+</style>
+<script>
+
+load_beaudar = function () {
+  let block = document.getElementById('comment-beaudar')
+  if ( block.childElementCount == 1 ) {
+    let beaudar = document.createElement('script')
+    beaudar.src = 'https://beaudar.lipk.org/client.js'
+    beaudar.setAttribute('repo', 'justzerock/justzerock.github.io')
+    beaudar.setAttribute('branch', 'blog')
+    beaudar.setAttribute('issue-term', 'pathname')
+    beaudar.setAttribute('label', 'Beaudar')
+    beaudar.setAttribute('theme', 'github-light')
+    beaudar.setAttribute('comment-order', 'desc')
+    beaudar.setAttribute('input-position', 'top')
+    beaudar.setAttribute('crossorigin', 'anonymous')
+    beaudar.setAttribute('async','')
+    block.appendChild(beaudar)
+  }
+}
+
+  document.getElementsByClassName('vcomment-toggle')[0].onclick = function () {
+    let beaudar = document.getElementsByClassName('beaudar')[0]
+    if ( ('','0','0px').includes(beaudar.style.maxHeight) ) {
+      beaudar.style.maxHeight = '999px'
+      setTimeout(() => {  beaudar.style.maxHeight = 'max-content' }, 500);
+    } else {
+      beaudar.style.maxHeight = '0px'
+    }
+  }
+
+document.addEventListener("DOMContentLoaded", (event) => {
+  load_beaudar()
+});   
+
+document.addEventListener('pjax:complete', function (){
+  load_beaudar()
+})
+
+</script>
   </div>
 
 
@@ -345,7 +253,7 @@ document.addEventListener('pjax:complete', function (){
 <div class="sidebar">
   
   <div class="sidebar__toc">
-    <div class='sidebar__toc--icon'><i class='if i-toc'>目录</i></div>
+    
     <div class="sidebar__toc--list" id="sidebar__toc--list"></div>
   </div>
   
@@ -367,7 +275,7 @@ document.addEventListener('pjax:complete', function (){
   
     <script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
   
-    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.5.0/build/highlight.min.js"></script>
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.0/build/highlight.min.js"></script>
   
     <script src="//cdn.jsdelivr.net/gh/RickStrahl/highlightjs-badge@master/highlightjs-badge.min.js"></script>
   

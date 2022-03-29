@@ -25,7 +25,7 @@
     
       <link rel="stylesheet" href="//at.alicdn.com/t/font_2332181_fvvpcv17kg.css">
     
-      <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.5.0/build/styles/nord.min.css">
+      <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/highlight.js@11.5.0/styles/base16/material-lighter.min.css">
     
       <link rel="stylesheet" href="//fonts.loli.net/css2?family=Fira+Code:wght@500&display=swap">
     
@@ -34,8 +34,6 @@
   
   <script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
   
-<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
-
   
 </head>
 <body>
@@ -51,19 +49,24 @@
 </div>
   
   
-    <a href="/" key="Home" class="menu__item ">
-      <i class="menu__icon if i-Home"></i>
-      Home
+    <a href="/" key="首页" class="menu__item ">
+      
+      首页
     </a>
   
-    <a href="/archives" key="Archives" class="menu__item ">
-      <i class="menu__icon if i-Archives"></i>
-      Archives
+    <a href="/archives" key="归档" class="menu__item ">
+      
+      归档
     </a>
   
-    <a href="/about" key="About" class="menu__item ">
-      <i class="menu__icon if i-About"></i>
-      About
+    <a href="/friends" key="友链" class="menu__item ">
+      
+      友链
+    </a>
+  
+    <a href="/about" key="关于" class="menu__item ">
+      
+      关于
     </a>
   
   <script>
@@ -111,7 +114,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 <div class="sidebar">
   
   <div class="sidebar__toc">
-    <div class='sidebar__toc--icon'><i class='if i-toc'>目录</i></div>
+    
     <div class="sidebar__toc--list" id="sidebar__toc--list"></div>
   </div>
   
@@ -133,7 +136,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
   
     <script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
   
-    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.5.0/build/highlight.min.js"></script>
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.0/build/highlight.min.js"></script>
   
     <script src="//cdn.jsdelivr.net/gh/RickStrahl/highlightjs-badge@master/highlightjs-badge.min.js"></script>
   

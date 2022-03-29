@@ -95,11 +95,11 @@ function css(css) {
 function randomColor() {
   return (
     "rgb(" +
-    ~~(Math.random() * 255) +
+    ~~(255) +
     "," +
-    ~~(Math.random() * 255) +
+    ~~(Math.random() * 100) +
     "," +
-    ~~(Math.random() * 255) +
+    ~~(Math.random() * 100) +
     ")"
   );
 }
