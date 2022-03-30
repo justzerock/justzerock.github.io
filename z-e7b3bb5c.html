@@ -315,7 +315,9 @@ commentToggle.onclick = function() {
   } else {
     localStorage.setItem('isComment', true)
     commentToggle.className = 'settings__btn'
-    load_beaudar()
+    if (lenBlock) {
+      load_beaudar()
+    }
   }
 }
 
