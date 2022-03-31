@@ -11,9 +11,9 @@ override: true
 # main menu navigation
 menu:
   首页: /
-  归档: /archives
   友链: /friends
   关于: /about
+  #归档: /archives
 
 valine:
   enable: false
@@ -102,10 +102,12 @@ flat-style: true
 
 # stylesheets loaded in the <head>
 stylesheets:
-- //at.alicdn.com/t/font_2332181_fvvpcv17kg.css
-#- //cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.5.0/build/styles/nord.min.css
+- //at.alicdn.com/t/font_2332181_q2j23x8zy1.css
+#- //cdn.jsdelivr.net/npm/highlight.js@11.5.0/styles/nord.min.css
+#- //cdn.jsdelivr.net/npm/highlight.js@11.5.0/styles/agate.min.css
+- //cdn.jsdelivr.net/npm/highlight.js@11.5.0/styles/base16/atelier-estuary-light.min.css
 #- //cdn.jsdelivr.net/npm/highlight.js@11.5.0/styles/base16/material-palenight.min.css
-- //cdn.jsdelivr.net/npm/highlight.js@11.5.0/styles/base16/material-lighter.min.css
+#- //cdn.jsdelivr.net/npm/highlight.js@11.5.0/styles/base16/material-lighter.min.css
 - //fonts.loli.net/css2?family=Fira+Code:wght@500&display=swap
 - /css/index.css
 # icon love -> if i-love
@@ -113,10 +115,9 @@ stylesheets:
 # scripts loaded in the end of the body
 scripts:
 - //cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js
-#- //cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.5.0/build/highlight.min.js
+- //cdn.jsdelivr.net/npm/pjax/pjax.min.js
 - //cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.0/build/highlight.min.js
 - //cdn.jsdelivr.net/gh/RickStrahl/highlightjs-badge@master/highlightjs-badge.min.js
-- //cdn.jsdelivr.net/npm/pjax/pjax.min.js
 - //cdn.jsdelivr.net/npm/tocbot@4.18.2/dist/tocbot.min.js
 - //cdn.jsdelivr.net/npm/anchor-js@4.3.1/anchor.min.js
 - /js/hexo-theme-zexo.js
@@ -127,3 +128,4 @@ scripts:
 - /js/anchor.js
 - /js/img-style.js
 - /js/video.js
+- /js/scroll.js
