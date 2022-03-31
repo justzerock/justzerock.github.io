@@ -383,6 +383,7 @@ body::-webkit-scrollbar-thumb {
   border-radius: 1vw 0 0 1vw;
   display: flex;
   padding: 0 1em;
+  flex-direction: column;
 /*  标签 */
 /*  目录 */
 }
@@ -688,6 +689,9 @@ body::-webkit-scrollbar-thumb {
   position: relative;
   margin: 0 0 4vw;
 }
+.post__article a {
+  color: rgba(66,165,245,0.8);
+}
 .post__article--top {
   padding-top: 15vw;
 }
@@ -778,6 +782,12 @@ body::-webkit-scrollbar-thumb {
 .post .code-badge-pre .hljs {
   padding: 1em;
   font-family: 'Menlo';
+  background: #efefef;
+}
+.post .code-badge-pre .hljs::selection,
+.post .code-badge-pre .hljs ::selection {
+  background-color: #42a5f5;
+  color: #efefef;
 }
 .post .code-badge-pre .hljs::-webkit-scrollbar {
   width: 0.6vw;
@@ -1049,6 +1059,30 @@ body::-webkit-scrollbar-thumb {
 .settings__btn:active {
   box-shadow: 0 0 0.2vw rgba(0,0,0,0.08);
   transform: translate(0.05vw, 0.05vw);
+}
+.friends__block {
+  display: flex;
+  justify-content: center;
+}
+.friends__block--link {
+  display: flex;
+  border-radius: 1vw;
+  box-shadow: 0 0 0.7vw rgba(0,0,0,0.1);
+  justify-content: flex-start;
+  align-items: center;
+  width: 50%;
+  transition: all 0.3s ease-in-out;
+}
+.friends__block--link:hover {
+  box-shadow: 0 0 1vw rgba(0,0,0,0.1);
+}
+.friends__block--img {
+  width: 8vw;
+  height: 8vw;
+  object-fit: cover;
+  box-shadow: 0 0 0.5vw rgba(0,0,0,0.1);
+  border-radius: 0.5vw;
+  margin-right: 3vw;
 }
 .fancybox-container {
   backdrop-filter: saturate(0.5) blur(4px);
