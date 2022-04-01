@@ -54,6 +54,11 @@
       首页
     </a>
   
+    <a href="/archives" key="归档" class="menu__item ">
+      
+      归档
+    </a>
+  
     <a href="/friends" key="友链" class="menu__item ">
       
       友链
@@ -112,9 +117,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
             </a>
           </h1>
           
-            <div class="post-list__excerpt">
-              <p>Make sure all the code blocks highlighted correctly. All the code samples are come from the demo of <a target="_blank" rel="noopener" href="https://highlightjs.org/">https://highlightjs.org</a></p>
-            </div>
+            <a class="post-list__excerpt" href="/z-9db656e5.html">
+              Make sure all the code blocks highlighted correctly. All the code samples are come from the demo of https://highlightjs.org
+            </a>
           
           <div class="post-list__bottom">
             <div class="post-list__date">
@@ -143,9 +148,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
             </a>
           </h1>
           
-            <div class="post-list__excerpt">
-              <p>This post is originated from <a target="_blank" rel="noopener" href="https://gist.github.com/apackeer/4159268">here</a> and is used for testing markdown style. This post contains nearly every markdown usage. Make sure all the markdown elements below show up correctly.</p>
-            </div>
+            <a class="post-list__excerpt" href="/z-89757140.html">
+              This post is originated from here and is used for testing markdown style. This post contains nearly every markdown usage. Make sure all the markdown elements below show up correctly.
+            </a>
           
           <div class="post-list__bottom">
             <div class="post-list__date">
@@ -241,9 +246,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
             </a>
           </h1>
           
-            <div class="post-list__excerpt">
-              <p>The following contents should be invisible in home&#x2F;archive page.</p>
-            </div>
+            <a class="post-list__excerpt" href="/z-13f29456.html">
+              The following contents should be invisible in home&#x2F;archive page.
+            </a>
           
           <div class="post-list__bottom">
             <div class="post-list__date">
@@ -348,7 +353,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
           <h1 class="post-list__title">
             <a class="post-list__title--link" target="_blank" rel="noopener" href="http://www.google.com/">
             
-              <i class="post-list__title--icon if i-link"></i> www.google.com
+               www.google.com <i class="post-list__title--icon if i-link"></i>
             
             </a>
           </h1>
@@ -406,21 +411,21 @@ document.addEventListener("DOMContentLoaded", (event) => {
 <div class="sidebar">
   
   <div class="sidebar__tag">
-    <a href="/tags/Bar/" style="font-size: 28px;" class="sidebar__tag--item-10">Bar</a> <a href="/tags/Baz/" style="font-size: 16px;" class="sidebar__tag--item-0">Baz</a> <a href="/tags/Foo/" style="font-size: 28px;" class="sidebar__tag--item-10">Foo</a> <a href="/tags/test/" style="font-size: 16px;" class="sidebar__tag--item-0">test</a> <a href="/tags/%E6%B5%8B%E8%AF%95/" style="font-size: 16px;" class="sidebar__tag--item-0">测试</a>
+    <a href="/tags/Bar/" style="font-size: 28px;" class="sidebar__tag--item-10">Bar</a> <a href="/tags/Baz/" style="font-size: 22px;" class="sidebar__tag--item-5">Baz</a> <a href="/tags/Foo/" style="font-size: 28px;" class="sidebar__tag--item-10">Foo</a> <a href="/tags/test/" style="font-size: 16px;" class="sidebar__tag--item-0">test</a> <a href="/tags/%E6%B5%8B%E8%AF%95/" style="font-size: 16px;" class="sidebar__tag--item-0">测试</a>
     <div class='sidebar__tag--icon'><i class='if i-Tags'></i></div>
   </div>
   
   
 </div>
 
-<div class='go-top' title='滚动到顶部'>
+<div class='go-top' aria-label='滚动到顶部'>
 <i class='if i-arrow-up'></i>
 </div>
 <div class='settings'>
-  <div class='settings__btn' id='dark-mode-toggle' title='切换暗色'>
+  <div class='settings__btn' id='dark-mode-toggle' aria-label='切换暗色'>
     <i class='if i-sun'></i>
   </div>
-  <div class='settings__btn disable' id='comment-toggle' title='开启评论'>
+  <div class='settings__btn disable' id='comment-toggle' aria-label='开启评论'>
     <i class='if i-comment'></i>
   </div>
 </div>
@@ -444,11 +449,11 @@ darkModeToggle.onclick = function () {
   if (darkMode === 'true') {
     localStorage.setItem('dark-mode', 'false')
     darkModeToggle.innerHTML = `<i class='if i-sun'></i>`
-    darkModeToggle.title = '切换暗色'
+    darkModeToggle.ariaLabel = '切换暗色'
   } else {
     localStorage.setItem('dark-mode', 'true')
     darkModeToggle.innerHTML = `<i class='if i-moon'></i>`
-    darkModeToggle.title = '切换亮色'
+    darkModeToggle.ariaLabel = '切换亮色'
   }
 }
 
@@ -457,10 +462,10 @@ getIsComment = function() {
   let isComment = localStorage.getItem('isComment')
   if ( isComment == 'true' ) {
     commentToggle.classList.remove('disable')
-    commentToggle.title = '关闭评论'
+    commentToggle.ariaLabel = '关闭评论'
   } else {
     commentToggle.classList.add('disable')
-    commentToggle.title = '开启评论'
+    commentToggle.ariaLabel = '开启评论'
   }
 }
 

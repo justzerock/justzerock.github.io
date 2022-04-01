@@ -56,6 +56,11 @@
       首页
     </a>
   
+    <a href="/archives" key="归档" class="menu__item ">
+      
+      归档
+    </a>
+  
     <a href="/friends" key="友链" class="menu__item ">
       
       友链
@@ -97,7 +102,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 <div class="content-main">
   
   
-  <div id="category" class="category">
+  <div id="category" class="post category">
     <h1 class="category__title">Bar</h1>
     
       <div class="category__item">
@@ -111,10 +116,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
     
   </div>
 
-    <div id="paginator" class="paginator">
-    <span class="page-number current">1</span>
-  </div>
-
 
 </div>
 
@@ -122,14 +123,14 @@ document.addEventListener("DOMContentLoaded", (event) => {
   
 </div>
 
-<div class='go-top' title='滚动到顶部'>
+<div class='go-top' aria-label='滚动到顶部'>
 <i class='if i-arrow-up'></i>
 </div>
 <div class='settings'>
-  <div class='settings__btn' id='dark-mode-toggle' title='切换暗色'>
+  <div class='settings__btn' id='dark-mode-toggle' aria-label='切换暗色'>
     <i class='if i-sun'></i>
   </div>
-  <div class='settings__btn disable' id='comment-toggle' title='开启评论'>
+  <div class='settings__btn disable' id='comment-toggle' aria-label='开启评论'>
     <i class='if i-comment'></i>
   </div>
 </div>
@@ -153,11 +154,11 @@ darkModeToggle.onclick = function () {
   if (darkMode === 'true') {
     localStorage.setItem('dark-mode', 'false')
     darkModeToggle.innerHTML = `<i class='if i-sun'></i>`
-    darkModeToggle.title = '切换暗色'
+    darkModeToggle.ariaLabel = '切换暗色'
   } else {
     localStorage.setItem('dark-mode', 'true')
     darkModeToggle.innerHTML = `<i class='if i-moon'></i>`
-    darkModeToggle.title = '切换亮色'
+    darkModeToggle.ariaLabel = '切换亮色'
   }
 }
 
@@ -166,10 +167,10 @@ getIsComment = function() {
   let isComment = localStorage.getItem('isComment')
   if ( isComment == 'true' ) {
     commentToggle.classList.remove('disable')
-    commentToggle.title = '关闭评论'
+    commentToggle.ariaLabel = '关闭评论'
   } else {
     commentToggle.classList.add('disable')
-    commentToggle.title = '开启评论'
+    commentToggle.ariaLabel = '开启评论'
   }
 }
 
