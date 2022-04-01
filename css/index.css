@@ -249,7 +249,7 @@ body {
   overflow-y: overlay;
 }
 body a {
-  color: #304a62;
+  color: rgba(66,165,245,0.8);
   text-decoration: none;
 }
 body a:hover {
@@ -272,9 +272,9 @@ body::-webkit-scrollbar-thumb {
   flex: 1;
 }
 ::selection {
-  color: rgba(255,255,255,0.8);
+  color: #efefef;
   text-shadow: none;
-  background-color: rgba(255,93,90,0.8);
+  background-color: rgba(66,165,245,0.8);
   border-radius: 10px;
 }
 @media (max-width: 575.98px) {
@@ -689,9 +689,6 @@ body::-webkit-scrollbar-thumb {
   position: relative;
   margin: 0 0 4vw;
 }
-.post__article a {
-  color: rgba(66,165,245,0.8);
-}
 .post__article--top {
   padding-top: 15vw;
 }
@@ -786,7 +783,7 @@ body::-webkit-scrollbar-thumb {
 }
 .post .code-badge-pre .hljs::selection,
 .post .code-badge-pre .hljs ::selection {
-  background-color: #42a5f5;
+  background-color: rgba(66,165,245,0.8);
   color: #efefef;
 }
 .post .code-badge-pre .hljs::-webkit-scrollbar {
@@ -841,7 +838,7 @@ body::-webkit-scrollbar-thumb {
   left: 0;
   top: 1vw;
   font-size: 5em;
-  color: rgba(66,165,245,0.5);
+  color: rgba(48,74,98,0.5);
 }
 .post blockquote.pullquote.right {
   text-align: right;
