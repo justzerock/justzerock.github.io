@@ -103,19 +103,25 @@ document.addEventListener("DOMContentLoaded", (event) => {
   
   
   <div id="category" class="post category">
-    <h1 class="category__title">Bar</h1>
+    <div class='category__name'>Bar</div>
     
       <div class="category__item">
-        <a href="/z-75ae45b8.html">
-          Categories
+        <a class='category__item--link' href="/z-75ae45b8.html">
+          <div class='category__item--date'>
+            2013-12-24
+          </div>
+          <h1 class="category__item--title">
+            
+              Categories
+            
+          </h1>
         </a>
-        <time datetime="2013-12-24T15:30:09.000Z">
-          2013-12-24
-        </time>
       </div>
     
   </div>
-
+    <div id="paginator" class="paginator">
+    <span class="page-number current">1</span>
+  </div>
 
 </div>
 
@@ -127,6 +133,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
 <i class='if i-arrow-up'></i>
 </div>
 <div class='settings'>
+  <div class='settings__btn' id='search' aria-label='搜索'>
+    <i class='if i-search'></i>
+  </div>
   <div class='settings__btn' id='dark-mode-toggle' aria-label='切换暗色'>
     <i class='if i-sun'></i>
   </div>

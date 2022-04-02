@@ -121,6 +121,21 @@ document.addEventListener("DOMContentLoaded", (event) => {
       
       </div>
       
+        <i class="if i-Categories post-list__category--icon"></i>
+        
+          <a class="post-list__category" href="/categories/%E6%B5%8B%E8%AF%95/">
+            · 测试
+          </a>
+        
+          <a class="post-list__category" href="/categories/%E6%B5%8B%E8%AF%95/test/">
+            · test
+          </a>
+        
+          <a class="post-list__category" href="/categories/%E6%B5%8B%E8%AF%95/test/%E5%88%86%E7%B1%BB/">
+            · 分类
+          </a>
+        
+      
       
         <i class="if i-Tags post-list__tag--icon"></i>
         
@@ -142,14 +157,14 @@ document.addEventListener("DOMContentLoaded", (event) => {
           Categories
         
       </span>
-      <span class="post__prev--block"></span>
+      <span class="post__prev--mobile">上一篇</span>
     </a>
   </div>
 
 
   <div class="post__next">
     <a class="post__next--link" href="/z-cf8e3b18.html">
-      <span class="post__next--block"></span>
+      <span class="post__next--mobile">下一篇</span>
       <span class="post__next--text">
         
           Tags 
@@ -259,6 +274,9 @@ document.addEventListener('pjax:complete', function (){
 <i class='if i-arrow-up'></i>
 </div>
 <div class='settings'>
+  <div class='settings__btn' id='search' aria-label='搜索'>
+    <i class='if i-search'></i>
+  </div>
   <div class='settings__btn' id='dark-mode-toggle' aria-label='切换暗色'>
     <i class='if i-sun'></i>
   </div>

@@ -13,9 +13,9 @@ btnGoTop.onclick = function() {
 window.onscroll = function () {
   var g = document.documentElement.scrollTop || document.body.scrollTop;
   if (g > 250) {
-    btnGoTop.style.transform = 'translate(0, 0)'
+    btnGoTop.classList.add('show')
   }
   else if (g < 250) {
-    btnGoTop.style.transform = 'translate(0, 3.5vw)'
+    btnGoTop.classList.remove('show')
   }
 }
