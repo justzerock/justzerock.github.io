@@ -54,6 +54,7 @@ const applyCustomDarkModeSettings = (mode) => {
     resetRootDarkModeAttributeAndLS();
   } else if (validColorModeKeys[currentSetting]) { // 相比 Array#indexOf，这种写法 Uglify 后字节数更少
     rootElement.setAttribute(rootElementDarkModeAttributeName, currentSetting);
+    setLS(darkModeStorageKey, currentSetting);
   } else {
     // 首次访问或从未使用过开关、localStorage 中没有存储的值，currentSetting 是 null
     // 或者 localStorage 被篡改，currentSetting 不是合法值

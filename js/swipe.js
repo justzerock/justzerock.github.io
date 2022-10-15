@@ -22,6 +22,8 @@ function _touch() {
       if ((startTop - endTop) > ($(window).height()/10) ) {
         $('.menu').addClass('hide');
         $('.settings').addClass('hide');
+        $('.settings').removeClass('open');
+        $('.blur').removeClass('open');
       } else if ((endTop - startTop) > ($(window).height()/10) ) {
         $('.menu').removeClass('hide');
         $('.settings').removeClass('hide');
@@ -33,6 +35,8 @@ function _touch() {
         // alert('top');
         $('.menu').addClass('hide');
         $('.settings').addClass('hide');
+        $('.settings').removeClass('open');
+        $('.blur').removeClass('open');
       } else if (startY < endY) {
         // alert('bottom');
         $('.menu').removeClass('hide');
