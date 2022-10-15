@@ -18,7 +18,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>categories · 亦如年少</title>
+  <title>我是来凑数的 · 亦如年少</title>
   <link rel="preconnect" href="https://gstatic.loli.net">
   
     
@@ -103,14 +103,94 @@ document.addEventListener("DOMContentLoaded", (event) => {
   
   
   <div class="post">
-    <article id="post" class="post__article">
+    <article id="post" class="post__article  post__article--top ">
+      
+      <p>
+        <img class="post__top-img" src="https://images.unsplash.com/photo-1654448187595-ec20937aa260?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2827&q=80" />
+      </p>
+      
       <h1 class="post__article--title">
-        categories
+      
+        我是来凑数的
+      
       </h1>
+      <div class='post__article--date'>
+        2022-09-02
+      </div>
       <div class="post__article--content">
+      <p>写主题需要适配 md 的各种标签，真的挺麻烦的，不做又太简陋了。</p>
+<span id="more"></span>
+
+<h2 id="这个博客主题真是个大坑"><a href="#这个博客主题真是个大坑" class="headerlink" title="这个博客主题真是个大坑"></a>这个博客主题真是个大坑</h2><blockquote>
+<p>完善没有那么容易，一个问题接着一个问题</p>
+</blockquote>
+
+      
+        <div  class='post__gallery--block'>
+        
+        </div>
       
       </div>
+      
+      
     </article>
+    <div class="post__paginator">
+
+  <div class="post__prev">
+    <span class="post__prev--text">
+    </span>
+  </div>
+
+
+  <div class="post__next">
+    <a class="post__next--link" href="/z-9db656e5.html">
+      <span class="post__next--mobile">下一篇</span>
+      <span class="post__next--text">
+        
+          Code Highlight Style test 
+        
+      </span>
+      <i class="post__next--icon if i-arrow-right"></i>
+    </a>
+  </div>
+
+</div>
+    <script>
+
+load_copy_button = function () {
+
+  let lenBadge = document.querySelectorAll('.code-badge-pre').length
+  let lenPre = document.querySelectorAll('pre').length
+  
+  if ( lenPre && !lenBadge ) {
+    var pres = document.querySelectorAll("pre>code");
+    for (var i = 0; i < pres.length; i++) {
+    	hljs.highlightElement(pres[i]);
+    }
+
+    var options = {
+      contentSelector: ".post__article--content",
+      loadDelay:0,
+      copyIconClass: "if i-copy",
+      checkIconClass: "if i-check",
+      onBeforeTextCopied: function(text, codeElement) {
+        return text;   
+      }
+    };
+    window.highlightJsBadge(options);
+  }
+
+}
+
+document.addEventListener("DOMContentLoaded", (event) => {
+  load_copy_button()
+});   
+
+document.addEventListener('pjax:complete', function (){
+  load_copy_button()
+})
+
+</script>
     
 <div id='comment-beaudar'>
 </div>
