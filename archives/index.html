@@ -22,14 +22,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Archives · 亦如年少</title>
   <link rel="preconnect" href="https://gstatic.loli.net">
+  <link rel="preconnect" href="https://gstatic.loli.net" crossorigin>
   
     
     
-      <link rel="stylesheet" href="//at.alicdn.com/t/c/font_2332181_c9rrut6l98j.css">
+      <link rel="stylesheet" href="//at.alicdn.com/t/c/font_2332181_vi8l6e2jpo.css">
     
       <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/highlight.js@11.5.0/styles/base16/atelier-estuary-light.min.css">
     
       <link rel="stylesheet" href="//fonts.loli.net/css2?family=Fira+Code:wght@500&display=swap">
+    
+      <link rel="stylesheet" href="//fonts.loli.net/css2?family=Tilt+Neon&display=swap">
     
       <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
     
@@ -42,6 +45,7 @@
 </head>
 <body>
 
+
 <div class="menu">
   <div class="menu__avatar">
   <a class="menu__avatar--link" href="/">
@@ -52,28 +56,41 @@
   </span>
 </div>
   
-  
-    <a href="/" key="首页" class="menu__item ">
-      
-      首页
-    </a>
-  
-    <a href="/archives" key="归档" class="menu__item menu__item--current">
-      
-      归档
-    </a>
-  
-    <a href="/friends" key="友链" class="menu__item ">
-      
-      友链
-    </a>
-  
-    <a href="/about" key="关于" class="menu__item ">
-      
-      关于
-    </a>
-  
-  <script>
+  <div class='menu__block'>
+    
+      <a href="/" key="首页" class="menu__item ">
+        <span class="menu__icon">
+          <i class="if i-home"></i>
+        </span>
+        <span class="menu__name">
+          首页
+        </span>
+      </a>
+    
+      <a href="/archives" key="归档" class="menu__item menu__item--current">
+        <span class="menu__icon">
+          <i class="if i-archives"></i>
+        </span>
+        <span class="menu__name">
+          归档
+        </span>
+      </a>
+    
+      <a href="/about" key="关于" class="menu__item ">
+        <span class="menu__icon">
+          <i class="if i-about"></i>
+        </span>
+        <span class="menu__name">
+          关于
+        </span>
+      </a>
+    
+    <div class="menu__back"></div>
+    <div class="menu__indicator"></div>
+  </div>
+</div>
+
+<script>
 
 load_menu = function () {
     document.querySelectorAll('.menu a.menu__item').forEach( el => {
@@ -85,9 +102,14 @@ load_menu = function () {
 set_current = function (it) {
   document.querySelectorAll('.menu a.menu__item').forEach( item => {
     item.className = 'menu__item'
+    if (item.contains(it.target)) {
+      item.classList.add('menu__item--current')
+    }
   })
-  //it.target.className = 'menu__item menu__item--current'
-  it.target.classList.add('menu__item--current')
+  let tag = it.target.tagName
+  if (tag == 'A') {
+    it.target.classList.add('menu__item--current')
+  }
 }
 
 document.addEventListener("DOMContentLoaded", (event) => {
@@ -99,7 +121,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
 //})
 
 </script>
-</div>
   
 <div class="content-main">
   
@@ -111,387 +132,20 @@ document.addEventListener("DOMContentLoaded", (event) => {
   
     
     <div class="archive__collection">
-      <span class="archive__collection--year">2022</span>
+      <span class="archive__collection--year">2023</span>
     </div>
   
 
   <div class="archive__item">
 
-    <a class="archive__item--link" href="/z-9813.html">
+    <a class="archive__item--link" href="/z-b836.html">
       <div class="archive__item--date">
-          09-02
+          03-09
       </div>
 
       <h1 class="archive__item--title">
         
-          我是来凑数的
-        
-      </h1>
-    </a>
-
-  </div>
-
-
-
-  
-
-  
-    
-    <div class="archive__collection">
-      <span class="archive__collection--year">2019</span>
-    </div>
-  
-
-  <div class="archive__item">
-
-    <a class="archive__item--link" href="/z-9db656e5.html">
-      <div class="archive__item--date">
-          07-25
-      </div>
-
-      <h1 class="archive__item--title">
-        
-          Code Highlight Style test
-        
-      </h1>
-    </a>
-
-  </div>
-
-
-
-  
-
-  
-    
-    <div class="archive__collection">
-      <span class="archive__collection--year">2018</span>
-    </div>
-  
-
-  <div class="archive__item">
-
-    <a class="archive__item--link" href="/z-89757140.html">
-      <div class="archive__item--date">
-          07-24
-      </div>
-
-      <h1 class="archive__item--title">
-        
-          Markdown Style test
-        
-      </h1>
-    </a>
-
-  </div>
-
-
-
-  
-
-  
-    
-    <div class="archive__collection">
-      <span class="archive__collection--year">2013</span>
-    </div>
-  
-
-  <div class="archive__item">
-
-    <a class="archive__item--link" href="/z-e7b3bb5c.html">
-      <div class="archive__item--date">
-          12-26
-      </div>
-
-      <h1 class="archive__item--title">
-        
-          Images
-        
-      </h1>
-    </a>
-
-  </div>
-
-
-
-  
-
-  
-
-  <div class="archive__item">
-
-    <a class="archive__item--link" href="/z-791e.html">
-      <div class="archive__item--date">
-          12-25
-      </div>
-
-      <h1 class="archive__item--title">
-        
-          no-title
-        
-      </h1>
-    </a>
-
-  </div>
-
-
-
-  
-
-  
-
-  <div class="archive__item">
-
-    <a class="archive__item--link" href="/z-13f29456.html">
-      <div class="archive__item--date">
-          12-25
-      </div>
-
-      <h1 class="archive__item--title">
-        
-          Excerpts
-        
-      </h1>
-    </a>
-
-  </div>
-
-
-
-  
-
-  
-
-  <div class="archive__item">
-
-    <a class="archive__item--link" href="/z-2e066104.html">
-      <div class="archive__item--date">
-          12-25
-      </div>
-
-      <h1 class="archive__item--title">
-        
-          Videos
-        
-      </h1>
-    </a>
-
-  </div>
-
-
-
-  
-
-  
-
-  <div class="archive__item">
-
-    <a class="archive__item--link" href="/z-a1447d9.html">
-      <div class="archive__item--date">
-          12-25
-      </div>
-
-      <h1 class="archive__item--title">
-        
-          Gallery Post
-        
-      </h1>
-    </a>
-
-  </div>
-
-
-
-  
-
-  
-
-  <div class="archive__item">
-
-    <a class="archive__item--link" href="/z-e2e5eeac.html">
-      <div class="archive__item--date">
-          12-25
-      </div>
-
-      <h1 class="archive__item--title">
-        
-          Tag Plugins
-        
-      </h1>
-    </a>
-
-  </div>
-
-
-
-  
-
-  
-
-  <div class="archive__item">
-
-    <a class="archive__item--link" target="_blank" rel="noopener" href="http://www.google.com/">
-      <div class="archive__item--date">
-          12-24
-      </div>
-
-      <h1 class="archive__item--title">
-        
-          www.google.com <i class="archive__item--icon if i-link"></i>
-        
-      </h1>
-    </a>
-
-  </div>
-
-
-
-  
-
-  
-
-  <div class="archive__item">
-
-    <a class="archive__item--link" href="/z-20cf26ba.html">
-      <div class="archive__item--date">
-          12-24
-      </div>
-
-      <h1 class="archive__item--title">
-        
-          日本語テスト
-        
-      </h1>
-    </a>
-
-  </div>
-
-
-
-  
-
-  
-
-  <div class="archive__item">
-
-    <a class="archive__item--link" href="/z-644ceca6.html">
-      <div class="archive__item--date">
-          12-24
-      </div>
-
-      <h1 class="archive__item--title">
-        
-          中文測試
-        
-      </h1>
-    </a>
-
-  </div>
-
-
-
-  
-
-  
-
-  <div class="archive__item">
-
-    <a class="archive__item--link" href="/z-40245f02.html">
-      <div class="archive__item--date">
-          12-24
-      </div>
-
-      <h1 class="archive__item--title">
-        
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam justo turpis, tincidunt ac convallis id.
-        
-      </h1>
-    </a>
-
-  </div>
-
-
-
-  
-
-  
-
-  <div class="archive__item">
-
-    <a class="archive__item--link" href="/z-75ae45b8.html">
-      <div class="archive__item--date">
-          12-24
-      </div>
-
-      <h1 class="archive__item--title">
-        
-          Categories
-        
-      </h1>
-    </a>
-
-  </div>
-
-
-
-  
-
-  
-
-  <div class="archive__item">
-
-    <a class="archive__item--link" target="_blank" rel="noopener" href="http://www.google.com/">
-      <div class="archive__item--date">
-          12-24
-      </div>
-
-      <h1 class="archive__item--title">
-        
-          Link Post <i class="archive__item--icon if i-link"></i>
-        
-      </h1>
-    </a>
-
-  </div>
-
-
-
-  
-
-  
-
-  <div class="archive__item">
-
-    <a class="archive__item--link" href="/z-cf8e3b18.html">
-      <div class="archive__item--date">
-          12-24
-      </div>
-
-      <h1 class="archive__item--title">
-        
-          Tags
-        
-      </h1>
-    </a>
-
-  </div>
-
-
-
-  
-
-  
-
-  <div class="archive__item">
-
-    <a class="archive__item--link" href="/z-bd3c650b.html">
-      <div class="archive__item--date">
-          12-24
-      </div>
-
-      <h1 class="archive__item--title">
-        
-          Elements
+          保号套餐 + 流量卡更省钱！
         
       </h1>
     </a>
@@ -515,10 +169,10 @@ document.addEventListener("DOMContentLoaded", (event) => {
 <div class='settings'>
   <div class='settings__block'>
     <div class='settings__btn light' id='btn-light' aria-label='切换亮色'>
-      <i class='if i-sun'></i>
+      <i class='if i-light'></i>
     </div>
     <div class='settings__btn dark' id='btn-dark' aria-label='切换暗色'>
-      <i class='if i-moon'></i>
+      <i class='if i-dark'></i>
     </div>
     <div class='settings__btn auto' id='btn-auto' aria-label='跟随系统'>
       <i class='if i-auto'></i>
@@ -544,7 +198,7 @@ let blur = document.getElementsByClassName('blur')[0]
 let settings = document.getElementsByClassName('settings')[0]
 
 getIscolorMode = function () {
-  let colorMode = localStorage.getItem('color-mode') || 'auto'
+  let colorMode = localStorage.getItem('user-color-scheme') || 'auto'
   colorModeToggle.innerHTML = `<i class='if i-${colorMode}'></i>`
 }
 
@@ -606,10 +260,20 @@ document.addEventListener('pjax:complete', function (){
 
 </script>
 
+<div class='search__blur'></div>
+<div class='search'>
+  <div class='search__keyword'>
+    <i class='if i-search search__keyword--icon'></i>
+    <input type='text' id='search-input' name='search-input' placeholder='站内搜索'>
+    <i class='if i-times search__keyword--clear'></i>
+  </div>
+  <div class='search__results'>
+  </div>
+</div>
 
 <div class="bottom">
   
-    <a class="bottom--link" target="_blank" rel="noopener" href="https://beian.miit.gov.cn"> 闽ICP备19023197号-1</a>
+    <a class="bottom--link" target="_blank" rel="noopener" href="https://beian.miit.gov.cn"> 闽 ICP 备 19023197 号 -1</a>
   
   <span>
     <a class="bottom--link" target="_blank" rel="noopener" href="https://github.com/justzerock/hexo-theme-zexo">Zexo</a>
@@ -656,6 +320,8 @@ document.addEventListener('pjax:complete', function (){
     <script src="/js/swipe.js"></script>
   
     <script src="/js/color-scheme.js"></script>
+  
+    <script src="/js/local-search.js"></script>
   
 
 </body>
