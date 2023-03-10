@@ -5,6 +5,13 @@ const rootElementDarkModeAttributeName = 'data-user-color-scheme';
 const darkModeTogglebuttonElement = document.getElementById('btn-dark');
 const lightModeTogglebuttonElement = document.getElementById('btn-light');
 const autoModeTogglebuttonElement = document.getElementById('btn-auto');
+const colorModeToggleEl = document.getElementById('color-mode-toggle')
+
+getIscolorMode = function () {
+  let colorMode = localStorage.getItem('user-color-scheme') || 'auto'
+  colorModeToggleEl.innerHTML = `<i class='if i-${colorMode}'></i>`
+  console.log(colorMode)
+}
 
 const setLS = (k, v) => {
   try {
@@ -42,17 +49,19 @@ const resetRootDarkModeAttributeAndLS = () => {
 
 const validColorModeKeys = {
   'dark': true,
-  'light': true
+  'light': true,
+  'auto': true
 }
 
 const applyCustomDarkModeSettings = (mode) => {
   // 接受从「开关」处传来的模式，或者从 localStorage 读取
   const currentSetting = mode || getLS(darkModeStorageKey);
 
-  if (currentSetting === getModeFromCSSMediaQuery()) {
-    // 当用户自定义的显示模式和 prefers-color-scheme 相同时重置、恢复到自动模式
-    resetRootDarkModeAttributeAndLS();
-  } else if (validColorModeKeys[currentSetting]) { // 相比 Array#indexOf，这种写法 Uglify 后字节数更少
+  //if (currentSetting === getModeFromCSSMediaQuery()) {
+  //  // 当用户自定义的显示模式和 prefers-color-scheme 相同时重置、恢复到自动模式
+  //  resetRootDarkModeAttributeAndLS();
+  //} else 
+  if (validColorModeKeys[currentSetting]) { // 相比 Array#indexOf，这种写法 Uglify 后字节数更少
     rootElement.setAttribute(rootElementDarkModeAttributeName, currentSetting);
     setLS(darkModeStorageKey, currentSetting);
   } else {
@@ -90,15 +99,18 @@ const toggleCustomDarkMode = () => {
 darkModeTogglebuttonElement.addEventListener('click', () => {
   // 当用户点击「开关」时，获得新的显示模式、写入 localStorage、并在页面上生效
   applyCustomDarkModeSettings('dark');
+  getIscolorMode()
 })
 
 lightModeTogglebuttonElement.addEventListener('click', () => {
   // 当用户点击「开关」时，获得新的显示模式、写入 localStorage、并在页面上生效
   applyCustomDarkModeSettings('light');
+  getIscolorMode()
 })
 
 autoModeTogglebuttonElement.addEventListener('click', ()=> {
   resetRootDarkModeAttributeAndLS()
+  getIscolorMode()
 })
 
 document.addEventListener("DOMContentLoaded", (event) => {
