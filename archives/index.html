@@ -93,14 +93,19 @@
 <script>
 
 load_menu = function () {
-    document.querySelectorAll('.menu a.menu__item').forEach( el => {
-      el.addEventListener("click", it => {set_current(it)}, false)
-    })
+  let items = document.querySelectorAll('a.menu__item')
+  items.forEach( el => {
+    el.addEventListener("click", it => {set_current(it)}, false)
+  })
 
+  let cur = document.querySelectorAll('a.menu__item--current')
+  if (cur.length == 0) {
+    items[0].classList.add('menu__item--current')
+  }
 }
 
 set_current = function (it) {
-  document.querySelectorAll('.menu a.menu__item').forEach( item => {
+  document.querySelectorAll('a.menu__item').forEach( item => {
     item.className = 'menu__item'
     if (item.contains(it.target)) {
       item.classList.add('menu__item--current')
@@ -116,9 +121,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
   load_menu()
 })
 
-//document.addEventListener('pjax:complete', function (){
-//  load_menu()
-//})
+document.addEventListener('pjax:complete', function (){
+  load_menu()
+})
 
 </script>
   

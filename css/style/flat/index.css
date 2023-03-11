@@ -173,25 +173,22 @@ body::-webkit-scrollbar-thumb {
     color: #fff;
   }
   .menu__item--current:nth-child(1) ~ .menu__indicator {
-    left: calc((100% - 168px) / 4);
-    opacity: 1;
+    left: calc((100vw - 168px) / 4);
   }
   .menu__item--current:nth-child(2) ~ .menu__indicator {
-    left: calc((100% - 168px) / 2 + 56px);
-    opacity: 1;
+    left: calc((100vw - 168px) / 2 + 56px);
   }
   .menu__item--current:nth-child(3) ~ .menu__indicator {
-    left: calc((100% - 168px) / 4 * 3 + 112px);
-    opacity: 1;
+    left: calc((100vw - 168px) / 4 * 3 + 112px);
   }
   .menu__item--current:nth-child(1) ~ .menu__back {
-    -webkit-mask: radial-gradient(circle at calc((100% - 168px) / 4 + 28px) 0, transparent 35px, #f00 0);
+    -webkit-mask-position: 0 0;
   }
   .menu__item--current:nth-child(2) ~ .menu__back {
-    -webkit-mask: radial-gradient(circle at calc((100% - 168px) / 2 + 84px) 0, transparent 35px, #f00 0);
+    -webkit-mask-position: calc((100vw - 168px) / 4 + 56px) 0;
   }
   .menu__item--current:nth-child(3) ~ .menu__back {
-    -webkit-mask: radial-gradient(circle at calc((100% - 168px) / 4 * 3 + 140px) 0, transparent 35px, #f00 0);
+    -webkit-mask-position: calc((100vw - 168px) / 2 + 112px) 0;
   }
   .menu__item--current .menu__icon {
     transform: translateY(-28px);
@@ -207,6 +204,8 @@ body::-webkit-scrollbar-thumb {
     background: var(--block-bg-color);
     -webkit-backdrop-filter: blur(3px);
     backdrop-filter: blur(3px);
+    transition: -webkit-mask-position 0.3s ease-in-out;
+    -webkit-mask: radial-gradient(circle at calc((100vw - 168px) / 4 + 28px) 0, transparent 35px, #f00 0);
   }
   .menu__icon {
     width: inherit;
@@ -215,6 +214,7 @@ body::-webkit-scrollbar-thumb {
     line-height: 75px;
     font-size: 1.5em;
     transition: transform 0.2s ease-in-out;
+    color: $link-color-hover;
   }
   .menu__name {
     position: absolute;
@@ -229,8 +229,8 @@ body::-webkit-scrollbar-thumb {
     position: absolute;
     width: 56px;
     height: 56px;
-    background: $link-color-hover;
-    opacity: 0;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     top: -50%;
     border-radius: 50%;
     transition: all 0.3s ease-in-out;
