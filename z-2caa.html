@@ -18,7 +18,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>tags · 亦如年少</title>
+  <title>使用 Html CSS 和 Javascript 的魔术导航菜单指示器 | 外部曲线效果 · 亦如年少</title>
   <link rel="preconnect" href="https://gstatic.loli.net">
   <link rel="preconnect" href="https://gstatic.loli.net" crossorigin>
   
@@ -129,14 +129,164 @@ document.addEventListener('pjax:complete', function (){
   
   
   <div class="post">
-    <article id="post" class="post__article">
+    <article id="post" class="post__article ">
+      
       <h1 class="post__article--title">
-        tags
+      
+        使用 Html CSS 和 Javascript 的魔术导航菜单指示器 | 外部曲线效果
+      
       </h1>
+      <div class='post__article--date'>
+        2023.03.16
+        
+      </div>
       <div class="post__article--content">
+      <p>最初在 <a target="_blank" rel="noopener" href="https://youtu.be/ArTVfdHOB-M">YouTube</a> 看到这个导航栏的视频教程，感觉效果还不错，跟着写了，为方便局域网的朋友，放个 B 站转载的视频，up 还很贴心提供了<a target="_blank" rel="noopener" href="https://github.com/Mr-majifu/Magic-Menu-Indicator">代码</a>。</p>
+<span id="more"></span>
+
+<iframe src="//player.bilibili.com/player.html?aid=944690515&bvid=BV1gW4y177Cq&cid=877659687&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
+<p>我照着写完，发现它在视觉效果上虽然是曲线内凹的背景，但实际上是通过圆形指示器的边框色加两个小圆形的阴影色组合，颜色和背景色一致，只演示导航栏的话还好，若实际放在项目上，指示器后面有非背景色的其他元素，就不太好看了，关键部分代码如下：</p>
+<pre><code>.indicator &#123;
+  position: absolute;
+  top: -50%;
+  width: 70px;
+  height: 70px;
+  background: #29fd53;
+  border-radius: 50%;
+  border: 6px solid var(--clr);
+  transition: 0.5s;
+&#125;
+
+.indicator::before&#123;
+  content: &#39;&#39;;
+  position: absolute;
+  top: 50%;
+  left: -22px;
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  border-top-right-radius: 20px;
+  box-shadow: 1px -10px 0 0 var(--clr);
+&#125;
+
+.indicator::after&#123;
+  content: &#39;&#39;;
+  position: absolute;
+  top: 50%;
+  right: -22px;
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  border-top-left-radius: 20px;
+  box-shadow: -1px -10px 0 0 var(--clr);
+&#125;
+</code></pre>
+<p>于是我选择了用径向渐变，在导航栏背景生成一个透明的圆：</p>
+<pre><code>&amp;__back &#123;
+  position: absolute
+  width: 100%
+  height: 70px
+  background: var(--block-bg-color)
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+  transition: -webkit-mask-position 0.3s ease-in-out;
+  -webkit-mask: radial-gradient( circle at calc((100vw - 168px)/4 + 28px)  0, transparent 35px, red 0)
+&#125;
+</code></pre>
+<p>解决了透明的背景，但是一时想不到如何解决两边的圆角。所以我去 B 站<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1gW4y177Cq">视频</a>看评论，看到 <a target="_blank" rel="noopener" href="https://space.bilibili.com/276544956">shOwlOtus</a> 说用径向渐变解决，而且不依赖背景色，我心想跟我想的一样。</p>
+<p>待我打开他的<a target="_blank" rel="noopener" href="https://codepen.io/showlotus/full/OJEmqrd">代码</a>，才发觉是我想多了，效果比我好太多了。</p>
+<p>原理说起来也简单，就是用了三个矩形组合成一个背景，中间的矩形用径向渐变做出一个和我之前代码一样的下凹的透明半圆，两边的矩形各有一个圆角紧挨着半圆，组合成一个圆滑的曲线透明背景，看代码：</p>
+<pre><code>.back .back-left &#123;
+  width: 100%;
+  border-top-right-radius: 35px 30px;
+  background-color: var(--back-color);
+  box-shadow: 1.5px 0 var(--back-color);
+&#125;
+
+.back .back-center &#123;
+  width: 70px;
+  background-image: radial-gradient(
+    circle at 50% 7px,
+    transparent 37px,
+    var(--back-color) 38px
+  );
+&#125;
+
+.back .back-right &#123;
+  width: 100%;
+  border-top-left-radius: 35px 30px;
+  background-color: var(--back-color);
+  box-shadow: -1.5px 0 var(--back-color);
+&#125;
+</code></pre>
+
+      
+        <div  class='post__gallery--block'>
+        
+        </div>
       
       </div>
+      
+      
     </article>
+    <div class="post__paginator">
+
+  <div class="post__prev">
+    <span class="post__prev--text">
+    </span>
+  </div>
+
+
+  <div class="post__next">
+    <a class="post__next--link" href="/z-b836.html">
+      <span class="post__next--mobile">下一篇</span>
+      <span class="post__next--text">
+        
+          保号套餐 + 流量卡更省钱！ 
+        
+      </span>
+      <i class="post__next--icon if i-arrow-right"></i>
+    </a>
+  </div>
+
+</div>
+    <script>
+
+load_copy_button = function () {
+
+  let lenBadge = document.querySelectorAll('.code-badge-pre').length
+  let lenPre = document.querySelectorAll('pre').length
+  
+  if ( lenPre && !lenBadge ) {
+    var pres = document.querySelectorAll("pre>code");
+    for (var i = 0; i < pres.length; i++) {
+    	hljs.highlightElement(pres[i]);
+    }
+
+    var options = {
+      contentSelector: ".post__article--content",
+      loadDelay:0,
+      copyIconClass: "if i-copy",
+      checkIconClass: "if i-check",
+      onBeforeTextCopied: function(text, codeElement) {
+        return text;   
+      }
+    };
+    window.highlightJsBadge(options);
+  }
+
+}
+
+document.addEventListener("DOMContentLoaded", (event) => {
+  load_copy_button()
+});   
+
+document.addEventListener('pjax:complete', function (){
+  load_copy_button()
+})
+
+</script>
     
 <div id='comment-beaudar'>
 </div>

@@ -10,7 +10,7 @@ const colorModeToggleEl = document.getElementById('color-mode-toggle')
 getIscolorMode = function () {
   let colorMode = localStorage.getItem('user-color-scheme') || 'auto'
   colorModeToggleEl.innerHTML = `<i class='if i-${colorMode}'></i>`
-  console.log(colorMode)
+  // console.log(colorMode)
 }
 
 const setLS = (k, v) => {

@@ -56,34 +56,29 @@
   
   <div class='menu__block'>
     
-      <a href="/" key="首页" class="menu__item ">
-        <span class="menu__icon">
-          <i class="if i-home"></i>
-        </span>
+      <a data-index="0" href="/" key="首页" class="menu__item ">
+        
         <span class="menu__name">
           首页
         </span>
       </a>
     
-      <a href="/archives" key="归档" class="menu__item ">
-        <span class="menu__icon">
-          <i class="if i-archives"></i>
-        </span>
+      <a data-index="1" href="/archives" key="归档" class="menu__item ">
+        
         <span class="menu__name">
           归档
         </span>
       </a>
     
-      <a href="/about" key="关于" class="menu__item ">
-        <span class="menu__icon">
-          <i class="if i-about"></i>
-        </span>
+      <a data-index="2" href="/about" key="关于" class="menu__item ">
+        
         <span class="menu__name">
           关于
         </span>
       </a>
     
-    <div class="menu__back"></div>
+    <div class="menu__back">
+    </div>
     <div class="menu__indicator"></div>
   </div>
 </div>
@@ -99,6 +94,9 @@ load_menu = function () {
   let cur = document.querySelectorAll('a.menu__item--current')
   if (cur.length == 0) {
     items[0].classList.add('menu__item--current')
+    items[0].nextElementSibling.classList.add('noline')
+  } else {
+    cur[0].nextElementSibling.classList.add('noline')
   }
 }
 
@@ -107,11 +105,13 @@ set_current = function (it) {
     item.className = 'menu__item'
     if (item.contains(it.target)) {
       item.classList.add('menu__item--current')
+      item.nextElementSibling.classList.add('noline')
     }
   })
   let tag = it.target.tagName
   if (tag == 'A') {
     it.target.classList.add('menu__item--current')
+    it.target.nextElementSibling.classList.add('noline')
   }
 }
 
@@ -233,14 +233,19 @@ document.addEventListener('pjax:complete', function (){
 
 <script>
 
-let commentToggle = document.getElementById('comment-toggle')
+// let commentToggle = document.getElementById('comment-toggle')
 let colorModeToggle = document.getElementById('color-mode-toggle')
 let blur = document.getElementsByClassName('blur')[0]
 let settings = document.getElementsByClassName('settings')[0]
+let search = document.getElementById('search')
 
 getIscolorMode = function () {
   let colorMode = localStorage.getItem('user-color-scheme') || 'auto'
   colorModeToggle.innerHTML = `<i class='if i-${colorMode}'></i>`
+}
+
+search.onclick = function () {
+  
 }
 
 colorModeToggle.onclick = function () {
@@ -259,7 +264,7 @@ blur.onclick = function () {
 }
 
 
-getIsComment = function() {
+/* getIsComment = function() {
   let isComment = localStorage.getItem('isComment')
   if ( isComment == 'true' ) {
     commentToggle.classList.remove('disable')
@@ -268,7 +273,7 @@ getIsComment = function() {
     commentToggle.classList.add('disable')
     commentToggle.ariaLabel = '开启评论'
   }
-}
+} */
 
 /* commentToggle.onclick = function() {
   let lenBlock = document.querySelectorAll('#comment-beaudar').length
@@ -305,12 +310,49 @@ document.addEventListener('pjax:complete', function (){
 <div class='search'>
   <div class='search__keyword'>
     <i class='if i-search search__keyword--icon'></i>
-    <input type='text' id='search-input' name='search-input' placeholder='站内搜索'>
+    <input type='text' id='search-input' name='search-input' placeholder='搜索'>
     <i class='if i-times search__keyword--clear'></i>
   </div>
-  <div class='search__results'>
+  <div class='search__results' id='search__results'>
   </div>
 </div>
+
+<script>
+$(function () {
+  searchFunc("/" + "search.json", 'search-input', 'search__results');
+
+  let btnSearch = document.querySelector('#search')
+  let sBlur = document.querySelector('.search__blur')
+  let search = document.querySelector('.search')
+  let clear = document.querySelector('.search__keyword--clear')
+  let sText = document.querySelector('#search-input')
+
+  clear.onclick = function () {
+    sText.value = ''
+  }
+
+  btnSearch.onclick = function () {
+    if (sBlur.classList.contains('show')) {
+      sBlur.classList.remove('show')
+      search.classList.remove('show')
+    } else {
+      sBlur.classList.add('show')
+      search.classList.add('show')    
+    }
+  }
+
+  sBlur.onclick = function () {
+    if (sBlur.classList.contains('show')) {
+      sBlur.classList.remove('show')
+      search.classList.remove('show')
+    } else {
+      sBlur.classList.add('show')
+      search.classList.add('show')    
+    }
+  }
+
+});
+</script>
 
 <div class="bottom">
   

@@ -56,34 +56,29 @@
   
   <div class='menu__block'>
     
-      <a href="/" key="首页" class="menu__item ">
-        <span class="menu__icon">
-          <i class="if i-home"></i>
-        </span>
+      <a data-index="0" href="/" key="首页" class="menu__item ">
+        
         <span class="menu__name">
           首页
         </span>
       </a>
     
-      <a href="/archives" key="归档" class="menu__item ">
-        <span class="menu__icon">
-          <i class="if i-archives"></i>
-        </span>
+      <a data-index="1" href="/archives" key="归档" class="menu__item ">
+        
         <span class="menu__name">
           归档
         </span>
       </a>
     
-      <a href="/about" key="关于" class="menu__item ">
-        <span class="menu__icon">
-          <i class="if i-about"></i>
-        </span>
+      <a data-index="2" href="/about" key="关于" class="menu__item ">
+        
         <span class="menu__name">
           关于
         </span>
       </a>
     
-    <div class="menu__back"></div>
+    <div class="menu__back">
+    </div>
     <div class="menu__indicator"></div>
   </div>
 </div>
@@ -99,6 +94,9 @@ load_menu = function () {
   let cur = document.querySelectorAll('a.menu__item--current')
   if (cur.length == 0) {
     items[0].classList.add('menu__item--current')
+    items[0].nextElementSibling.classList.add('noline')
+  } else {
+    cur[0].nextElementSibling.classList.add('noline')
   }
 }
 
@@ -107,11 +105,13 @@ set_current = function (it) {
     item.className = 'menu__item'
     if (item.contains(it.target)) {
       item.classList.add('menu__item--current')
+      item.nextElementSibling.classList.add('noline')
     }
   })
   let tag = it.target.tagName
   if (tag == 'A') {
     it.target.classList.add('menu__item--current')
+    it.target.nextElementSibling.classList.add('noline')
   }
 }
 
@@ -152,7 +152,8 @@ document.addEventListener('pjax:complete', function (){
 </ol>
 <p>等到第二个月，套餐生效，从此，你的老号码就是保号套餐，以最低的月租享受最低的待遇，接电话和短信，仅此而已</p>
 <h2 id="新卡用什么套餐呢"><a href="#新卡用什么套餐呢" class="headerlink" title="新卡用什么套餐呢"></a>新卡用什么套餐呢</h2><p>大部分流量卡和普通电话卡差不多，激活后根据具体号卡要求充值 50 到 100 元不等，然后你会得到大流量与一定额度的话费返还。</p>
-<p>根据你的需求，选 100G 到 200G 左右流量的套餐，相比营业厅可选的套餐，它们算是便宜得离谱</p>
+<p>根据你的需求，选 100G 到 200G 左右流量的套餐，相比营业厅可选的套餐，它们算是便宜得离谱。</p>
+<p>有需要的朋友，记得收藏这个网站：<a target="_blank" rel="noopener" href="https://ka.zerock.top/">https://ka.zerock.top</a></p>
 <p>想了解更多，可以加我的群：</p>
 <p><img src="https://i.imgtg.com/2023/03/07/YJ9vY.png" alt="小鲤游"></p>
 
@@ -168,8 +169,15 @@ document.addEventListener('pjax:complete', function (){
     <div class="post__paginator">
 
   <div class="post__prev">
-    <span class="post__prev--text">
-    </span>
+    <a class="post__prev--link" href="/z-2caa.html">
+      <i class="post__prev--icon if i-arrow-left"></i>
+      <span class="post__prev--text">
+        
+          使用 Html CSS 和 Javascript 的魔术导航菜单指示器 | 外部曲线效果
+        
+      </span>
+      <span class="post__prev--mobile">上一篇</span>
+    </a>
   </div>
 
 
@@ -303,14 +311,19 @@ document.addEventListener('pjax:complete', function (){
 
 <script>
 
-let commentToggle = document.getElementById('comment-toggle')
+// let commentToggle = document.getElementById('comment-toggle')
 let colorModeToggle = document.getElementById('color-mode-toggle')
 let blur = document.getElementsByClassName('blur')[0]
 let settings = document.getElementsByClassName('settings')[0]
+let search = document.getElementById('search')
 
 getIscolorMode = function () {
   let colorMode = localStorage.getItem('user-color-scheme') || 'auto'
   colorModeToggle.innerHTML = `<i class='if i-${colorMode}'></i>`
+}
+
+search.onclick = function () {
+  
 }
 
 colorModeToggle.onclick = function () {
@@ -329,7 +342,7 @@ blur.onclick = function () {
 }
 
 
-getIsComment = function() {
+/* getIsComment = function() {
   let isComment = localStorage.getItem('isComment')
   if ( isComment == 'true' ) {
     commentToggle.classList.remove('disable')
@@ -338,7 +351,7 @@ getIsComment = function() {
     commentToggle.classList.add('disable')
     commentToggle.ariaLabel = '开启评论'
   }
-}
+} */
 
 /* commentToggle.onclick = function() {
   let lenBlock = document.querySelectorAll('#comment-beaudar').length
@@ -375,12 +388,49 @@ document.addEventListener('pjax:complete', function (){
 <div class='search'>
   <div class='search__keyword'>
     <i class='if i-search search__keyword--icon'></i>
-    <input type='text' id='search-input' name='search-input' placeholder='站内搜索'>
+    <input type='text' id='search-input' name='search-input' placeholder='搜索'>
     <i class='if i-times search__keyword--clear'></i>
   </div>
-  <div class='search__results'>
+  <div class='search__results' id='search__results'>
   </div>
 </div>
+
+<script>
+$(function () {
+  searchFunc("/" + "search.json", 'search-input', 'search__results');
+
+  let btnSearch = document.querySelector('#search')
+  let sBlur = document.querySelector('.search__blur')
+  let search = document.querySelector('.search')
+  let clear = document.querySelector('.search__keyword--clear')
+  let sText = document.querySelector('#search-input')
+
+  clear.onclick = function () {
+    sText.value = ''
+  }
+
+  btnSearch.onclick = function () {
+    if (sBlur.classList.contains('show')) {
+      sBlur.classList.remove('show')
+      search.classList.remove('show')
+    } else {
+      sBlur.classList.add('show')
+      search.classList.add('show')    
+    }
+  }
+
+  sBlur.onclick = function () {
+    if (sBlur.classList.contains('show')) {
+      sBlur.classList.remove('show')
+      search.classList.remove('show')
+    } else {
+      sBlur.classList.add('show')
+      search.classList.add('show')    
+    }
+  }
+
+});
+</script>
 
 <div class="bottom">
   
