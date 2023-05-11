@@ -34,6 +34,8 @@
     
       <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
     
+      <link rel="stylesheet" href="//unpkg.com/@waline/client@v2/dist/waline.css">
+    
       <link rel="stylesheet" href="/css/index.css">
     
   
@@ -138,50 +140,31 @@ document.addEventListener('pjax:complete', function (){
       </div>
     </article>
     
-<div id='comment-beaudar'>
-</div>
-<style>
-  .beaudar {
-    transition: all .5s ease-in-out;
-    max-height: max-content;
-    overflow: hidden;
+    
+<div id="waline"></div>
+<script type="module">
+  import { init } from 'https://unpkg.com/@waline/client@v2/dist/waline.mjs'
+
+  let opt = {
+      el: '#waline',
+      serverURL: 'https://waline.zerock.top',
+      placeholder: '畅所欲言',
+      emoji: [
+        'https://unpkg.com/@waline/emojis@1.1.0/weibo',
+        'https://unpkg.com/@waline/emojis@1.1.0/bilibili',
+      ],
   }
-</style>
-<script>
+    
+  document.addEventListener("DOMContentLoaded", function(event) {
+    init(opt)
+  })
 
-load_beaudar = function () {
-  let isComment = localStorage.getItem('isComment')
-  if ( isComment == 'true' ) {
-    let beaudar = document.createElement('script')
-    beaudar.src = 'https://beaudar.lipk.org/client.js'
-    beaudar.setAttribute('repo', 'justzerock/justzerock.github.io')
-    beaudar.setAttribute('branch', 'blog')
-    beaudar.setAttribute('issue-term', 'pathname')
-    beaudar.setAttribute('label', 'Beaudar')
-    beaudar.setAttribute('theme', 'github-light')
-    beaudar.setAttribute('comment-order', 'desc')
-    beaudar.setAttribute('input-position', 'top')
-    beaudar.setAttribute('crossorigin', 'anonymous')
-    beaudar.setAttribute('async','')
-    let lenBlock = document.querySelectorAll('#comment-beaudar').length
-    if ( lenBlock ) {
-      let block = document.getElementById('comment-beaudar')
-      if ( block.childElementCount == 0 ) {
-        block.appendChild(beaudar)
-      }
-    }
-  }
-}
-
-document.addEventListener("DOMContentLoaded", (event) => {
-  load_beaudar()
-});   
-
-document.addEventListener('pjax:complete', function (){
-  load_beaudar()
-})
+  document.addEventListener('pjax:complete', function (){
+    init(opt)
+  })
 
 </script>
+
   </div>
 
 
