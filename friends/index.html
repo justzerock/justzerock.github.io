@@ -150,28 +150,6 @@ document.addEventListener('pjax:complete', function (){
     
     
 <div id="waline"></div>
-<script type="module">
-  import { init } from 'https://unpkg.com/@waline/client@v2/dist/waline.mjs'
-
-  let opt = {
-      el: '#waline',
-      serverURL: 'https://waline.zerock.top',
-      placeholder: '畅所欲言',
-      emoji: [
-        'https://unpkg.com/@waline/emojis@1.1.0/weibo',
-        'https://unpkg.com/@waline/emojis@1.1.0/bilibili',
-      ],
-  }
-    
-  document.addEventListener("DOMContentLoaded", function(event) {
-    init(opt)
-  })
-
-  document.addEventListener('pjax:complete', function (){
-    init(opt)
-  })
-
-</script>
 
   </div>
 
@@ -389,6 +367,30 @@ $(function () {
   
     <script src="/js/local-search.js"></script>
   
+
+
+<script type="module">
+  import { init } from 'https://unpkg.com/@waline/client@v2/dist/waline.mjs'
+
+  let opt = {
+      el: '#waline',
+      serverURL: 'https://waline.zerock.top',
+      placeholder: '畅所欲言',
+      emoji: [
+        'https://unpkg.com/@waline/emojis@1.1.0/weibo',
+        'https://unpkg.com/@waline/emojis@1.1.0/bilibili',
+      ],
+  }
+    
+  document.addEventListener("DOMContentLoaded", function(event) {
+    init(opt)
+  })
+
+  document.addEventListener('pjax:complete', function (){
+    init(opt)
+  })
+
+</script>
 
 </body>
 </html>
