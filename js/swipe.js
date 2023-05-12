@@ -20,12 +20,12 @@ function _touch() {
         // alert('right');
       } */
       if ((startTop - endTop) > ($(window).height()/10) ) {
-        $('.menu').addClass('hide');
+        //$('.menu').addClass('hide');
         $('.settings').addClass('hide');
         $('.settings').removeClass('open');
         $('.blur').removeClass('open');
       } else if ((endTop - startTop) > ($(window).height()/10) ) {
-        $('.menu').removeClass('hide');
+        //$('.menu').removeClass('hide');
         $('.settings').removeClass('hide');
       }
 
@@ -33,13 +33,13 @@ function _touch() {
       // y事件
       if (startY > endY) {
         // alert('top');
-        $('.menu').addClass('hide');
+        //$('.menu').addClass('hide');
         $('.settings').addClass('hide');
         $('.settings').removeClass('open');
         $('.blur').removeClass('open');
       } else if (startY < endY) {
         // alert('bottom');
-        $('.menu').removeClass('hide');
+        //$('.menu').removeClass('hide');
         $('.settings').removeClass('hide');
       }
     }

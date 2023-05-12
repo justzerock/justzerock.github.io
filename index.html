@@ -135,7 +135,7 @@ document.addEventListener('pjax:complete', function (){
   <div id="recent-posts" class="post-list">
     
       <div class="post-list__item">
-        <div class="post-list__info">
+        <span class="post-list__info">
           <a class="post-list__title--link" href="/z-2caa.html">
             <h1 class="post-list__title">
             
@@ -145,26 +145,40 @@ document.addEventListener('pjax:complete', function (){
           </a>
           
             <a class="post-list__excerpt" href="/z-2caa.html">
+            <span>
               最初在 YouTube 看到这个导航栏的视频教程，感觉效果还不错，跟着写了，为方便局域网的朋友，放个 B 站转载的视频，up 还很贴心提供了代码。
+            </span>
             </a>
           
-          <div class="post-list__bottom">
-            <div class="post-list__date">
+          <span class="post-list__bottom">
+            <span class="post-list__date">
                 
                 <span class="post-list__date--date">
                   2023.03.16
                   
                 </span>
-            </div>
+            </span>
             
             
-          </div>
-        </div>
+              <i class="if i-Tags post-list__tag--icon"></i>
+              
+                <a
+                  class="post-list__tag" 
+                  href="/tags/%E5%89%8D%E7%AB%AF/"
+                >#前端</a>
+              
+            
+          </span>
+        </span>
+        
+        <span class="post-list__img--link">
+          <img class="post-list__img--img" src="https://i.imgtg.com/2023/05/13/w80aY.md.png" />
+        </span>
         
       </div>
     
       <div class="post-list__item">
-        <div class="post-list__info">
+        <span class="post-list__info">
           <a class="post-list__title--link" href="/z-b836.html">
             <h1 class="post-list__title">
             
@@ -174,25 +188,46 @@ document.addEventListener('pjax:complete', function (){
           </a>
           
             <a class="post-list__excerpt" href="/z-b836.html">
+            <span>
               如果你现在的手机号套餐流量不够多，或者套餐费不够便宜，可以考虑加一张流量卡。多一张卡的支出，也许会比原来的话费更省，我没有开玩笑。
+            </span>
             </a>
           
-          <div class="post-list__bottom">
-            <div class="post-list__date">
+          <span class="post-list__bottom">
+            <span class="post-list__date">
                 
                 <span class="post-list__date--date">
                   2023.03.09
                   
                 </span>
-            </div>
+            </span>
             
             
-          </div>
-        </div>
+          </span>
+        </span>
+        
+        <span class="post-list__img--link">
+          <img class="post-list__img--img" src="https://i.imgtg.com/2023/05/13/w8sIc.png" />
+        </span>
         
       </div>
     
+    
+    <div id="waline" class="post-list__waline"></div>
+    
   </div>
+  <script>
+  showMenu = function () {
+    $('.menu').removeClass('hide')
+  }
+  document.addEventListener("DOMContentLoaded", function(event) {
+    showMenu()
+  })
+
+  document.addEventListener('pjax:complete', function (){
+    showMenu()
+  })
+</script>
 
 
     <div id="paginator" class="paginator">
@@ -355,8 +390,6 @@ $(function () {
 </script>
 
 <div class="bottom">
-  
-    <a class="bottom--link" target="_blank" rel="noopener" href="https://beian.miit.gov.cn"> 闽 ICP 备 19023197 号 -1</a>
   
   <span>
     <a class="bottom--link" target="_blank" rel="noopener" href="https://github.com/justzerock/hexo-theme-zexo">Zexo</a>

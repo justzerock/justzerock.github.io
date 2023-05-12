@@ -131,7 +131,12 @@ document.addEventListener('pjax:complete', function (){
   
   
   <div class="post">
-    <article id="post" class="post__article ">
+    <a href="/" class="post__back"> < 返回</a>
+    <article id="post" class="post__article  post__article--top ">
+      
+      <p>
+        <img class="post__top-img" src="https://i.imgtg.com/2023/05/13/w8sIc.png" />
+      </p>
       
       <h1 class="post__article--title">
       
@@ -231,6 +236,19 @@ document.addEventListener('pjax:complete', function (){
 
   </div>
 
+<script>
+  hideMenu = function () {
+    $('.menu').addClass('hide')
+  }
+
+  document.addEventListener("DOMContentLoaded", function(event) {
+    hideMenu()
+  })
+
+  document.addEventListener('pjax:complete', function (){
+    hideMenu()
+  })
+</script>
 
 </div>
 
@@ -394,8 +412,6 @@ $(function () {
 </script>
 
 <div class="bottom">
-  
-    <a class="bottom--link" target="_blank" rel="noopener" href="https://beian.miit.gov.cn"> 闽 ICP 备 19023197 号 -1</a>
   
   <span>
     <a class="bottom--link" target="_blank" rel="noopener" href="https://github.com/justzerock/hexo-theme-zexo">Zexo</a>
