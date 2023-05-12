@@ -631,7 +631,7 @@ body::-webkit-scrollbar-thumb {
 .post__article--title {
   color: var(--post-tt-color);
   letter-spacing: 0.093em;
-  text-shadow: 2px 2px 0px #dfdfdf;
+  text-shadow: 2px 2px 0px var(--post-tt-shadow-color);
   line-height: 1.5em;
   text-align: left;
 }
@@ -819,8 +819,8 @@ body::-webkit-scrollbar-thumb {
     position: fixed;
     font-size: 0.75em;
     letter-spacing: 0.05em;
-    color: var(--menu-m-tc);
-    background: var(--menu-m-in);
+    color: var(--menu-back-color);
+    background: var(--menu-back-bg-color);
     box-shadow: 0 0 1vw rgba(0,0,0,0.1);
     padding: 2vw 5vw;
     border-radius: 5vw;

@@ -11,6 +11,7 @@
   --body-bg: #f8f9f4;
   --post-bg-color: rgba(241,209,166,0.1);
   --post-tt-color: #3b3b39;
+  --post-tt-shadow-color: #dfdfdf;
   --tag-color: #b0711c;
   --tag-color-hover: #6a4411;
   --link-color: #e09a3c;
@@ -24,6 +25,8 @@
   --menu-bg-color: rgba(241,209,166,0.4);
   --menu-bg-color-hover: rgba(241,209,166,0.2);
   --menu-tt-color: #b0711c;
+  --menu-back-color: #e09a3c;
+  --menu-back-bg-color: #f8e8d3;
   --menu-m-bg: rgba(255,255,255,0.2);
   --menu-m-in: #f1d1a6;
   --menu-m-tt: #3b3b39;
@@ -45,6 +48,7 @@
     --body-bg: #30343c;
     --post-bg-color: rgba(241,209,166,0.1);
     --post-tt-color: #dedede;
+    --post-tt-shadow-color: rgba(223,223,223,0.18);
     --tag-color: #b0711c;
     --tag-color-hover: #e09a3c;
     --link-color: #f1d1a6;
@@ -58,6 +62,8 @@
     --menu-bg-color: rgba(241,209,166,0.2);
     --menu-bg-color-hover: rgba(241,209,166,0.1);
     --menu-tt-color: #b0711c;
+    --menu-back-color: #f8e8d3;
+    --menu-back-bg-color: #e6ad60;
     --menu-m-bg: rgba(255,255,255,0.1);
     --menu-m-in: rgba(247,208,162,0.3);
     --menu-m-tt: rgba(255,255,255,0.8);
@@ -90,6 +96,7 @@
   --body-bg: #30343c;
   --post-bg-color: rgba(241,209,166,0.1);
   --post-tt-color: #dedede;
+  --post-tt-shadow-color: rgba(223,223,223,0.18);
   --tag-color: #b0711c;
   --tag-color-hover: #e09a3c;
   --link-color: #f1d1a6;
@@ -103,6 +110,8 @@
   --menu-bg-color: rgba(241,209,166,0.2);
   --menu-bg-color-hover: rgba(241,209,166,0.1);
   --menu-tt-color: #b0711c;
+  --menu-back-color: #f8e8d3;
+  --menu-back-bg-color: #e6ad60;
   --menu-m-bg: rgba(255,255,255,0.1);
   --menu-m-in: rgba(247,208,162,0.3);
   --menu-m-tt: rgba(255,255,255,0.8);
@@ -1020,7 +1029,7 @@ body::-webkit-scrollbar-thumb {
 .post__article--title {
   color: var(--post-tt-color);
   letter-spacing: 0.093em;
-  text-shadow: 2px 2px 0px #dfdfdf;
+  text-shadow: 2px 2px 0px var(--post-tt-shadow-color);
   line-height: 1.5em;
   text-align: left;
 }
@@ -1208,8 +1217,8 @@ body::-webkit-scrollbar-thumb {
     position: fixed;
     font-size: 0.75em;
     letter-spacing: 0.05em;
-    color: var(--menu-m-tc);
-    background: var(--menu-m-in);
+    color: var(--menu-back-color);
+    background: var(--menu-back-bg-color);
     box-shadow: 0 0 1vw rgba(0,0,0,0.1);
     padding: 2vw 5vw;
     border-radius: 5vw;
