@@ -48,9 +48,9 @@
 
 <div class="menu">
   <div class="menu__avatar">
-  <a class="menu__avatar--link" href="/">
+  <span class="menu__avatar--link" href="/">
     <img class="menu__avatar--img"  src="https://cdn.jsdelivr.net/gh/justzerock/assets@master/img/logo.svg"/>
-  </a>
+  </span>
   <span class="menu__avatar--title">
     亦<span class="menu__avatar--ru">如</span>年少
   </span>
@@ -171,9 +171,9 @@ document.addEventListener('pjax:complete', function (){
           </span>
         </span>
         
-        <span class="post-list__img--link">
+        <a class="post-list__img--link" href="/z-2caa.html">
           <img class="post-list__img--img" src="https://i.imgtg.com/2023/05/13/w80aY.md.png" />
-        </span>
+        </a>
         
       </div>
     
@@ -206,9 +206,9 @@ document.addEventListener('pjax:complete', function (){
           </span>
         </span>
         
-        <span class="post-list__img--link">
+        <a class="post-list__img--link" href="/z-b836.html">
           <img class="post-list__img--img" src="https://i.imgtg.com/2023/05/13/w8sIc.png" />
-        </span>
+        </a>
         
       </div>
     
@@ -365,6 +365,16 @@ $(function () {
   clear.onclick = function () {
     sText.value = ''
   }
+
+  $(document).keydown(function (event) {
+    if (event.keyCode == 27) {
+      sText.value = ''
+      if (sBlur.classList.contains('show')) {
+        sBlur.classList.remove('show')
+        search.classList.remove('show')
+      }
+    }
+  });
 
   btnSearch.onclick = function () {
     if (sBlur.classList.contains('show')) {
