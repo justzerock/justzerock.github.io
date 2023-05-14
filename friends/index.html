@@ -209,15 +209,30 @@ search.onclick = function () {
   
 }
 
+getReverse = function (mode) {
+  return mode == 'dark' ? 'light' : 'dark'
+}
+
 colorModeToggle.onclick = function () {
-  if (settings.className.indexOf('open') > -1) {
+  let curMode = localStorage.getItem('user-color-scheme') || 'auto'
+  let sysMode = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+  if (curMode == 'auto' || curMode == sysMode) {
+    applyCustomDarkModeSettings(getReverse(sysMode))
+  } else {
+    resetRootDarkModeAttributeAndLS()
+
+  }
+  getIscolorMode()
+/*   if (settings.className.indexOf('open') > -1) {
     settings.classList.remove('open')
     blur.classList.remove('open')
   } else {
     settings.classList.add('open')
     blur.classList.add('open')
-  }
+  } */
 }
+
+
 
 blur.onclick = function () {
   settings.classList.remove('open')
@@ -290,6 +305,7 @@ $(function () {
 
   clear.onclick = function () {
     sText.value = ''
+    clear.classList.remove('show')
   }
 
   $(document).keydown(function (event) {
