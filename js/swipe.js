@@ -12,26 +12,26 @@ function _touch() {
     var l = Math.abs(startX - endX);
     var h = Math.abs(startY - endY);
 
-    if (l > h) {
+    if (l < h) {
       // x事件
       /* if (startX > endX) {
         // alert('left');
       } else if (startX < endX) {
         // alert('right');
       } */
-      if ((startTop - endTop) > ($(window).height()/10) ) {
-        $('.menu').addClass('swipe');
-        $('.post__back').addClass('swipe');
+      if ((startTop - endTop) > ($(window).height()/20) ) {
+        $('.menu').removeClass('swipe');
+        $('.post__back').removeClass('swipe');
         //$('.settings').addClass('hide');
         //$('.settings').removeClass('open');
         //$('.blur').removeClass('open');
-      } else if ((endTop - startTop) > ($(window).height()/10) ) {
-        $('.menu').removeClass('swipe');
-        $('.post__back').removeClass('swipe');
+      } else if ((endTop - startTop) > ($(window).height()/20) ) {
+        $('.menu').addClass('swipe');
+        $('.post__back').addClass('swipe');
         //$('.settings').removeClass('hide');
       }
 
-    } else {
+    } /* else {
       // y事件
       if (startY > endY) {
         // alert('top');
@@ -46,7 +46,7 @@ function _touch() {
         $('.post__back').removeClass('swipe');
         //$('.settings').removeClass('hide');
       }
-    }
+    } */
 
   }
   el.addEventListener('touchstart', function (e) {

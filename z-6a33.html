@@ -4,8 +4,6 @@
 
 
 
-  
-
 
 
 
@@ -20,7 +18,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tag: 前端 · 小鲤游</title>
+  <title>免费域名 + 动态 DNS，兼容大部分设备 · 小鲤游</title>
   <link rel="preconnect" href="https://gstatic.loli.net">
   <link rel="preconnect" href="https://gstatic.loli.net" crossorigin>
   
@@ -132,30 +130,164 @@ document.addEventListener('pjax:complete', function (){
 <div class="content-main">
   
   
-  <div id="tag" class="post tag">
-    <div class='tag__name'>前端</div>
-    
-      <div class="tag__item">
-        <a class='tag__item--link' href="/z-2caa.html">
-          <div class='tag__item--date'>
-            2023-03-16
-          </div>
-          <h1 class="tag__item--title">
-            
-              使用 Html CSS 和 Javascript 的魔术导航菜单指示器 | 外部曲线效果
-            
-          </h1>
-        </a>
+  <div class="post">
+    <a href="/" class="post__back"> < 返回</a>
+    <article id="post" class="post__article  post__article--top ">
+      
+      <p>
+        <img class="post__top-img" src="https://i.imgtg.com/2023/05/16/OMKkMx.jpg" />
+      </p>
+      
+      <h1 class="post__article--title">
+      
+        免费域名 + 动态 DNS，兼容大部分设备
+      
+      </h1>
+      <div class='post__article--date'>
+        2023.05.15
+        
+        
+        <i class="if i-Tags post-list__tag--icon"></i>
+        
+          <a class="post-list__tag" href="/tags/%E7%BD%91%E7%BB%9C/">#网络</a>
+        
+      
       </div>
+      <div class="post__article--content">
+      <p><code>dynv6</code> 是个免费易用的动态 DNS 服务商，<a target="_blank" rel="noopener" href="https://dynv6.com/users/sign_up">点我注册</a></p>
+<p>脚本默认使用 ipv6，几乎每个设备都能拥有的公网 ipv6</p>
+<pre><code>#!/usr/bin/env bash
+
+if [[ &quot;$OSTYPE&quot; == &quot;darwin&quot;* ]]; then
+    # macOS
+    ipv6=$(ifconfig | grep inet6 | grep autoconf | grep -v temporary | awk &#39;&#123;print $2&#125;&#39; | cut -d &#39;%&#39; -f1 | grep -E &#39;^240e:|2408:8000:|2409:8000:&#39;)
+elif [[ &quot;$OSTYPE&quot; == &quot;linux-gnu&quot;* ]]; then
+    # Linux
+    ipv6=$(ip addr show | awk &#39;/inet6/&#123;print $2&#125;&#39; | cut -d &#39;/&#39; -f1 | grep -E &#39;240e:|2408:8000:|2409:8000:&#39; | head -1)
+else
+    ipv6=$(curl -s 6.ipw.cn)
+fi
+
+hostname=你的域名 (注册后创建)
+token=你的token
+# token 获取方式
+# 1. 登录后 -&gt; 右上角邮箱 -&gt; Keys -&gt; HTTP Tokens
+# 2. 登录后 -&gt; My Zones -&gt; 任意一个域名 -&gt; Instructions -&gt; Benutzername
+
+saved_ip=$(cat ~/.ddns/ipv6.txt)
+
+if [[ &quot;$ipv6&quot; == &quot;$saved_ip&quot; ]]; then
+    echo &quot;当前ip为：$&#123;ipv6&#125;&quot;
+    echo &quot;ipv6 地址没有变化&quot;
+else
+    echo &quot;当前ip为：$&#123;ipv6&#125;&quot;
+    echo &quot;ipv6 改变，开始更新&quot;
+    curl &quot;http://dynv6.com/api/update?hostname=$hostname&amp;ipv6=$ipv6&amp;token=$token&quot;
+    cat /dev/null&gt; ~/.ddns/ipv6.txt
+    echo $ipv6 &gt; ~/.ddns/ipv6.txt
+fi
+</code></pre>
+<p>复制上面的代码，存为 xx.sh<br>记得赋予可执行权限 <code>chmod +x xx.sh</code><br>最后可以设置个定时任务 <code>crontab -e</code></p>
+<pre><code># 每十分钟执行一次脚本
+*/10 * * * * nohup bash ~/.ddns/ddns.sh &gt; ~/.ddns/ddns.log 2&gt;&amp;1 &amp;
+</code></pre>
+<p>保存即生效</p>
+
+      
+        <div  class='post__gallery--block'>
+        
+        </div>
+      
+      </div>
+      
+      
+    </article>
+    <div class="post__paginator">
+
+  <div class="post__prev">
+    <span class="post__prev--text">
+    </span>
+  </div>
+
+
+  <div class="post__next">
+    <a class="post__next--link" href="/z-2caa.html">
+      <span class="post__next--mobile">下一篇</span>
+      <span class="post__next--text">
+        
+          使用 Html CSS 和 Javascript 的魔术导航菜单指示器 | 外部曲线效果 
+        
+      </span>
+      <i class="post__next--icon if i-arrow-right"></i>
+    </a>
+  </div>
+
+</div>
+    <script>
+
+load_copy_button = function () {
+
+  let lenBadge = document.querySelectorAll('.code-badge-pre').length
+  let lenPre = document.querySelectorAll('pre').length
+  
+  if ( lenPre && !lenBadge ) {
+    var pres = document.querySelectorAll("pre>code");
+    for (var i = 0; i < pres.length; i++) {
+    	hljs.highlightElement(pres[i]);
+    }
+
+    var options = {
+      contentSelector: ".post__article--content",
+      loadDelay:0,
+      copyIconClass: "if i-copy",
+      checkIconClass: "if i-check",
+      onBeforeTextCopied: function(text, codeElement) {
+        return text;   
+      }
+    };
+    window.highlightJsBadge(options);
+  }
+
+}
+
+document.addEventListener("DOMContentLoaded", (event) => {
+  load_copy_button()
+});   
+
+document.addEventListener('pjax:complete', function (){
+  load_copy_button()
+})
+
+</script>
     
+    
+<div id="waline"></div>
+
   </div>
-    <div id="paginator" class="paginator">
-    <span class="page-number current">1</span>
-  </div>
+
+<script>
+  hideMenu = function () {
+    $('.menu').addClass('hide')
+  }
+
+  document.addEventListener("DOMContentLoaded", function(event) {
+    hideMenu()
+  })
+
+  document.addEventListener('pjax:complete', function (){
+    hideMenu()
+  })
+</script>
 
 </div>
 
 <div class="sidebar">
+  
+  <div class="sidebar__toc">
+    
+    <div class="sidebar__toc--list" id="sidebar__toc--list"></div>
+  </div>
+  
   
 </div>
 

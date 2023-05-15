@@ -4,6 +4,8 @@
 
 
 
+  
+
 
 
 
@@ -18,7 +20,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>关于 · 小鲤游</title>
+  <title>Tag: 网络 · 小鲤游</title>
   <link rel="preconnect" href="https://gstatic.loli.net">
   <link rel="preconnect" href="https://gstatic.loli.net" crossorigin>
   
@@ -49,7 +51,7 @@
 <div class="menu">
   <div class="menu__avatar">
   <span class="menu__avatar--link" href="/">
-    <img class="menu__avatar--img"  src="https://cdn.jsdelivr.net/gh/justzerock/assets@master/img/logo.svg"/>
+    <img class="menu__avatar--img"  src="https://gh.zerock.top/https://github.com/justzerock/assets/raw/master/zero.svg"/>
   </span>
   <span class="menu__avatar--title">
     亦<span class="menu__avatar--ru">如</span>年少
@@ -72,10 +74,10 @@
         </span>
       </a>
     
-      <a data-index="2" href="/about" key="关于" class="menu__item menu__item--current">
+      <a data-index="2" href="/navigation" key="导航" class="menu__item ">
         
         <span class="menu__name">
-          关于
+          导航
         </span>
       </a>
     
@@ -130,67 +132,30 @@ document.addEventListener('pjax:complete', function (){
 <div class="content-main">
   
   
-  <div class="post">
-    <article id="post" class="post__article">
-      <h1 class="post__article--title">
-        关于
-      </h1>
-      <div class="post__article--content">
-      <p>话说为什么会有这个网站，因为我想用自己写的主题，所以参考了 <a target="_blank" rel="noopener" href="https://github.com/theme-next/hexo-theme-next">Next</a>、<a target="_blank" rel="noopener" href="https://github.com/fluid-dev/hexo-theme-fluid">Fluid</a> 等主题后，然后有了这个 <a target="_blank" rel="noopener" href="https://github.com/justzerock/hexo-theme-zexo">Zexo</a>。</p>
-<p><a target="_blank" rel="noopener" href="https://github.com/justzerock/hexo-theme-zexo">Zexo</a> 依靠 <a target="_blank" rel="noopener" href="http://hexo.io/">Hexo</a> 博客框架，不完美，很简单，修修补补，自己凑合用，主要是自由吧，所有的样式与功能都随心所欲。</p>
-
-      </div>
-    </article>
+  <div id="tag" class="post tag">
+    <div class='tag__name'>网络</div>
     
-    <script>
-
-load_copy_button = function () {
-
-  let lenBadge = document.querySelectorAll('.code-badge-pre').length
-  let lenPre = document.querySelectorAll('pre').length
-  
-  if ( lenPre && !lenBadge ) {
-    var pres = document.querySelectorAll("pre>code");
-    for (var i = 0; i < pres.length; i++) {
-    	hljs.highlightElement(pres[i]);
-    }
-
-    var options = {
-      contentSelector: ".post__article--content",
-      loadDelay:0,
-      copyIconClass: "if i-copy",
-      checkIconClass: "if i-check",
-      onBeforeTextCopied: function(text, codeElement) {
-        return text;   
-      }
-    };
-    window.highlightJsBadge(options);
-  }
-
-}
-
-document.addEventListener("DOMContentLoaded", (event) => {
-  load_copy_button()
-});   
-
-document.addEventListener('pjax:complete', function (){
-  load_copy_button()
-})
-
-</script>
+      <div class="tag__item">
+        <a class='tag__item--link' href="/z-6a33.html">
+          <div class='tag__item--date'>
+            2023-05-15
+          </div>
+          <h1 class="tag__item--title">
+            
+              免费域名 + 动态 DNS，兼容大部分设备
+            
+          </h1>
+        </a>
+      </div>
+    
   </div>
-
-
+    <div id="paginator" class="paginator">
+    <span class="page-number current">1</span>
+  </div>
 
 </div>
 
 <div class="sidebar">
-  
-  <div class="sidebar__toc">
-    
-    <div class="sidebar__toc--list" id="sidebar__toc--list"></div>
-  </div>
-  
   
 </div>
 
@@ -373,8 +338,9 @@ $(function () {
   
   <span>
     <a class="bottom--link" target="_blank" rel="noopener" href="https://github.com/justzerock/hexo-theme-zexo">Zexo</a>
-     Powered by 
-    <a class="bottom--link" target="_blank" rel="noopener" href="http://hexo.io">Hexo</a>
+     Designed by 
+    <a class="bottom--link" target="_blank" rel="noopener" href="https://github.com/justzerock">Zero</a>
+      with ❤️
   </span>
 </div>
 
