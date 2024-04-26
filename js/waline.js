@@ -2,7 +2,7 @@ initWaline = function () {
   new MiniValine({
     el: '#waline',
     backend: 'waline',
-    serverURLs: 'https://waline-9ib0k0jpp-justzerock.vercel.app/',
+    serverURLs: 'https://waline.zerock.eu.org/',
   });
 }
 
