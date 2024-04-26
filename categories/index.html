@@ -34,7 +34,7 @@
     
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
     
-      <link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css">
+      <link rel="stylesheet" href="https://unpkg.com/@waline/client@v3/dist/waline.css">
     
       <link rel="stylesheet" href="/css/index.css">
     
@@ -387,15 +387,16 @@ $(function () {
 
 
 <script type="module">
-  import { init } from 'https://unpkg.com/@waline/client@v2/dist/waline.mjs'
+  import { init } from 'https://unpkg.com/@waline/client@v3/dist/waline.js'
 
   let opt = {
       el: '#waline',
       serverURL: 'https://waline.leoo.tech',
       placeholder: '畅所欲言',
       emoji: [
-        'https://unpkg.com/@waline/emojis@1.1.0/weibo',
-        'https://unpkg.com/@waline/emojis@1.1.0/bilibili',
+        'https://unpkg.com/@waline/emojis@1.2.0/alus',
+        'https://unpkg.com/@waline/emojis@1.2.0/bilibili',
+        'https://unpkg.com/@waline/emojis@1.2.0/bmoji',
       ],
   }
     
